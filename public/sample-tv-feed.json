@@ -42,43 +42,7 @@
         }
       ]
     },
-    {
-      "id": "science-inquiry",
-      "title": "Science, Physics & Inquiry",
-      "description": "Thought-provoking explanations and animated science essays.",
-      "videos": [
-        {
-          "id": "vid-sci-1",
-          "youtubeId": "Bey4XXJAqS8",
-          "title": "What If We Detonated All Nuclear Bombs at Once?",
-          "channel": "Kurzgesagt – In a Nutshell",
-          "duration": "11:06",
-          "description": "A deeply researched, beautifully animated scientific simulation investigating what happens to Earth and humanity if all arsenals exploded simultaneously.",
-          "thumbnail": "https://img.youtube.com/vi/Bey4XXJAqS8/hqdefault.jpg",
-          "badge": "Documentary"
-        },
-        {
-          "id": "vid-sci-2",
-          "youtubeId": "zOjov-2OZ0E",
-          "title": "The Simplest Math Problem No One Can Solve (Collatz)",
-          "channel": "Veritasium",
-          "duration": "22:08",
-          "description": "The story and mathematics behind the 3x+1 Collatz conjecture, a deceptive problem in number theory that mathematicians warn could be impossible.",
-          "thumbnail": "https://img.youtube.com/vi/zOjov-2OZ0E/hqdefault.jpg",
-          "badge": "Mathematics"
-        },
-        {
-          "id": "vid-sci-3",
-          "youtubeId": "h33Srr5J9nY",
-          "title": "The Last Human on Earth",
-          "channel": "Kurzgesagt – In a Nutshell",
-          "duration": "10:39",
-          "description": "An existential scientific meditation on the deep future of humanity, civilizational lifespans, and entropy in the universe.",
-          "thumbnail": "https://img.youtube.com/vi/h33Srr5J9nY/hqdefault.jpg",
-          "badge": "Philosophy"
-        }
-      ]
-    },
+    
     {
       "id": "open-animation",
       "title": "Animated Cinema & Creative Shorts",
@@ -130,23 +94,6 @@
           "description": "A towering orchestral performance of the iconic Interstellar pipe organ suite conducted live with full symphony.",
           "thumbnail": "https://img.youtube.com/vi/kOHB85vDuow/hqdefault.jpg",
           "badge": "Orchestral Live"
-        }
-      ]
-    },
-    {
-      "id": "code-engineering",
-      "title": "Computing & Architecture Lectures",
-      "description": "Deep-dive lectures from world-class computer science programs.",
-      "videos": [
-        {
-          "id": "vid-code-1",
-          "youtubeId": "S320n8FSBvU",
-          "title": "Harvard CS50: Computational Thinking & Algorithms",
-          "channel": "CS50",
-          "duration": "24:15",
-          "description": "Professor David J. Malan introduces core algorithmic principles, binary search, Big O efficiency, and problem decomposition.",
-          "thumbnail": "https://img.youtube.com/vi/S320n8FSBvU/hqdefault.jpg",
-          "badge": "Harvard University"
         }
       ]
     }
