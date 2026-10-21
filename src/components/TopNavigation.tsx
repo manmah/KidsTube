@@ -1,7 +1,8 @@
 import React, { useRef, useEffect } from 'react';
 import { DeviceMode } from '../types/tvFeed';
-import { Tv, Smartphone, Lock, Unlock, Settings, RefreshCw, Search, X, Shield, Download } from 'lucide-react';
+import { Tv, Smartphone, Settings, RefreshCw, Search, X, Shield, Download, Clock } from 'lucide-react';
 import { PWAInstallButton } from './PWAInstallButton';
+import { formatRemainingTime } from '../services/timerStorage';
 
 interface TopNavigationProps {
   appTitle: string;
@@ -22,6 +23,9 @@ interface TopNavigationProps {
   onOpenParentalControls: () => void;
   blockedCount: number;
   onOpenApkModal: () => void;
+  onOpenSleepTimer: () => void;
+  isTimerActive: boolean;
+  timerSecondsRemaining: number;
 }
 
 export const TopNavigation: React.FC<TopNavigationProps> = ({
@@ -43,6 +47,9 @@ export const TopNavigation: React.FC<TopNavigationProps> = ({
   onOpenParentalControls,
   blockedCount,
   onOpenApkModal,
+  onOpenSleepTimer,
+  isTimerActive,
+  timerSecondsRemaining,
 }) => {
   const searchInputRef = useRef<HTMLInputElement>(null);
 
@@ -97,7 +104,7 @@ export const TopNavigation: React.FC<TopNavigationProps> = ({
               }
             }}
             placeholder="Search videos by title... (Press /)"
-            className="w-full bg-slate-900/90 border border-slate-700/80 hover:border-slate-600 focus:border-sky-500 rounded-xl pl-9 pr-8 py-2 text-xs md:text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-sky-500/30 transition shadow-inner"
+            className="w-full bg-slate-900/90 border border-slate-700/80 hover:border-slate-600 focus:border-emerald-500 rounded-xl pl-9 pr-8 py-2 text-xs md:text-sm text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-emerald-500/30 transition shadow-inner"
           />
           {searchQuery && (
             <button
@@ -119,7 +126,7 @@ export const TopNavigation: React.FC<TopNavigationProps> = ({
             <button
               onClick={() => onSelectTab('all')}
               className={`hover:text-white transition-colors whitespace-nowrap shrink-0 ${
-                activeTab === 'all' ? 'text-sky-400 font-semibold' : ''
+                activeTab === 'all' ? 'text-emerald-400 font-semibold' : ''
               }`}
             >
               All Channels
@@ -139,6 +146,26 @@ export const TopNavigation: React.FC<TopNavigationProps> = ({
 
       {/* Zone 3: Actions & Controls */}
       <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+        {/* Bedtime / Screen Timer */}
+        {isTimerActive ? (
+          <button
+            onClick={onOpenSleepTimer}
+            className="flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 whitespace-nowrap shrink-0 transition shadow-sm"
+            title="Screen Time Limit Active (Click to edit)"
+          >
+            <Clock className="w-3.5 h-3.5 text-amber-400 animate-pulse" />
+            <span className="font-mono tabular-nums">{formatRemainingTime(timerSecondsRemaining)}</span>
+          </button>
+        ) : (
+          <button
+            onClick={onOpenSleepTimer}
+            className="p-2 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-slate-400 hover:text-amber-400 border border-slate-800 active:scale-95 transition"
+            title="Set Bedtime Screen Limit Timer"
+          >
+            <Clock className="w-4 h-4" />
+          </button>
+        )}
+
         {/* Get TV APK Button */}
         <button
           onClick={onOpenApkModal}
@@ -170,7 +197,7 @@ export const TopNavigation: React.FC<TopNavigationProps> = ({
             onClick={() => onSetDeviceMode('tv')}
             className={`flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-medium transition ${
               deviceMode === 'tv'
-                ? 'bg-sky-500 text-white shadow-xs'
+                ? 'bg-emerald-500 text-slate-950 font-bold shadow-xs'
                 : 'text-slate-400 hover:text-white'
             }`}
             title="Smart TV 10-foot Leanback mode"
@@ -182,7 +209,7 @@ export const TopNavigation: React.FC<TopNavigationProps> = ({
             onClick={() => onSetDeviceMode('mobile')}
             className={`flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-medium transition ${
               deviceMode === 'mobile'
-                ? 'bg-sky-500 text-white shadow-xs'
+                ? 'bg-emerald-500 text-slate-950 font-bold shadow-xs'
                 : 'text-slate-400 hover:text-white'
             }`}
             title="Mobile Touch mode"
@@ -199,7 +226,7 @@ export const TopNavigation: React.FC<TopNavigationProps> = ({
           className="p-2 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-slate-800 active:scale-95 transition disabled:opacity-50"
           title="Reload Remote JSON Feed"
         >
-          <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin text-sky-400' : ''}`} />
+          <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin text-emerald-400' : ''}`} />
         </button>
 
         {/* Feed Config Dialog */}
@@ -207,7 +234,7 @@ export const TopNavigation: React.FC<TopNavigationProps> = ({
           onClick={onOpenFeedConfig}
           className="flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-white bg-slate-800 hover:bg-slate-700 rounded-lg border border-slate-700 whitespace-nowrap shrink-0 transition"
         >
-          <Settings className="w-3.5 h-3.5 text-sky-400" />
+          <Settings className="w-3.5 h-3.5 text-emerald-400" />
           <span className="hidden sm:inline">JSON</span>
         </button>
 

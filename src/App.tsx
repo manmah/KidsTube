@@ -29,6 +29,9 @@ import { TVRemoteHUD } from './components/TVRemoteHUD';
 import { FeedConfigModal } from './components/FeedConfigModal';
 import { ParentalControlModal } from './components/ParentalControlModal';
 import { SmartTvApkModal } from './components/SmartTvApkModal';
+import { SleepTimerModal } from './components/SleepTimerModal';
+import { CurfewCurtain } from './components/CurfewCurtain';
+import { getTimerStatus, TimerStatus } from './services/timerStorage';
 import { MobileBottomBar } from './components/MobileBottomBar';
 import { WifiOff, AlertTriangle, Tv, RefreshCw, SearchX, X, ShieldCheck } from 'lucide-react';
 
@@ -49,6 +52,19 @@ export default function App() {
   const [parentalVersion, setParentalVersion] = useState(0);
   const [isParentalModalOpen, setIsParentalModalOpen] = useState(false);
   const [isApkModalOpen, setIsApkModalOpen] = useState(false);
+
+  // Bedtime screen limit & sleep timer state
+  const [timerStatus, setTimerStatus] = useState<TimerStatus>(() => getTimerStatus());
+  const [isSleepTimerModalOpen, setIsSleepTimerModalOpen] = useState(false);
+
+  // Live timer tick listener
+  useEffect(() => {
+    const interval = setInterval(() => {
+      const current = getTimerStatus();
+      setTimerStatus(current);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   // Navigation & Selection state (2D grid for TV leanback)
   const [selectedRow, setSelectedRow] = useState(0);
@@ -439,6 +455,9 @@ export default function App() {
         onOpenParentalControls={() => setIsParentalModalOpen(true)}
         blockedCount={blockedVideosCount}
         onOpenApkModal={() => setIsApkModalOpen(true)}
+        onOpenSleepTimer={() => setIsSleepTimerModalOpen(true)}
+        isTimerActive={timerStatus.isActive && !timerStatus.isExpired}
+        timerSecondsRemaining={timerStatus.remainingSeconds}
       />
 
       {/* Main Content Area */}
@@ -689,6 +708,18 @@ export default function App() {
             : 'https://ais-pre-eb3zgm5puel3wpubvj5hdu-599766215321.europe-west3.run.app'
         }
       />
+
+      {/* Sleep Timer & Screen Time Limit Modal */}
+      <SleepTimerModal
+        isOpen={isSleepTimerModalOpen}
+        onClose={() => setIsSleepTimerModalOpen(false)}
+        onTimerUpdated={() => setTimerStatus(getTimerStatus())}
+      />
+
+      {/* Curfew & Bedtime Screen Lock Curtain */}
+      {timerStatus.isExpired && (
+        <CurfewCurtain onDismiss={() => setTimerStatus(getTimerStatus())} />
+      )}
     </div>
   );
 }

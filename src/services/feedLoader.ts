@@ -9,18 +9,11 @@ export const DEFAULT_FEED_URL = '/sample-tv-feed.json';
 
 export const FEED_PRESETS: FeedSourcePreset[] = [
   {
-    id: 'default-curated',
-    name: 'CurateTV Master Showcase (Default)',
-    description: 'Documentaries, NASA 4K, Kurzgesagt science, Blender animations & Lo-Fi music',
+    id: 'omar-and-hana-arabic',
+    name: 'عمر وهنا بالعربية (@Omarandhanaarabic)',
+    description: 'الأناشيد الإسلامية، قصص الأخلاق والحلقات الكرتونية من القناة الرسمية',
     url: '/sample-tv-feed.json',
     isLocal: true,
-  },
-  {
-    id: 'science-discovery',
-    name: 'Veritasium & Scientific Inquiry',
-    description: 'Deep science phenomena, Collatz conjecture, space exploration & physics',
-    url: 'https://raw.githubusercontent.com/datasets/sample-feeds/main/science.json', // preset fallback to local structured
-    isLocal: false,
   },
   {
     id: 'kids-safe',
@@ -30,10 +23,10 @@ export const FEED_PRESETS: FeedSourcePreset[] = [
     isLocal: false,
   },
   {
-    id: 'ambient-music',
-    name: 'Living Room Lo-Fi & Symphonies',
-    description: 'Hans Zimmer concerts, live study beats & ambient relaxation loops',
-    url: 'https://raw.githubusercontent.com/datasets/sample-feeds/main/ambient.json',
+    id: 'nature-cinema',
+    name: 'Cinematic Nature & Planet Earth',
+    description: 'Ultra-HD visual landscapes and wildlife expeditions for leanback viewing',
+    url: 'https://raw.githubusercontent.com/datasets/sample-feeds/main/nature.json',
     isLocal: false,
   },
 ];
