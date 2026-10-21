@@ -1,0 +1,8 @@
+{
+  "name": "CurateTV - Restricted Smart TV & Mobile YouTube Player",
+  "description": "Android TV & Mobile leanback video app playing only approved YouTube content from a remote JSON URL with strict navigation limits and category rails.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

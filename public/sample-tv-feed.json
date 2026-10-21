@@ -1,0 +1,154 @@
+{
+  "version": "1.0",
+  "appTitle": "CurateTV Channel Hub",
+  "description": "Restricted leanback channel feed strictly confined to verified educational, scientific, nature, and cultural YouTube videos.",
+  "lastUpdated": "2026-10-21T07:00:00Z",
+  "kioskModeRestricted": true,
+  "categories": [
+    {
+      "id": "nature-cinema",
+      "title": "Cinematic Nature & Planet Earth",
+      "description": "Ultra-HD visual landscapes and wildlife expeditions for leanback viewing.",
+      "videos": [
+        {
+          "id": "vid-nature-1",
+          "youtubeId": "LXb3EKWsInQ",
+          "title": "Costa Rica in 4K 60fps HDR",
+          "channel": "Jacob + Katie Schwarz",
+          "duration": "05:14",
+          "description": "A breathtaking visual journey through the lush rainforests, vibrant birds, exotic wildlife, and pristine waterfalls of Costa Rica.",
+          "thumbnail": "https://img.youtube.com/vi/LXb3EKWsInQ/hqdefault.jpg",
+          "badge": "4K Ultra HD"
+        },
+        {
+          "id": "vid-nature-2",
+          "youtubeId": "1La4QzGeaaQ",
+          "title": "Peru 8K HDR 60FPS: The Sacred Valley",
+          "channel": "Jacob + Katie Schwarz",
+          "duration": "05:37",
+          "description": "Spectacular aerial and close-up cinematography capturing the majestic Andes, Machu Picchu, and ancient cultural heritage of Peru.",
+          "thumbnail": "https://img.youtube.com/vi/1La4QzGeaaQ/hqdefault.jpg",
+          "badge": "8K HDR"
+        },
+        {
+          "id": "vid-nature-3",
+          "youtubeId": "EEIk7gwjgIM",
+          "title": "NASA Earth from Orbit 4K ISS Expedition",
+          "channel": "NASA",
+          "duration": "08:12",
+          "description": "Ultra-high definition flyover footage captured from the International Space Station showcasing auroras, city lights, and oceanic cloud formations.",
+          "thumbnail": "https://img.youtube.com/vi/EEIk7gwjgIM/hqdefault.jpg",
+          "badge": "NASA Space"
+        }
+      ]
+    },
+    {
+      "id": "science-inquiry",
+      "title": "Science, Physics & Inquiry",
+      "description": "Thought-provoking explanations and animated science essays.",
+      "videos": [
+        {
+          "id": "vid-sci-1",
+          "youtubeId": "Bey4XXJAqS8",
+          "title": "What If We Detonated All Nuclear Bombs at Once?",
+          "channel": "Kurzgesagt – In a Nutshell",
+          "duration": "11:06",
+          "description": "A deeply researched, beautifully animated scientific simulation investigating what happens to Earth and humanity if all arsenals exploded simultaneously.",
+          "thumbnail": "https://img.youtube.com/vi/Bey4XXJAqS8/hqdefault.jpg",
+          "badge": "Documentary"
+        },
+        {
+          "id": "vid-sci-2",
+          "youtubeId": "zOjov-2OZ0E",
+          "title": "The Simplest Math Problem No One Can Solve (Collatz)",
+          "channel": "Veritasium",
+          "duration": "22:08",
+          "description": "The story and mathematics behind the 3x+1 Collatz conjecture, a deceptive problem in number theory that mathematicians warn could be impossible.",
+          "thumbnail": "https://img.youtube.com/vi/zOjov-2OZ0E/hqdefault.jpg",
+          "badge": "Mathematics"
+        },
+        {
+          "id": "vid-sci-3",
+          "youtubeId": "h33Srr5J9nY",
+          "title": "The Last Human on Earth",
+          "channel": "Kurzgesagt – In a Nutshell",
+          "duration": "10:39",
+          "description": "An existential scientific meditation on the deep future of humanity, civilizational lifespans, and entropy in the universe.",
+          "thumbnail": "https://img.youtube.com/vi/h33Srr5J9nY/hqdefault.jpg",
+          "badge": "Philosophy"
+        }
+      ]
+    },
+    {
+      "id": "open-animation",
+      "title": "Animated Cinema & Creative Shorts",
+      "description": "Open-source animated short films celebrated for artistic direction.",
+      "videos": [
+        {
+          "id": "vid-anim-1",
+          "youtubeId": "e-ORhEE9VVg",
+          "title": "Spring - Blender Open Movie (Official)",
+          "channel": "Blender Animation Studio",
+          "duration": "07:44",
+          "description": "A poetic fantasy story of a shepherd girl and her dog who face ancient spirits in order to continue the cycle of life.",
+          "thumbnail": "https://img.youtube.com/vi/e-ORhEE9VVg/hqdefault.jpg",
+          "badge": "Animated Short"
+        },
+        {
+          "id": "vid-anim-2",
+          "youtubeId": "aqz-KE-bpKQ",
+          "title": "Big Buck Bunny 4K 60fps",
+          "channel": "Blender Foundation",
+          "duration": "09:56",
+          "description": "The legendary comedy short film following a gentle oversized rabbit seeking humorous revenge on forest bullies.",
+          "thumbnail": "https://img.youtube.com/vi/aqz-KE-bpKQ/hqdefault.jpg",
+          "badge": "Classic Animation"
+        }
+      ]
+    },
+    {
+      "id": "music-soundscapes",
+      "title": "Acoustic & Ambient Soundscapes",
+      "description": "Calm study rhythms, live symphonies, and relaxing focus music.",
+      "videos": [
+        {
+          "id": "vid-music-1",
+          "youtubeId": "jfKfPfyJRdk",
+          "title": "Lofi Hip Hop Radio - Beats to Relax/Study to",
+          "channel": "Lofi Girl",
+          "duration": "Live / Stream",
+          "description": "Continuous soothing downtempo chillhop instrumentals perfect for background ambience on living room televisions.",
+          "thumbnail": "https://img.youtube.com/vi/jfKfPfyJRdk/hqdefault.jpg",
+          "badge": "Continuous Stream"
+        },
+        {
+          "id": "vid-music-2",
+          "youtubeId": "kOHB85vDuow",
+          "title": "Hans Zimmer - Interstellar Main Theme Live in Prague",
+          "channel": "Hans Zimmer Live",
+          "duration": "04:36",
+          "description": "A towering orchestral performance of the iconic Interstellar pipe organ suite conducted live with full symphony.",
+          "thumbnail": "https://img.youtube.com/vi/kOHB85vDuow/hqdefault.jpg",
+          "badge": "Orchestral Live"
+        }
+      ]
+    },
+    {
+      "id": "code-engineering",
+      "title": "Computing & Architecture Lectures",
+      "description": "Deep-dive lectures from world-class computer science programs.",
+      "videos": [
+        {
+          "id": "vid-code-1",
+          "youtubeId": "S320n8FSBvU",
+          "title": "Harvard CS50: Computational Thinking & Algorithms",
+          "channel": "CS50",
+          "duration": "24:15",
+          "description": "Professor David J. Malan introduces core algorithmic principles, binary search, Big O efficiency, and problem decomposition.",
+          "thumbnail": "https://img.youtube.com/vi/S320n8FSBvU/hqdefault.jpg",
+          "badge": "Harvard University"
+        }
+      ]
+    }
+  ]
+}
