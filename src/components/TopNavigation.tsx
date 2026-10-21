@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import { DeviceMode } from '../types/tvFeed';
-import { Tv, Smartphone, Lock, Unlock, Settings, RefreshCw, Search, X, Shield } from 'lucide-react';
+import { Tv, Smartphone, Lock, Unlock, Settings, RefreshCw, Search, X, Shield, Download } from 'lucide-react';
 import { PWAInstallButton } from './PWAInstallButton';
 
 interface TopNavigationProps {
@@ -21,6 +21,7 @@ interface TopNavigationProps {
   onClearSearch: () => void;
   onOpenParentalControls: () => void;
   blockedCount: number;
+  onOpenApkModal: () => void;
 }
 
 export const TopNavigation: React.FC<TopNavigationProps> = ({
@@ -41,6 +42,7 @@ export const TopNavigation: React.FC<TopNavigationProps> = ({
   onClearSearch,
   onOpenParentalControls,
   blockedCount,
+  onOpenApkModal,
 }) => {
   const searchInputRef = useRef<HTMLInputElement>(null);
 
@@ -70,11 +72,11 @@ export const TopNavigation: React.FC<TopNavigationProps> = ({
         }}
         className="flex items-center gap-2.5 text-lg font-bold tracking-tight text-white whitespace-nowrap shrink-0 group"
       >
-        <div className="w-8 h-8 rounded-lg bg-sky-500/20 border border-sky-400/40 flex items-center justify-center text-sky-400 group-hover:scale-105 transition-transform">
+        <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-400/40 flex items-center justify-center text-emerald-400 group-hover:scale-105 transition-transform">
           <Tv className="w-4 h-4" />
         </div>
-        <span className="font-extrabold text-white group-hover:text-sky-300 transition-colors">
-          Curate<span className="text-sky-400">TV</span>
+        <span className="font-extrabold text-white group-hover:text-emerald-300 transition-colors">
+          GreenKid<span className="text-emerald-400">TV</span>
         </span>
       </a>
 
@@ -137,18 +139,33 @@ export const TopNavigation: React.FC<TopNavigationProps> = ({
 
       {/* Zone 3: Actions & Controls */}
       <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-        {/* Refresh Feed */}
+        {/* Get TV APK Button */}
         <button
-          onClick={onRefreshFeed}
-          disabled={isRefreshing}
-          className="p-2 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-slate-800 active:scale-95 transition disabled:opacity-50"
-          title="Reload Remote JSON Feed"
+          onClick={onOpenApkModal}
+          className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-500 rounded-lg shadow-md shadow-sky-600/20 whitespace-nowrap shrink-0 transition"
+          title="Get Android TV APK for Smart TV installation"
         >
-          <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin text-sky-400' : ''}`} />
+          <Download className="w-3.5 h-3.5" />
+          <span>Get TV APK</span>
+        </button>
+
+        {/* Parental Controls Button */}
+        <button
+          onClick={onOpenParentalControls}
+          className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-white bg-rose-950/40 hover:bg-rose-900/60 rounded-lg border border-rose-500/30 whitespace-nowrap shrink-0 transition"
+          title="Parental Controls: Remove unwanted videos and manage content filters"
+        >
+          <Shield className="w-3.5 h-3.5 text-rose-400" />
+          <span className="hidden md:inline">Parental</span>
+          {blockedCount > 0 && (
+            <span className="px-1.5 py-0.2 rounded-full bg-rose-600 text-white text-[10px] font-mono font-bold">
+              {blockedCount}
+            </span>
+          )}
         </button>
 
         {/* Device Mode Toggle (Smart TV vs Mobile) */}
-        <div className="hidden sm:flex items-center bg-slate-900/80 border border-slate-800 rounded-lg p-0.5">
+        <div className="hidden lg:flex items-center bg-slate-900/80 border border-slate-800 rounded-lg p-0.5">
           <button
             onClick={() => onSetDeviceMode('tv')}
             className={`flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-medium transition ${
@@ -159,7 +176,7 @@ export const TopNavigation: React.FC<TopNavigationProps> = ({
             title="Smart TV 10-foot Leanback mode"
           >
             <Tv className="w-3.5 h-3.5" />
-            <span>TV UI</span>
+            <span>TV</span>
           </button>
           <button
             onClick={() => onSetDeviceMode('mobile')}
@@ -171,55 +188,27 @@ export const TopNavigation: React.FC<TopNavigationProps> = ({
             title="Mobile Touch mode"
           >
             <Smartphone className="w-3.5 h-3.5" />
-            <span>Mobile</span>
+            <span>Phone</span>
           </button>
         </div>
 
-        {/* Parental Controls Button */}
+        {/* Refresh Feed */}
         <button
-          onClick={onOpenParentalControls}
-          className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium text-white bg-rose-950/40 hover:bg-rose-900/60 rounded-lg border border-rose-500/30 whitespace-nowrap shrink-0 transition"
-          title="Parental Controls: Remove unwanted videos and manage content filters"
+          onClick={onRefreshFeed}
+          disabled={isRefreshing}
+          className="p-2 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-slate-800 active:scale-95 transition disabled:opacity-50"
+          title="Reload Remote JSON Feed"
         >
-          <Shield className="w-3.5 h-3.5 text-rose-400" />
-          <span className="hidden md:inline">Parental Control</span>
-          {blockedCount > 0 && (
-            <span className="px-1.5 py-0.2 rounded-full bg-rose-600 text-white text-[10px] font-mono font-bold">
-              {blockedCount}
-            </span>
-          )}
-        </button>
-
-        {/* Kiosk Lock State Button */}
-        <button
-          onClick={onToggleLock}
-          className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium border transition ${
-            isKioskLocked
-              ? 'bg-rose-950/40 border-rose-500/40 text-rose-300 hover:bg-rose-950/70'
-              : 'bg-slate-900/80 border-slate-800 text-slate-300 hover:bg-slate-800'
-          }`}
-          title={isKioskLocked ? 'Kiosk Mode Locked (Click to enter PIN)' : 'Kiosk Mode Unlocked'}
-        >
-          {isKioskLocked ? (
-            <>
-              <Lock className="w-3.5 h-3.5 text-rose-400" />
-              <span className="hidden md:inline">Locked</span>
-            </>
-          ) : (
-            <>
-              <Unlock className="w-3.5 h-3.5 text-slate-400" />
-              <span className="hidden md:inline">Unlocked</span>
-            </>
-          )}
+          <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin text-sky-400' : ''}`} />
         </button>
 
         {/* Feed Config Dialog */}
         <button
           onClick={onOpenFeedConfig}
-          className="flex items-center gap-1.5 px-3.5 py-2 text-xs font-medium text-white bg-slate-800 hover:bg-slate-700 rounded-lg border border-slate-700 whitespace-nowrap shrink-0 transition"
+          className="flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-white bg-slate-800 hover:bg-slate-700 rounded-lg border border-slate-700 whitespace-nowrap shrink-0 transition"
         >
           <Settings className="w-3.5 h-3.5 text-sky-400" />
-          <span className="hidden sm:inline">JSON Feed</span>
+          <span className="hidden sm:inline">JSON</span>
         </button>
 
         {/* PWA In-App Install */}

@@ -28,6 +28,7 @@ import { YouTubeLeanbackPlayer } from './components/YouTubeLeanbackPlayer';
 import { TVRemoteHUD } from './components/TVRemoteHUD';
 import { FeedConfigModal } from './components/FeedConfigModal';
 import { ParentalControlModal } from './components/ParentalControlModal';
+import { SmartTvApkModal } from './components/SmartTvApkModal';
 import { MobileBottomBar } from './components/MobileBottomBar';
 import { WifiOff, AlertTriangle, Tv, RefreshCw, SearchX, X, ShieldCheck } from 'lucide-react';
 
@@ -47,6 +48,7 @@ export default function App() {
   // Parental Control version trigger to recompute blocked items
   const [parentalVersion, setParentalVersion] = useState(0);
   const [isParentalModalOpen, setIsParentalModalOpen] = useState(false);
+  const [isApkModalOpen, setIsApkModalOpen] = useState(false);
 
   // Navigation & Selection state (2D grid for TV leanback)
   const [selectedRow, setSelectedRow] = useState(0);
@@ -414,7 +416,7 @@ export default function App() {
 
       {/* Top Bar Header with Integrated Search Input & Parental Controls */}
       <TopNavigation
-        appTitle={feed?.appTitle || 'CurateTV'}
+        appTitle={feed?.appTitle || 'GreenKid TV'}
         deviceMode={deviceMode}
         onSetDeviceMode={setDeviceMode}
         isKioskLocked={isKioskLocked}
@@ -436,6 +438,7 @@ export default function App() {
         onClearSearch={handleClearSearch}
         onOpenParentalControls={() => setIsParentalModalOpen(true)}
         blockedCount={blockedVideosCount}
+        onOpenApkModal={() => setIsApkModalOpen(true)}
       />
 
       {/* Main Content Area */}
@@ -674,6 +677,17 @@ export default function App() {
         onStateChanged={() => {
           setParentalVersion((v) => v + 1);
         }}
+      />
+
+      {/* Smart TV APK & Sideload Guide Modal */}
+      <SmartTvApkModal
+        isOpen={isApkModalOpen}
+        onClose={() => setIsApkModalOpen(false)}
+        appUrl={
+          typeof window !== 'undefined' && window.location.origin && !window.location.origin.includes('localhost')
+            ? window.location.origin
+            : 'https://ais-pre-eb3zgm5puel3wpubvj5hdu-599766215321.europe-west3.run.app'
+        }
       />
     </div>
   );

@@ -1,0 +1,32 @@
+{
+  "background_color": "#ffffff",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "GreenKid TV",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "GreenKidTV",
+  "start_url": "https://ais-dev-eb3zgm5puel3wpubvj5hdu-599766215321.europe-west3.run.app",
+  "theme_color": "#ffffff",
+  "icons": [
+    {
+      "src": "https://ais-dev-eb3zgm5puel3wpubvj5hdu-599766215321.europe-west3.run.app/favicon.ico",
+      "type": "image/x-icon",
+      "isSquare": false,
+      "isPng": false,
+      "isWebp": false,
+      "isJpg": false,
+      "width": 0,
+      "is512x512": false,
+      "is256x256": false,
+      "is192x192": false
+    }
+  ],
+  "id": "GreenKidTV",
+  "lang": "en",
+  "categories": [
+    "kids",
+    "multimedia",
+    "video"
+  ]
+}
