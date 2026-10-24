@@ -297,16 +297,6 @@
       "description": "قصص ومغامرات تساعد الأطفال على تعلّم القيم الإيجابية",
       "videos": [
         {
-          "id": "osratouna-0tY8dcR8xDY",
-          "youtubeId": "0tY8dcR8xDY",
-          "title": "وي وي ثعلوب والشرطة",
-          "channel": "Osratouna TV - قناة أسرتنا",
-          "duration": "00:00",
-          "description": "فيديو أطفال من قناة أسرتنا الرسمية: وي وي ثعلوب والشرطة",
-          "thumbnail": "https://img.youtube.com/vi/0tY8dcR8xDY/hqdefault.jpg",
-          "badge": "أسرتنا"
-        },
-        {
           "id": "osratouna-mecMSY7uak4",
           "youtubeId": "mecMSY7uak4",
           "title": "لا تفتح الباب لثعلوب",
@@ -314,16 +304,6 @@
           "duration": "00:00",
           "description": "فيديو أطفال من قناة أسرتنا الرسمية: لا تفتح الباب لثعلوب",
           "thumbnail": "https://img.youtube.com/vi/mecMSY7uak4/hqdefault.jpg",
-          "badge": "أسرتنا"
-        },
-        {
-          "id": "osratouna-s57scN1O3to",
-          "youtubeId": "s57scN1O3to",
-          "title": "أغنية ثعلوب الحرامي",
-          "channel": "Osratouna TV - قناة أسرتنا",
-          "duration": "00:00",
-          "description": "فيديو أطفال من قناة أسرتنا الرسمية: أغنية ثعلوب الحرامي",
-          "thumbnail": "https://img.youtube.com/vi/s57scN1O3to/hqdefault.jpg",
           "badge": "أسرتنا"
         },
         {
