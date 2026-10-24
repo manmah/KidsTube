@@ -12,6 +12,8 @@ import {
   Maximize2,
   Tv,
   X,
+  SkipBack,
+  SkipForward,
 } from 'lucide-react';
 
 interface TVRemoteHUDProps {
@@ -25,6 +27,8 @@ interface TVRemoteHUDProps {
   onTogglePlay: () => void;
   onReplay: () => void;
   onFullscreen: () => void;
+  onNext?: () => void;
+  onPrev?: () => void;
   isPlaying: boolean;
 }
 
@@ -39,6 +43,8 @@ export const TVRemoteHUD: React.FC<TVRemoteHUDProps> = ({
   onTogglePlay,
   onReplay,
   onFullscreen,
+  onNext,
+  onPrev,
   isPlaying,
 }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,7 +60,8 @@ export const TVRemoteHUD: React.FC<TVRemoteHUDProps> = ({
     }
   };
 
-  const press = (action: () => void) => {
+  const press = (action?: () => void) => {
+    if (!action) return;
     triggerHaptic();
     action();
   };
@@ -171,24 +178,42 @@ export const TVRemoteHUD: React.FC<TVRemoteHUDProps> = ({
         </button>
       </div>
 
-      {/* Playback Controls: Replay, Play/Pause (No next video) */}
-      <div className="w-full grid grid-cols-2 gap-2 mt-2">
+      {/* Playback Controls: Prev, Replay, Play/Pause, Next (Strictly from approved list) */}
+      <div className="w-full grid grid-cols-4 gap-1.5 mt-2">
+        <button
+          onClick={() => press(onPrev || onReplay)}
+          className="py-2.5 flex flex-col items-center justify-center rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 active:scale-95 transition"
+          title="Previous Video from Approved List (P)"
+        >
+          <SkipBack className="w-4 h-4 text-sky-400" />
+          <span className="text-[9px] mt-0.5 font-medium">Prev</span>
+        </button>
+
         <button
           onClick={() => press(onReplay)}
-          className="py-2.5 flex items-center justify-center gap-1.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 active:scale-95 transition"
-          title="Replay Chosen Video"
+          className="py-2.5 flex flex-col items-center justify-center rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 active:scale-95 transition"
+          title="Replay Video (R)"
         >
           <RotateCcw className="w-4 h-4 text-sky-400" />
-          <span className="text-[11px] font-medium">Replay</span>
+          <span className="text-[9px] mt-0.5 font-medium">Replay</span>
         </button>
 
         <button
           onClick={() => press(onTogglePlay)}
-          className="py-2.5 flex items-center justify-center gap-1.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-semibold active:scale-95 transition"
-          title="Play / Pause (Space)"
+          className="py-2.5 flex flex-col items-center justify-center rounded-xl bg-sky-500 hover:bg-sky-400 text-white font-semibold active:scale-95 transition"
+          title="Play / Pause"
         >
           {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4 ml-0.5" />}
-          <span className="text-[11px] font-medium">{isPlaying ? 'Pause' : 'Play'}</span>
+          <span className="text-[9px] mt-0.5 font-medium">{isPlaying ? 'Pause' : 'Play'}</span>
+        </button>
+
+        <button
+          onClick={() => press(onNext || onReplay)}
+          className="py-2.5 flex flex-col items-center justify-center rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-300 active:scale-95 transition"
+          title="Next Video from Approved List (N)"
+        >
+          <SkipForward className="w-4 h-4 text-sky-400" />
+          <span className="text-[9px] mt-0.5 font-medium">Next</span>
         </button>
       </div>
 

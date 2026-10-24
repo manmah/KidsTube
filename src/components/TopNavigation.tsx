@@ -1,16 +1,8 @@
 import React, { useRef, useEffect } from 'react';
-import { DeviceMode } from '../types/tvFeed';
-import { Tv, Smartphone, Settings, RefreshCw, Search, X, Shield, Download, Clock } from 'lucide-react';
-import { PWAInstallButton } from './PWAInstallButton';
-import { formatRemainingTime } from '../services/timerStorage';
+import { Tv, RefreshCw, Search, X, Shield } from 'lucide-react';
 
 interface TopNavigationProps {
-  appTitle: string;
-  deviceMode: DeviceMode;
-  onSetDeviceMode: (mode: DeviceMode) => void;
-  isKioskLocked: boolean;
-  onOpenFeedConfig: () => void;
-  onToggleLock: () => void;
+  appTitle?: string;
   onRefreshFeed: () => void;
   isRefreshing: boolean;
   activeTab: string;
@@ -22,19 +14,22 @@ interface TopNavigationProps {
   onClearSearch: () => void;
   onOpenParentalControls: () => void;
   blockedCount: number;
-  onOpenApkModal: () => void;
-  onOpenSleepTimer: () => void;
-  isTimerActive: boolean;
-  timerSecondsRemaining: number;
+  // Optional legacy props kept for backwards compatibility
+  deviceMode?: any;
+  onSetDeviceMode?: any;
+  isKioskLocked?: boolean;
+  onOpenFeedConfig?: () => void;
+  onToggleLock?: () => void;
+  onOpenApkModal?: () => void;
+  onOpenSleepTimer?: () => void;
+  isTimerActive?: boolean;
+  timerSecondsRemaining?: number;
+  activeSource?: any;
+  lastSyncTime?: number | null;
 }
 
 export const TopNavigation: React.FC<TopNavigationProps> = ({
-  appTitle,
-  deviceMode,
-  onSetDeviceMode,
-  isKioskLocked,
-  onOpenFeedConfig,
-  onToggleLock,
+  appTitle = 'GreenKid TV',
   onRefreshFeed,
   isRefreshing,
   activeTab,
@@ -46,10 +41,6 @@ export const TopNavigation: React.FC<TopNavigationProps> = ({
   onClearSearch,
   onOpenParentalControls,
   blockedCount,
-  onOpenApkModal,
-  onOpenSleepTimer,
-  isTimerActive,
-  timerSecondsRemaining,
 }) => {
   const searchInputRef = useRef<HTMLInputElement>(null);
 
@@ -146,36 +137,6 @@ export const TopNavigation: React.FC<TopNavigationProps> = ({
 
       {/* Zone 3: Actions & Controls */}
       <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-        {/* Bedtime / Screen Timer */}
-        {isTimerActive ? (
-          <button
-            onClick={onOpenSleepTimer}
-            className="flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold rounded-lg bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 whitespace-nowrap shrink-0 transition shadow-sm"
-            title="Screen Time Limit Active (Click to edit)"
-          >
-            <Clock className="w-3.5 h-3.5 text-amber-400 animate-pulse" />
-            <span className="font-mono tabular-nums">{formatRemainingTime(timerSecondsRemaining)}</span>
-          </button>
-        ) : (
-          <button
-            onClick={onOpenSleepTimer}
-            className="p-2 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-slate-400 hover:text-amber-400 border border-slate-800 active:scale-95 transition"
-            title="Set Bedtime Screen Limit Timer"
-          >
-            <Clock className="w-4 h-4" />
-          </button>
-        )}
-
-        {/* Get TV APK Button */}
-        <button
-          onClick={onOpenApkModal}
-          className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-white bg-sky-600 hover:bg-sky-500 rounded-lg shadow-md shadow-sky-600/20 whitespace-nowrap shrink-0 transition"
-          title="Get Android TV APK for Smart TV installation"
-        >
-          <Download className="w-3.5 h-3.5" />
-          <span>Get TV APK</span>
-        </button>
-
         {/* Parental Controls Button */}
         <button
           onClick={onOpenParentalControls}
@@ -191,55 +152,15 @@ export const TopNavigation: React.FC<TopNavigationProps> = ({
           )}
         </button>
 
-        {/* Device Mode Toggle (Smart TV vs Mobile) */}
-        <div className="hidden lg:flex items-center bg-slate-900/80 border border-slate-800 rounded-lg p-0.5">
-          <button
-            onClick={() => onSetDeviceMode('tv')}
-            className={`flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-medium transition ${
-              deviceMode === 'tv'
-                ? 'bg-emerald-500 text-slate-950 font-bold shadow-xs'
-                : 'text-slate-400 hover:text-white'
-            }`}
-            title="Smart TV 10-foot Leanback mode"
-          >
-            <Tv className="w-3.5 h-3.5" />
-            <span>TV</span>
-          </button>
-          <button
-            onClick={() => onSetDeviceMode('mobile')}
-            className={`flex items-center gap-1 px-2.5 py-1 rounded-md text-xs font-medium transition ${
-              deviceMode === 'mobile'
-                ? 'bg-emerald-500 text-slate-950 font-bold shadow-xs'
-                : 'text-slate-400 hover:text-white'
-            }`}
-            title="Mobile Touch mode"
-          >
-            <Smartphone className="w-3.5 h-3.5" />
-            <span>Phone</span>
-          </button>
-        </div>
-
         {/* Refresh Feed */}
         <button
           onClick={onRefreshFeed}
           disabled={isRefreshing}
           className="p-2 rounded-lg bg-slate-900/80 hover:bg-slate-800 text-slate-300 border border-slate-800 active:scale-95 transition disabled:opacity-50"
-          title="Reload Remote JSON Feed"
+          title="Reload & Check Remote Updates"
         >
           <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin text-emerald-400' : ''}`} />
         </button>
-
-        {/* Feed Config Dialog */}
-        <button
-          onClick={onOpenFeedConfig}
-          className="flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-white bg-slate-800 hover:bg-slate-700 rounded-lg border border-slate-700 whitespace-nowrap shrink-0 transition"
-        >
-          <Settings className="w-3.5 h-3.5 text-emerald-400" />
-          <span className="hidden sm:inline">JSON</span>
-        </button>
-
-        {/* PWA In-App Install */}
-        <PWAInstallButton compact />
       </div>
     </header>
   );

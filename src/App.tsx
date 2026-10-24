@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { TVFeed, VideoItem, CategorySection, DeviceMode, WatchedVideoItem } from './types/tvFeed';
+import { TVFeed, VideoItem, CategorySection, DeviceMode, WatchedVideoItem, FeedSourceType, FeedSyncResult } from './types/tvFeed';
 import {
   loadFeedFromUrl,
   getSavedFeedUrl,
@@ -7,6 +7,10 @@ import {
   isKioskLocked as getInitialKioskLocked,
   setKioskLockState,
   DEFAULT_FEED_URL,
+  syncFeedFromGithubOrLocal,
+  loadLocalFallbackFeed,
+  loadLocalBundledFeed,
+  getLastSyncTimestamp,
 } from './services/feedLoader';
 import {
   getWatchedVideos,
@@ -33,7 +37,7 @@ import { SleepTimerModal } from './components/SleepTimerModal';
 import { CurfewCurtain } from './components/CurfewCurtain';
 import { getTimerStatus, TimerStatus } from './services/timerStorage';
 import { MobileBottomBar } from './components/MobileBottomBar';
-import { WifiOff, AlertTriangle, Tv, RefreshCw, SearchX, X, ShieldCheck } from 'lucide-react';
+import { WifiOff, AlertTriangle, Tv, RefreshCw, SearchX, X, ShieldCheck, CheckCircle2 } from 'lucide-react';
 
 export default function App() {
   const [feed, setFeed] = useState<TVFeed | null>(null);
@@ -42,6 +46,11 @@ export default function App() {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [feedUrl, setFeedUrl] = useState<string>(getSavedFeedUrl());
   
+  // GitHub Sync & Feed source status
+  const [activeSource, setActiveSource] = useState<FeedSourceType>('local');
+  const [lastSyncTime, setLastSyncTime] = useState<number | null>(() => getLastSyncTimestamp());
+  const [syncToast, setSyncToast] = useState<{ message: string; isError?: boolean } | null>(null);
+
   // Search query state for filtering by video title
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -102,7 +111,116 @@ export default function App() {
     };
   }, []);
 
-  // Fetch feed on URL change or mount
+  // Show transient sync toast helper
+  const showToast = useCallback((message: string, isError = false) => {
+    setSyncToast({ message, isError });
+    setTimeout(() => {
+      setSyncToast(null);
+    }, 4500);
+  }, []);
+
+  // Manual or triggered sync from GitHub
+  const handleTriggerGithubSync = useCallback(async (customGithubUrl?: string): Promise<FeedSyncResult> => {
+    setIsRefreshing(true);
+    try {
+      const result = await syncFeedFromGithubOrLocal({
+        githubUrl: customGithubUrl,
+        forceRefresh: true,
+      });
+
+      setFeed(result.feed);
+      setActiveSource(result.source);
+      if (result.lastSyncTime) setLastSyncTime(result.lastSyncTime);
+
+      showToast(result.message, result.source !== 'github');
+      return result;
+    } catch (err: any) {
+      const fallback = await loadLocalFallbackFeed();
+      setFeed(fallback);
+      setActiveSource('local');
+      showToast(`Error syncing: ${err.message}. Using local list.`, true);
+      return {
+        feed: fallback,
+        source: 'local',
+        isUpdated: false,
+        error: err.message,
+        message: 'Loaded local list after error',
+      };
+    } finally {
+      setIsRefreshing(false);
+    }
+  }, [showToast]);
+
+  // Restore bundled local feed
+  const handleRestoreLocal = useCallback(async () => {
+    setIsRefreshing(true);
+    try {
+      const local = await loadLocalBundledFeed();
+      setFeed(local);
+      setActiveSource('local');
+      showToast('Restored local bundled video feed.');
+    } catch (err: any) {
+      showToast(`Failed to restore local feed: ${err.message}`, true);
+    } finally {
+      setIsRefreshing(false);
+    }
+  }, [showToast]);
+
+  // Initial startup flow:
+  // 1. Immediately render local list so app opens instantly with zero latency
+  // 2. Automatically check GitHub for updates on app start
+  // 3. Update local list on success; on error smoothly keep local list
+  useEffect(() => {
+    let isMounted = true;
+
+    const startupSync = async () => {
+      setIsLoading(true);
+      // Fast path: load local/cached feed first
+      try {
+        const local = await loadLocalFallbackFeed();
+        if (isMounted) {
+          setFeed(local);
+          setIsLoading(false);
+        }
+      } catch (err) {
+        console.warn('Fast local load failed:', err);
+      }
+
+      // Check GitHub for updates
+      try {
+        const syncResult = await syncFeedFromGithubOrLocal();
+        if (isMounted) {
+          setFeed(syncResult.feed);
+          setActiveSource(syncResult.source);
+          if (syncResult.lastSyncTime) setLastSyncTime(syncResult.lastSyncTime);
+
+          if (syncResult.isUpdated) {
+            showToast(syncResult.message);
+          }
+        }
+      } catch (err: any) {
+        console.warn('Startup GitHub check failed, falling back to local list:', err);
+        if (isMounted) {
+          const fallback = await loadLocalFallbackFeed();
+          setFeed(fallback);
+          setActiveSource('local');
+        }
+      } finally {
+        if (isMounted) {
+          setIsLoading(false);
+          setIsRefreshing(false);
+        }
+      }
+    };
+
+    startupSync();
+
+    return () => {
+      isMounted = false;
+    };
+  }, [showToast]);
+
+  // Generic feed URL loader for custom URLs
   const fetchFeed = useCallback(async (url: string, isSilent = false) => {
     if (!isSilent) setIsLoading(true);
     else setIsRefreshing(true);
@@ -111,19 +229,21 @@ export default function App() {
     try {
       const data = await loadFeedFromUrl(url);
       setFeed(data);
+      setActiveSource(url.includes('github') ? 'github' : 'local');
       setSelectedRow(0);
       setSelectedCol(0);
     } catch (err: any) {
-      setErrorMessage(err.message || 'Failed to load video feed');
+      // In case of error, load local list
+      console.warn('Feed error, falling back to local list:', err);
+      const fallback = await loadLocalFallbackFeed();
+      setFeed(fallback);
+      setActiveSource('local');
+      showToast(`Error loading ${url}. Loaded local list.`, true);
     } finally {
       setIsLoading(false);
       setIsRefreshing(false);
     }
-  }, []);
-
-  useEffect(() => {
-    fetchFeed(feedUrl);
-  }, [fetchFeed, feedUrl]);
+  }, [showToast]);
 
   // Handle search query change
   const handleSearchChange = (query: string) => {
@@ -321,6 +441,147 @@ export default function App() {
     }
   }, [playingTarget, searchQuery, selectedRow, selectedCol]);
 
+  // Advance to the next unblocked video strictly from the approved list
+  const handlePlayNextVideo = useCallback(() => {
+    if (!playingTarget) return;
+
+    const { category, videoIndex } = playingTarget;
+    const vids = category.videos;
+
+    // 1. Search next unblocked video in current category
+    for (let i = videoIndex + 1; i < vids.length; i++) {
+      if (!isVideoBlocked(vids[i])) {
+        playVideoItem(vids[i], category, i);
+        return;
+      }
+    }
+
+    // 2. Search next unblocked video in subsequent categories
+    const currentCatIdx = displayedCategories.findIndex((c) => c.id === category.id);
+    if (currentCatIdx !== -1) {
+      for (let cIdx = currentCatIdx + 1; cIdx < displayedCategories.length; cIdx++) {
+        const nextCat = displayedCategories[cIdx];
+        const foundIdx = nextCat.videos.findIndex((v) => !isVideoBlocked(v));
+        if (foundIdx !== -1) {
+          playVideoItem(nextCat.videos[foundIdx], nextCat, foundIdx);
+          return;
+        }
+      }
+    }
+
+    // 3. Loop back to first unblocked video in the first category
+    if (displayedCategories.length > 0) {
+      for (const firstCat of displayedCategories) {
+        const firstIdx = firstCat.videos.findIndex((v) => !isVideoBlocked(v));
+        if (firstIdx !== -1) {
+          playVideoItem(firstCat.videos[firstIdx], firstCat, firstIdx);
+          return;
+        }
+      }
+    }
+
+    // Fallback: loop to index 0 of current category
+    if (vids.length > 0) {
+      playVideoItem(vids[0], category, 0);
+    }
+  }, [playingTarget, displayedCategories, playVideoItem]);
+
+  // Play previous unblocked video strictly from the approved list
+  const handlePlayPrevVideo = useCallback(() => {
+    if (!playingTarget) return;
+
+    const { category, videoIndex } = playingTarget;
+    const vids = category.videos;
+
+    // 1. Search previous unblocked video in current category
+    for (let i = videoIndex - 1; i >= 0; i--) {
+      if (!isVideoBlocked(vids[i])) {
+        playVideoItem(vids[i], category, i);
+        return;
+      }
+    }
+
+    // 2. Search backward in preceding categories
+    const currentCatIdx = displayedCategories.findIndex((c) => c.id === category.id);
+    if (currentCatIdx > 0) {
+      for (let cIdx = currentCatIdx - 1; cIdx >= 0; cIdx--) {
+        const prevCat = displayedCategories[cIdx];
+        for (let i = prevCat.videos.length - 1; i >= 0; i--) {
+          if (!isVideoBlocked(prevCat.videos[i])) {
+            playVideoItem(prevCat.videos[i], prevCat, i);
+            return;
+          }
+        }
+      }
+    }
+
+    // Fallback: loop to last unblocked video in current category
+    for (let i = vids.length - 1; i >= 0; i--) {
+      if (!isVideoBlocked(vids[i])) {
+        playVideoItem(vids[i], category, i);
+        return;
+      }
+    }
+  }, [playingTarget, displayedCategories, playVideoItem]);
+
+  // Preview next video from approved list
+  const upNextVideo = useMemo<VideoItem | null>(() => {
+    if (!playingTarget) return null;
+    const { category, videoIndex } = playingTarget;
+    const vids = category.videos;
+
+    for (let i = videoIndex + 1; i < vids.length; i++) {
+      if (!isVideoBlocked(vids[i])) {
+        return vids[i];
+      }
+    }
+
+    const currentCatIdx = displayedCategories.findIndex((c) => c.id === category.id);
+    if (currentCatIdx !== -1) {
+      for (let cIdx = currentCatIdx + 1; cIdx < displayedCategories.length; cIdx++) {
+        const nextCat = displayedCategories[cIdx];
+        const found = nextCat.videos.find((v) => !isVideoBlocked(v));
+        if (found) return found;
+      }
+    }
+
+    if (displayedCategories.length > 0) {
+      for (const firstCat of displayedCategories) {
+        const found = firstCat.videos.find((v) => !isVideoBlocked(v));
+        if (found) return found;
+      }
+    }
+
+    return vids[0] || null;
+  }, [playingTarget, displayedCategories]);
+
+  // Preview previous video from approved list
+  const prevVideo = useMemo<VideoItem | null>(() => {
+    if (!playingTarget) return null;
+    const { category, videoIndex } = playingTarget;
+    const vids = category.videos;
+
+    for (let i = videoIndex - 1; i >= 0; i--) {
+      if (!isVideoBlocked(vids[i])) {
+        return vids[i];
+      }
+    }
+
+    const currentCatIdx = displayedCategories.findIndex((c) => c.id === category.id);
+    if (currentCatIdx > 0) {
+      for (let cIdx = currentCatIdx - 1; cIdx >= 0; cIdx--) {
+        const prevCat = displayedCategories[cIdx];
+        for (let i = prevCat.videos.length - 1; i >= 0; i--) {
+          if (!isVideoBlocked(prevCat.videos[i])) {
+            return prevCat.videos[i];
+          }
+        }
+      }
+    }
+
+    return vids[vids.length - 1] || null;
+  }, [playingTarget, displayedCategories]);
+
   // Save new URL from modal
   const handleSaveUrl = (newUrl: string) => {
     setFeedUrl(newUrl);
@@ -352,6 +613,12 @@ export default function App() {
         if (e.key === 'Escape' || e.key === 'Backspace') {
           e.preventDefault();
           setPlayingTarget(null);
+        } else if (e.key === 'n' || e.key === 'N') {
+          e.preventDefault();
+          handlePlayNextVideo();
+        } else if (e.key === 'p' || e.key === 'P') {
+          e.preventDefault();
+          handlePlayPrevVideo();
         }
         return;
       }
@@ -438,7 +705,7 @@ export default function App() {
         isKioskLocked={isKioskLocked}
         onOpenFeedConfig={() => setIsConfigModalOpen(true)}
         onToggleLock={handleToggleLock}
-        onRefreshFeed={() => fetchFeed(feedUrl, true)}
+        onRefreshFeed={() => handleTriggerGithubSync()}
         isRefreshing={isRefreshing}
         activeTab={activeTab}
         onSelectTab={setActiveTab}
@@ -458,7 +725,23 @@ export default function App() {
         onOpenSleepTimer={() => setIsSleepTimerModalOpen(true)}
         isTimerActive={timerStatus.isActive && !timerStatus.isExpired}
         timerSecondsRemaining={timerStatus.remainingSeconds}
+        activeSource={activeSource}
+        lastSyncTime={lastSyncTime}
       />
+
+      {/* Sync Update Floating Toast */}
+      {syncToast && (
+        <div className="fixed top-16 right-4 z-50 pointer-events-none animate-in fade-in slide-in-from-top-2 duration-300">
+          <div className={`px-4 py-2.5 rounded-xl shadow-2xl border flex items-center gap-2.5 text-xs font-semibold backdrop-blur-md ${
+            syncToast.isError
+              ? 'bg-amber-950/90 border-amber-500/50 text-amber-200 shadow-amber-900/30'
+              : 'bg-emerald-950/90 border-emerald-500/50 text-emerald-200 shadow-emerald-900/30'
+          }`}>
+            <CheckCircle2 className={`w-4 h-4 shrink-0 ${syncToast.isError ? 'text-amber-400' : 'text-emerald-400'}`} />
+            <span>{syncToast.message}</span>
+          </div>
+        </div>
+      )}
 
       {/* Main Content Area */}
       <main className="flex-1 flex flex-col">
@@ -615,6 +898,10 @@ export default function App() {
               playVideoItem(nextVid, playingTarget.category, newVidIdx);
             }
           }}
+          onPlayNext={handlePlayNextVideo}
+          onPlayPrevious={handlePlayPrevVideo}
+          nextVideo={upNextVideo}
+          previousVideo={prevVideo}
           isKioskLocked={isKioskLocked}
         />
       )}
@@ -657,6 +944,8 @@ export default function App() {
         }}
         onTogglePlay={handlePlayCurrent}
         onReplay={handlePlayCurrent}
+        onNext={handlePlayNextVideo}
+        onPrev={handlePlayPrevVideo}
         onFullscreen={() => {
           if (!document.fullscreenElement) {
             document.documentElement.requestFullscreen().catch(() => {});
@@ -687,6 +976,11 @@ export default function App() {
         onApplyRawJson={handleApplyRawJson}
         adminPin={adminPin}
         onUpdateAdminPin={setAdminPinState}
+        activeSource={activeSource}
+        lastSyncTime={lastSyncTime}
+        onTriggerGithubSync={handleTriggerGithubSync}
+        currentFeed={feed}
+        onRestoreLocal={handleRestoreLocal}
       />
 
       {/* Parental Controls & Content Filter Modal */}

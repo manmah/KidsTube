@@ -40,3 +40,14 @@ export interface WatchedVideoItem {
   watchedAt: number;
   categoryTitle?: string;
 }
+
+export type FeedSourceType = 'github' | 'local' | 'cache' | 'custom';
+
+export interface FeedSyncResult {
+  feed: TVFeed;
+  source: FeedSourceType;
+  isUpdated: boolean;
+  message: string;
+  error?: string;
+  lastSyncTime?: number;
+}
