@@ -1,9 +1,8 @@
 {
   "version": "2.0",
-  "appTitle": "GreenKid TV - عمر وهنا بالعربية",
-  "channelHandle": "@Omarandhanaarabic",
-  "channelUrl": "https://www.youtube.com/@Omarandhanaarabic",
-  "description": "قائمة فيديوهات مختارة ومحمية للأطفال من القناة الرسمية عمر وهنا بالعربية (Omar & Hana Arabic - أناشيد ورسوم دينية للأطفال)",
+  "appTitle": "GreenKid TV",
+  "channelHandle": "@Maher.Ismaail",
+  "description": "قائمة فيديوهات مختارة ومحمية للأطفال من القناة",
   "lastUpdated": "2026-10-21T17:50:00Z",
   "kioskModeRestricted": true,
   "categories": [
@@ -212,6 +211,227 @@
           "description": "رسوم كرتونية مميزة تسرد أروع قصص الصدق، الأمانة، والمحبة.",
           "thumbnail": "https://img.youtube.com/vi/jpnV4Ec_qUI/hqdefault.jpg",
           "badge": "قصص إسلامية"
+        }
+      ]
+    },
+    {
+      "id": "osratouna-songs",
+      "title": "أناشيد وأغاني أسرتنا",
+      "description": "أناشيد وأغاني عربية للأطفال من قناة أسرتنا",
+      "videos": [
+        {
+          "id": "osratouna-swJiZ0EQKAs",
+          "youtubeId": "swJiZ0EQKAs",
+          "title": "دق دق الباب + وي وي شرطة",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: دق دق الباب + وي وي شرطة",
+          "thumbnail": "https://img.youtube.com/vi/swJiZ0EQKAs/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna--oKjZlrsJlQ",
+          "youtubeId": "-oKjZlrsJlQ",
+          "title": "ساعة كاملة من أغاني أسرتنا للأطفال",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: ساعة كاملة من أغاني أسرتنا للأطفال",
+          "thumbnail": "https://img.youtube.com/vi/-oKjZlrsJlQ/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-_ooKHovDab4",
+          "youtubeId": "_ooKHovDab4",
+          "title": "توت توت",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: توت توت",
+          "thumbnail": "https://img.youtube.com/vi/_ooKHovDab4/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-NBXMqr3thfU",
+          "youtubeId": "NBXMqr3thfU",
+          "title": "أغنية وي وي شرطة",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: أغنية وي وي شرطة",
+          "thumbnail": "https://img.youtube.com/vi/NBXMqr3thfU/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-E6wUkiqd0h4",
+          "youtubeId": "E6wUkiqd0h4",
+          "title": "أغنية حمار جحا",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: أغنية حمار جحا",
+          "thumbnail": "https://img.youtube.com/vi/E6wUkiqd0h4/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-wTjQ5SYfkPk",
+          "youtubeId": "wTjQ5SYfkPk",
+          "title": "أغنية علي بابا",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: أغنية علي بابا",
+          "thumbnail": "https://img.youtube.com/vi/wTjQ5SYfkPk/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-eQVQJ4ibKkM",
+          "youtubeId": "eQVQJ4ibKkM",
+          "title": "أغنية الأرنب والسلحفاة",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: أغنية الأرنب والسلحفاة",
+          "thumbnail": "https://img.youtube.com/vi/eQVQJ4ibKkM/hqdefault.jpg",
+          "badge": "أسرتنا"
+        }
+      ]
+    },
+    {
+      "id": "osratouna-stories",
+      "title": "قصص وأخلاق ومغامرات",
+      "description": "قصص ومغامرات تساعد الأطفال على تعلّم القيم الإيجابية",
+      "videos": [
+        {
+          "id": "osratouna-0tY8dcR8xDY",
+          "youtubeId": "0tY8dcR8xDY",
+          "title": "وي وي ثعلوب والشرطة",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: وي وي ثعلوب والشرطة",
+          "thumbnail": "https://img.youtube.com/vi/0tY8dcR8xDY/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-mecMSY7uak4",
+          "youtubeId": "mecMSY7uak4",
+          "title": "لا تفتح الباب لثعلوب",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: لا تفتح الباب لثعلوب",
+          "thumbnail": "https://img.youtube.com/vi/mecMSY7uak4/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-s57scN1O3to",
+          "youtubeId": "s57scN1O3to",
+          "title": "أغنية ثعلوب الحرامي",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: أغنية ثعلوب الحرامي",
+          "thumbnail": "https://img.youtube.com/vi/s57scN1O3to/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-R5uVr6oIyrI",
+          "youtubeId": "R5uVr6oIyrI",
+          "title": "ثعلوب والأكل غير الصحي",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: ثعلوب والأكل غير الصحي",
+          "thumbnail": "https://img.youtube.com/vi/R5uVr6oIyrI/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-mSm94TUaP7M",
+          "youtubeId": "mSm94TUaP7M",
+          "title": "أغنية الراعي الكذاب",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: أغنية الراعي الكذاب",
+          "thumbnail": "https://img.youtube.com/vi/mSm94TUaP7M/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-4F7-tzZR6aw",
+          "youtubeId": "4F7-tzZR6aw",
+          "title": "توت توت ثعلوب",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: توت توت ثعلوب",
+          "thumbnail": "https://img.youtube.com/vi/4F7-tzZR6aw/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-Uexbx9VmbN4",
+          "youtubeId": "Uexbx9VmbN4",
+          "title": "الذئب والعنزات السبع",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: الذئب والعنزات السبع",
+          "thumbnail": "https://img.youtube.com/vi/Uexbx9VmbN4/hqdefault.jpg",
+          "badge": "أسرتنا"
+        }
+      ]
+    },
+    {
+      "id": "osratouna-learning",
+      "title": "التعلّم والسلامة",
+      "description": "فيديوهات تعليمية للأطفال من قناة أسرتنا",
+      "videos": [
+        {
+          "id": "osratouna--o2T2L33Ydo",
+          "youtubeId": "-o2T2L33Ydo",
+          "title": "أغنية عمي شرطي المرور",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: أغنية عمي شرطي المرور",
+          "thumbnail": "https://img.youtube.com/vi/-o2T2L33Ydo/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-wtbD0vpbJb4",
+          "youtubeId": "wtbD0vpbJb4",
+          "title": "أغنية النحلة",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: أغنية النحلة",
+          "thumbnail": "https://img.youtube.com/vi/wtbD0vpbJb4/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-P52Y5f2ieaY",
+          "youtubeId": "P52Y5f2ieaY",
+          "title": "أغنية جوعانين - خضروات وفواكه",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: أغنية جوعانين - خضروات وفواكه",
+          "thumbnail": "https://img.youtube.com/vi/P52Y5f2ieaY/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-YOz9y3AP56g",
+          "youtubeId": "YOz9y3AP56g",
+          "title": "أغنية جوعانين - خضروات وفواكه",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: أغنية جوعانين - خضروات وفواكه",
+          "thumbnail": "https://img.youtube.com/vi/YOz9y3AP56g/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-VkfwhNtvVBE",
+          "youtubeId": "VkfwhNtvVBE",
+          "title": "أغنية الحصان",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: أغنية الحصان",
+          "thumbnail": "https://img.youtube.com/vi/VkfwhNtvVBE/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-EzHZhC2LfI0",
+          "youtubeId": "EzHZhC2LfI0",
+          "title": "يا بقراتي",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: يا بقراتي",
+          "thumbnail": "https://img.youtube.com/vi/EzHZhC2LfI0/hqdefault.jpg",
+          "badge": "أسرتنا"
         }
       ]
     }
