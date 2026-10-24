@@ -1,0 +1,419 @@
+{
+  "version": "2.0",
+  "appTitle": "GreenKid TV",
+  "channelHandle": "@Maher.Ismaail",
+  "description": "قائمة فيديوهات مختارة ومحمية للأطفال من القناة",
+  "lastUpdated": "2026-10-21T17:50:00Z",
+  "kioskModeRestricted": true,
+  "categories": [
+    {
+      "id": "islamic-songs",
+      "title": "الأناشيد والأذكار اليومية",
+      "description": "أناشيد إسلامية هادفة وممتعة لتعليم الأطفال البسملة والحمد والأذكار.",
+      "videos": [
+        {
+          "id": "oh-vid-1",
+          "youtubeId": "bE2jqFbwnpA",
+          "title": "ابدأ ببسم الله - عمر وهنا بالعربية",
+          "channel": "Omar & Hana Arabic",
+          "duration": "03:45",
+          "description": "أنشودة تعليمية تشجع الأطفال على ذكر اسم الله والبسملة قبل البدء في أي عمل.",
+          "thumbnail": "https://img.youtube.com/vi/bE2jqFbwnpA/hqdefault.jpg",
+          "badge": "أنشودة تعليمية"
+        },
+        {
+          "id": "oh-vid-2",
+          "youtubeId": "HIFc-VjzHbI",
+          "title": "الحمد لله - شكر النعم مع عمر وهنا",
+          "channel": "Omar & Hana Arabic",
+          "duration": "04:12",
+          "description": "أنشودة جميلة لتعليم الصغار شكر الله تعالى وحمده على النعم في كل حين.",
+          "thumbnail": "https://img.youtube.com/vi/HIFc-VjzHbI/hqdefault.jpg",
+          "badge": "شكر النعم"
+        },
+        {
+          "id": "oh-vid-3",
+          "youtubeId": "hs-1o10P4ck",
+          "title": "بسم الله الرحمن الرحيم",
+          "channel": "Omar & Hana Arabic",
+          "duration": "03:20",
+          "description": "أنشودة للأطفال تسلط الضوء على فضل قول بسم الله في حياتنا اليومية.",
+          "thumbnail": "https://img.youtube.com/vi/hs-1o10P4ck/hqdefault.jpg",
+          "badge": "أذكار"
+        },
+        {
+          "id": "oh-vid-4",
+          "youtubeId": "77e0aGprSq8",
+          "title": "دعاء ما قبل النوم",
+          "channel": "Omar & Hana Arabic",
+          "duration": "03:55",
+          "description": "تعليم الأطفال دعاء النوم والاستعداد للنوم بطمأنينة وهدوء.",
+          "thumbnail": "https://img.youtube.com/vi/77e0aGprSq8/hqdefault.jpg",
+          "badge": "دعاء النوم"
+        },
+        {
+          "id": "oh-vid-5",
+          "youtubeId": "3N0dmHVTc48",
+          "title": "أنشودة الحروف العربية (ألف باء تاء)",
+          "channel": "Omar & Hana Arabic",
+          "duration": "04:30",
+          "description": "تعلم نطق الحروف الأبجدية العربية بطريقة غنائية مرحة وسهلة الحفظ.",
+          "thumbnail": "https://img.youtube.com/vi/3N0dmHVTc48/hqdefault.jpg",
+          "badge": "حروف لغتي"
+        }
+      ]
+    },
+    {
+      "id": "good-deeds",
+      "title": "قصص الأخلاق والتعاون والمساعدة",
+      "description": "مغامرات عمر وهنا لتعليم بر الوالدين، النظافة، ومساعدة الآخرين.",
+      "videos": [
+        {
+          "id": "oh-vid-6",
+          "youtubeId": "c6c6y_HqkLA",
+          "title": "لننظف المسجد معاً",
+          "channel": "Omar & Hana Arabic",
+          "duration": "05:18",
+          "description": "عمر وهنا يشاركان في تنظيف المسجد ويعلمان الأطفال أهمية المحافظة على بيوت الله.",
+          "thumbnail": "https://img.youtube.com/vi/c6c6y_HqkLA/hqdefault.jpg",
+          "badge": "عمارة المساجد"
+        },
+        {
+          "id": "oh-vid-7",
+          "youtubeId": "gchqNwJU_C0",
+          "title": "مساعدة الآخرين وإدخال السرور",
+          "channel": "Omar & Hana Arabic",
+          "duration": "04:40",
+          "description": "درس تطبيقي ممتع حول حب الخير للناس وتقديم العون لكل محتاج.",
+          "thumbnail": "https://img.youtube.com/vi/gchqNwJU_C0/hqdefault.jpg",
+          "badge": "عمل الخير"
+        },
+        {
+          "id": "oh-vid-8",
+          "youtubeId": "cvFLQtJ7XJE",
+          "title": "راجو اللطيف وحسن معاملة الجار",
+          "channel": "Omar & Hana Arabic",
+          "duration": "05:02",
+          "description": "حلقة مميزة عن إكرام الجار وحسن الخلق في التعامل مع الأصدقاء والجيران.",
+          "thumbnail": "https://img.youtube.com/vi/cvFLQtJ7XJE/hqdefault.jpg",
+          "badge": "حق الجار"
+        },
+        {
+          "id": "oh-vid-9",
+          "youtubeId": "q0tMrazNSgM",
+          "title": "لنقم بالبستنة ورعاية النباتات",
+          "channel": "Omar & Hana Arabic",
+          "duration": "04:15",
+          "description": "تعليم الصغار حب الطبيعة والزراعة وكيف نعتني بالنباتات والأشجار.",
+          "thumbnail": "https://img.youtube.com/vi/q0tMrazNSgM/hqdefault.jpg",
+          "badge": "حب الطبيعة"
+        }
+      ]
+    },
+    {
+      "id": "family-fun",
+      "title": "عمر وهنا في البيت والمدرسة",
+      "description": "حلقات عائلية مرحة تعزز المحبة بين الإخوة وبر الوالدين واحترام المعلمة.",
+      "videos": [
+        {
+          "id": "oh-vid-10",
+          "youtubeId": "EiQ--fzWtoc",
+          "title": "نحب أمي وأبي - بر الوالدين",
+          "channel": "Omar & Hana Arabic",
+          "duration": "04:22",
+          "description": "تعبير صادق عن المحبة والامتنان للأم والأب وفضل طاعتهما.",
+          "thumbnail": "https://img.youtube.com/vi/EiQ--fzWtoc/hqdefault.jpg",
+          "badge": "بر الوالدين"
+        },
+        {
+          "id": "oh-vid-11",
+          "youtubeId": "Sl4hYYOi6yk",
+          "title": "مفاجأة لأبي الحبيب",
+          "channel": "Omar & Hana Arabic",
+          "duration": "04:50",
+          "description": "عمر وهنا يخططان لمفاجأة سارة لإسعاد والدهما بعد عودته من العمل.",
+          "thumbnail": "https://img.youtube.com/vi/Sl4hYYOi6yk/hqdefault.jpg",
+          "badge": "العائلة"
+        },
+        {
+          "id": "oh-vid-12",
+          "youtubeId": "qYYeOUYSkUg",
+          "title": "شكراً يا معلمتي الفاضلة",
+          "channel": "Omar & Hana Arabic",
+          "duration": "04:05",
+          "description": "تقدير دور المعلمة والثناء على جهودها في تعليم وبناء أجيال المستقبل.",
+          "thumbnail": "https://img.youtube.com/vi/qYYeOUYSkUg/hqdefault.jpg",
+          "badge": "احترام المعلم"
+        },
+        {
+          "id": "oh-vid-13",
+          "youtubeId": "XeCJsvl_qbU",
+          "title": "وقت النزهة والرحلات المرحة",
+          "channel": "Omar & Hana Arabic",
+          "duration": "05:10",
+          "description": "رحلة عائلية في الهواء الطلق واستكشاف جمال الكون مع عمر وهنا وسارة.",
+          "thumbnail": "https://img.youtube.com/vi/XeCJsvl_qbU/hqdefault.jpg",
+          "badge": "نزهة عائلية"
+        },
+        {
+          "id": "oh-vid-14",
+          "youtubeId": "Zh9O6bbwa2o",
+          "title": "من الممتع أن نرسم معاً بالألوان",
+          "channel": "Omar & Hana Arabic",
+          "duration": "03:50",
+          "description": "نشاط رسم ترفيهي يشجع الإبداع والتعاون بين الأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/Zh9O6bbwa2o/hqdefault.jpg",
+          "badge": "إبداع ورسم"
+        },
+        {
+          "id": "oh-vid-15",
+          "youtubeId": "J58e1IBM-RI",
+          "title": "قصة عمر والقطة ميمي",
+          "channel": "Omar & Hana Arabic",
+          "duration": "04:35",
+          "description": "قصة لطيفة عن الرفق بالحيوان والاهتمام بالقطة ميمي ورعايتها.",
+          "thumbnail": "https://img.youtube.com/vi/J58e1IBM-RI/hqdefault.jpg",
+          "badge": "الرفق بالحيوان"
+        }
+      ]
+    },
+    {
+      "id": "compilations",
+      "title": "حلقات مجمعة للأطفال (Full Cartoons)",
+      "description": "ساعات متواصلة من الرسوم المتحركة الهادفة والآمنة للأطفال على الشاشات الذكية.",
+      "videos": [
+        {
+          "id": "oh-vid-16",
+          "youtubeId": "ivIHuufug7w",
+          "title": "مجموعة أناشيد ورسوم دينية للأطفال",
+          "channel": "Omar & Hana Arabic",
+          "duration": "35:10",
+          "description": "باقة من أفضل أناشيد ورسوم عمر وهنا التعليمية مجمعة في فيديو واحد متكامل.",
+          "thumbnail": "https://img.youtube.com/vi/ivIHuufug7w/hqdefault.jpg",
+          "badge": "حلقة مجمعة"
+        },
+        {
+          "id": "oh-vid-17",
+          "youtubeId": "SKMvC5kE2Hk",
+          "title": "رسوم متحركة دينية إسلامية للأطفال (كاملة)",
+          "channel": "Omar & Hana Arabic",
+          "duration": "28:40",
+          "description": "حلقات الرسوم المتحركة التربوية الهادفة للأطفال بدون إعلانات مزعجة.",
+          "thumbnail": "https://img.youtube.com/vi/SKMvC5kE2Hk/hqdefault.jpg",
+          "badge": "ساعة كرتون"
+        },
+        {
+          "id": "oh-vid-18",
+          "youtubeId": "jpnV4Ec_qUI",
+          "title": "حكايات الأخلاق والقيم الإسلامية",
+          "channel": "Omar & Hana Arabic",
+          "duration": "31:25",
+          "description": "رسوم كرتونية مميزة تسرد أروع قصص الصدق، الأمانة، والمحبة.",
+          "thumbnail": "https://img.youtube.com/vi/jpnV4Ec_qUI/hqdefault.jpg",
+          "badge": "قصص إسلامية"
+        }
+      ]
+    },
+    {
+      "id": "osratouna-songs",
+      "title": "أناشيد وأغاني أسرتنا",
+      "description": "أناشيد وأغاني عربية للأطفال من قناة أسرتنا",
+      "videos": [
+        {
+          "id": "osratouna-swJiZ0EQKAs",
+          "youtubeId": "swJiZ0EQKAs",
+          "title": "دق دق الباب + وي وي شرطة",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: دق دق الباب + وي وي شرطة",
+          "thumbnail": "https://img.youtube.com/vi/swJiZ0EQKAs/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna--oKjZlrsJlQ",
+          "youtubeId": "-oKjZlrsJlQ",
+          "title": "ساعة كاملة من أغاني أسرتنا للأطفال",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: ساعة كاملة من أغاني أسرتنا للأطفال",
+          "thumbnail": "https://img.youtube.com/vi/-oKjZlrsJlQ/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-_ooKHovDab4",
+          "youtubeId": "_ooKHovDab4",
+          "title": "توت توت",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: توت توت",
+          "thumbnail": "https://img.youtube.com/vi/_ooKHovDab4/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-NBXMqr3thfU",
+          "youtubeId": "NBXMqr3thfU",
+          "title": "أغنية وي وي شرطة",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: أغنية وي وي شرطة",
+          "thumbnail": "https://img.youtube.com/vi/NBXMqr3thfU/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-E6wUkiqd0h4",
+          "youtubeId": "E6wUkiqd0h4",
+          "title": "أغنية حمار جحا",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: أغنية حمار جحا",
+          "thumbnail": "https://img.youtube.com/vi/E6wUkiqd0h4/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-wTjQ5SYfkPk",
+          "youtubeId": "wTjQ5SYfkPk",
+          "title": "أغنية علي بابا",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: أغنية علي بابا",
+          "thumbnail": "https://img.youtube.com/vi/wTjQ5SYfkPk/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-eQVQJ4ibKkM",
+          "youtubeId": "eQVQJ4ibKkM",
+          "title": "أغنية الأرنب والسلحفاة",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: أغنية الأرنب والسلحفاة",
+          "thumbnail": "https://img.youtube.com/vi/eQVQJ4ibKkM/hqdefault.jpg",
+          "badge": "أسرتنا"
+        }
+      ]
+    },
+    {
+      "id": "osratouna-stories",
+      "title": "قصص وأخلاق ومغامرات",
+      "description": "قصص ومغامرات تساعد الأطفال على تعلّم القيم الإيجابية",
+      "videos": [
+        {
+          "id": "osratouna-mecMSY7uak4",
+          "youtubeId": "mecMSY7uak4",
+          "title": "لا تفتح الباب لثعلوب",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: لا تفتح الباب لثعلوب",
+          "thumbnail": "https://img.youtube.com/vi/mecMSY7uak4/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-R5uVr6oIyrI",
+          "youtubeId": "R5uVr6oIyrI",
+          "title": "ثعلوب والأكل غير الصحي",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: ثعلوب والأكل غير الصحي",
+          "thumbnail": "https://img.youtube.com/vi/R5uVr6oIyrI/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-mSm94TUaP7M",
+          "youtubeId": "mSm94TUaP7M",
+          "title": "أغنية الراعي الكذاب",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: أغنية الراعي الكذاب",
+          "thumbnail": "https://img.youtube.com/vi/mSm94TUaP7M/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-4F7-tzZR6aw",
+          "youtubeId": "4F7-tzZR6aw",
+          "title": "توت توت ثعلوب",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: توت توت ثعلوب",
+          "thumbnail": "https://img.youtube.com/vi/4F7-tzZR6aw/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-Uexbx9VmbN4",
+          "youtubeId": "Uexbx9VmbN4",
+          "title": "الذئب والعنزات السبع",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: الذئب والعنزات السبع",
+          "thumbnail": "https://img.youtube.com/vi/Uexbx9VmbN4/hqdefault.jpg",
+          "badge": "أسرتنا"
+        }
+      ]
+    },
+    {
+      "id": "osratouna-learning",
+      "title": "التعلّم والسلامة",
+      "description": "فيديوهات تعليمية للأطفال من قناة أسرتنا",
+      "videos": [
+        {
+          "id": "osratouna--o2T2L33Ydo",
+          "youtubeId": "-o2T2L33Ydo",
+          "title": "أغنية عمي شرطي المرور",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: أغنية عمي شرطي المرور",
+          "thumbnail": "https://img.youtube.com/vi/-o2T2L33Ydo/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-wtbD0vpbJb4",
+          "youtubeId": "wtbD0vpbJb4",
+          "title": "أغنية النحلة",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: أغنية النحلة",
+          "thumbnail": "https://img.youtube.com/vi/wtbD0vpbJb4/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-P52Y5f2ieaY",
+          "youtubeId": "P52Y5f2ieaY",
+          "title": "أغنية جوعانين - خضروات وفواكه",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: أغنية جوعانين - خضروات وفواكه",
+          "thumbnail": "https://img.youtube.com/vi/P52Y5f2ieaY/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-YOz9y3AP56g",
+          "youtubeId": "YOz9y3AP56g",
+          "title": "أغنية جوعانين - خضروات وفواكه",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: أغنية جوعانين - خضروات وفواكه",
+          "thumbnail": "https://img.youtube.com/vi/YOz9y3AP56g/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-VkfwhNtvVBE",
+          "youtubeId": "VkfwhNtvVBE",
+          "title": "أغنية الحصان",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: أغنية الحصان",
+          "thumbnail": "https://img.youtube.com/vi/VkfwhNtvVBE/hqdefault.jpg",
+          "badge": "أسرتنا"
+        },
+        {
+          "id": "osratouna-EzHZhC2LfI0",
+          "youtubeId": "EzHZhC2LfI0",
+          "title": "يا بقراتي",
+          "channel": "Osratouna TV - قناة أسرتنا",
+          "duration": "00:00",
+          "description": "فيديو أطفال من قناة أسرتنا الرسمية: يا بقراتي",
+          "thumbnail": "https://img.youtube.com/vi/EzHZhC2LfI0/hqdefault.jpg",
+          "badge": "أسرتنا"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GreenKid TV</string>
+    <string name="hero_watch_now">مشاهدة الآن</string>
+    <string name="feed_refresh">تحديث القائمة من GitHub</string>
+    <string name="parental_control">الرقابة الأبوية</string>
+    <string name="synced_github">تم التحديث من GitHub</string>
+    <string name="synced_offline">يعمل من الذاكرة المحلية (Offline)</string>
+    <string name="status_loading">جارٍ تحميل قائمة الفيديوهات...</string>
+</resources>

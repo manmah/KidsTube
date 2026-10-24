@@ -41,6 +41,7 @@ export const TopNavigation: React.FC<TopNavigationProps> = ({
   onClearSearch,
   onOpenParentalControls,
   blockedCount,
+  onOpenApkModal,
 }) => {
   const searchInputRef = useRef<HTMLInputElement>(null);
 
@@ -78,7 +79,7 @@ export const TopNavigation: React.FC<TopNavigationProps> = ({
         </span>
       </a>
 
-      {/* Zone 2: Search Input Field & Nav Links */}
+      {/* Zone 2: Search Input Field */}
       <div className="flex-1 max-w-lg flex items-center gap-4">
         {/* Search Input Field */}
         <div className="relative w-full">
@@ -110,29 +111,6 @@ export const TopNavigation: React.FC<TopNavigationProps> = ({
             </button>
           )}
         </div>
-
-        {/* Quick nav tabs (visible when not actively searching) */}
-        {!searchQuery && (
-          <nav className="hidden xl:flex items-center gap-4 text-xs font-medium text-slate-400">
-            <button
-              onClick={() => onSelectTab('all')}
-              className={`hover:text-white transition-colors whitespace-nowrap shrink-0 ${
-                activeTab === 'all' ? 'text-emerald-400 font-semibold' : ''
-              }`}
-            >
-              All Channels
-            </button>
-            {categoryNames.slice(0, 2).map((name, idx) => (
-              <button
-                key={name}
-                onClick={() => onSelectCategoryIndex(idx)}
-                className="hover:text-white transition-colors whitespace-nowrap shrink-0 max-w-[120px] truncate"
-              >
-                {name}
-              </button>
-            ))}
-          </nav>
-        )}
       </div>
 
       {/* Zone 3: Actions & Controls */}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.CurateTV" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowBackground">@color/bg_slate_dark</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="colorPrimary">@color/brand_emerald</item>
+        <item name="colorPrimaryDark">@color/brand_emerald_dark</item>
+        <item name="colorAccent">@color/brand_emerald_light</item>
+    </style>
+</resources>
