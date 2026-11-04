@@ -1,0 +1,66 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="320dp"
+    android:height="180dp"
+    android:viewportWidth="320"
+    android:viewportHeight="180">
+
+    <!-- Card Background Gradient Base -->
+    <path
+        android:fillColor="#090D16"
+        android:pathData="M0,0h320v180h-320z" />
+    <path
+        android:fillColor="#0F172A"
+        android:pathData="M0,0 L320,180 L0,180 Z" />
+
+    <!-- Subtle Emerald Brand Glow Ring in Background -->
+    <path
+        android:fillColor="#052E2B"
+        android:pathData="M240,90 m-70,0 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0" />
+
+    <!-- TV Frame on the Right Side -->
+    <path
+        android:fillColor="#1E293B"
+        android:strokeColor="#334155"
+        android:strokeWidth="2"
+        android:pathData="M180,45 h100 a8,8 0 0,1 8,8 v56 a8,8 0 0,1 -8,8 h-100 a8,8 0 0,1 -8,-8 v-56 a8,8 0 0,1 8,-8 z" />
+
+    <!-- Screen Inner Display -->
+    <path
+        android:fillColor="#030712"
+        android:pathData="M184,49 h92 a4,4 0 0,1 4,4 v48 a4,4 0 0,1 -4,4 h-92 a4,4 0 0,1 -4,-4 v-48 a4,4 0 0,1 4,-4 z" />
+
+    <!-- Screen Emerald Play Circle -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M230,77 m-18,0 a18,18 0 1,0 36,0 a18,18 0 1,0 -36,0" />
+
+    <!-- Screen Play Icon Polygon -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M226,69 L238,77 L226,85 Z" />
+
+    <!-- TV Stand Base -->
+    <path
+        android:fillColor="#334155"
+        android:pathData="M224,117 L220,125 L210,128 L250,128 L240,125 L236,117 Z" />
+    <path
+        android:fillColor="#475569"
+        android:pathData="M208,128 h44 v2 h-44 z" />
+
+    <!-- Brand Accent Line (Left Banner side) -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M24,48 h36 v4 h-36 z" />
+
+    <!-- Decorative Screen Wave Dots on Left -->
+    <path
+        android:fillColor="#34D399"
+        android:pathData="M66,48 m-2,2 a2,2 0 1,0 4,0 a2,2 0 1,0 -4,0" />
+
+    <!-- Safe TV Border Outline -->
+    <path
+        android:strokeColor="#1E293B"
+        android:strokeWidth="1.5"
+        android:pathData="M8,8 h304 a6,6 0 0,1 6,6 v152 a6,6 0 0,1 -6,6 h-304 a6,6 0 0,1 -6,-6 v-152 a6,6 0 0,1 6,-6 z" />
+</vector>
+

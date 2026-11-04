@@ -34,52 +34,82 @@ A restricted, sandboxed Kids TV launcher written in **Kotlin** for Android TV, G
 
 ```text
 android/
+├── gradlew, gradlew.bat                       # Gradle Wrapper scripts
+├── gradle/wrapper/                            # Gradle 8.5 distribution wrapper
 ├── build.gradle                               # Root Gradle build script
 ├── settings.gradle                            # Project name and module inclusion
+├── local.properties                           # Local Android SDK directory
 └── app/
-    ├── build.gradle                           # App module dependencies (Coroutines, Leanback, Lifecycle)
+    ├── build.gradle                           # App module config, dependencies & signingConfigs
+    ├── proguard-rules.pro                     # R8 rules keeping JS interface & models
+    ├── release.jks                            # Production release keystore
     └── src/
         └── main/
             ├── AndroidManifest.xml            # TV Leanback & Launcher intents, permissions
             ├── assets/
-                └── sample-tv-feed.json        # Bundled offline fallback video feed
+            │   └── sample-tv-feed.json        # Bundled offline fallback video feed
             ├── java/com/curatetv/app/
-                ├── MainActivity.kt            # TV catalog screen, D-Pad focus & hero spotlight
-                ├── model/
-                │   ├── TvFeed.kt              # TvFeed data class
-                │   ├── CategorySection.kt     # CategorySection data class
-                │   └── VideoItem.kt           # VideoItem data class with resolved thumbnails
-                ├── data/
-                │   ├── FeedRepository.kt      # GitHub sync, disk cache, and asset loader
-                │   └── ParentalControlManager.kt # SharedPreferences storage for PIN & blocked IDs
-                └── player/
-                    └── PlayerActivity.kt      # Sandboxed YouTube player & Safe Pause shield
+            │   ├── MainActivity.kt            # TV catalog screen, D-Pad focus & hero spotlight
+            │   ├── model/
+            │   │   ├── TvFeed.kt              # TvFeed data class
+            │   │   ├── CategorySection.kt     # CategorySection data class
+            │   │   └── VideoItem.kt           # VideoItem data class with resolved thumbnails
+            │   ├── data/
+            │   │   ├── FeedRepository.kt      # GitHub sync, disk cache, and asset loader
+            │   │   └── ParentalControlManager.kt # SharedPreferences storage for PIN & blocked IDs
+            │   └── player/
+            │       └── PlayerActivity.kt      # Sandboxed YouTube player & Safe Pause shield
             └── res/
-                ├── values/
-                │   ├── colors.xml             # Emerald & Dark slate theme
-                │   ├── strings.xml            # UI labels and RTL Arabic strings
-                │   └── styles.xml             # Theme.CurateTV
+                ├── drawable/                  # Vector drawables & TV Leanback 16:9 banner
+                ├── mipmap/                    # Launcher icons & adaptive icons
+                ├── values/                    # colors.xml, strings.xml, styles.xml
+                └── xml/                       # network_security_config.xml
 ```
 
 ---
 
-## 🛠️ How to Build & Run with Gradle / Android Studio
+## 🛠️ How to Build & Publish APK / AAB
 
-1. **Open in Android Studio:**
-   - Launch Android Studio and choose **Open an Existing Project**.
-   - Select the `android/` directory.
+### 1. Build Signed Release APK (For Direct Download, Sideloading, Fire TV):
+```bash
+cd android
+./gradlew assembleRelease
+# On Windows PowerShell:
+# .\gradlew.bat assembleRelease
+```
+The compiled signed APK is saved at:
+`android/app/build/outputs/apk/release/app-release.apk`
 
-2. **Build Debug APK via Command Line:**
-   ```bash
-   cd android
-   ./gradlew assembleDebug
-   ```
+### 2. Build Android App Bundle (For Google Play Store):
+```bash
+cd android
+./gradlew bundleRelease
+```
+The compiled bundle is saved at:
+`android/app/build/outputs/bundle/release/app-release.aab`
 
-3. **Locate APK:**
-   - The compiled APK is saved at:
-     `android/app/build/outputs/apk/debug/app-debug.apk`
+### 3. Build Debug APK (For Local Testing):
+```bash
+cd android
+./gradlew assembleDebug
+```
+Output: `android/app/build/outputs/apk/debug/app-debug.apk`
 
-4. **Install on Smart TV / Emulator:**
-   ```bash
-   adb install -r android/app/build/outputs/apk/debug/app-debug.apk
-   ```
+### 4. Install on Android TV / Smart TV / Emulator:
+```bash
+adb install -r android/app/build/outputs/apk/release/app-release.apk
+```
+
+---
+
+## 🔐 Keystore Signing Credentials
+The project includes an auto-configured `release.jks` keystore. To provide custom credentials via environment variables or properties:
+* `RELEASE_STORE_FILE` (default: `release.jks`)
+* `RELEASE_STORE_PASSWORD` (default: `curatetv123`)
+* `RELEASE_KEY_ALIAS` (default: `curatetv`)
+* `RELEASE_KEY_PASSWORD` (default: `curatetv123`)
+
+---
+
+## 🤖 Automated CI/CD (GitHub Actions)
+Pushing a git tag (e.g. `v2.0.0`) automatically builds both the signed Release APK and the Google Play Bundle (`.aab`), and publishes them as downloadable GitHub Release assets.

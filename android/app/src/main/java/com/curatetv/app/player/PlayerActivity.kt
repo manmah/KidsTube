@@ -110,6 +110,7 @@ class PlayerActivity : Activity() {
                 allowFileAccess = true
                 mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
                 cacheMode = WebSettings.LOAD_NO_CACHE
+                userAgentString = "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
             }
             addJavascriptInterface(YouTubeInterface(), "AndroidKidShield")
             webChromeClient = WebChromeClient()
@@ -350,7 +351,7 @@ class PlayerActivity : Activity() {
         autoAdvanceTimer?.cancel()
 
         val embedHtml = generateSandboxedHtml(currentVideo.youtubeId)
-        webView.loadDataWithBaseURL("https://www.youtube.com", embedHtml, "text/html", "UTF-8", null)
+        webView.loadDataWithBaseURL("https://curatetv.app", embedHtml, "text/html", "UTF-8", null)
         showHudTemporarily()
     }
 
@@ -395,7 +396,8 @@ class PlayerActivity : Activity() {
                                 'rel': 0,
                                 'iv_load_policy': 3,
                                 'playsinline': 1,
-                                'origin': 'https://www.youtube.com'
+                                host: 'https://www.youtube-nocookie.com',
+                                'origin': 'https://curatetv.app'
                             },
                             events: {
                                 'onReady': onPlayerReady,
