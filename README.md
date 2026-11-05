@@ -1,4 +1,4 @@
-# GreenKid TV (CurateTV) - Native Kotlin Android TV & Smart TV App
+# GreenKid TV - Native Kotlin Android TV & Smart TV App
 
 A restricted, sandboxed Kids TV launcher written in **Kotlin** for Android TV, Google TV, Fire TV, and mobile devices. It streams only curated YouTube videos from a remote GitHub JSON feed with strict navigational sandboxing and parental security.
 
@@ -13,7 +13,7 @@ A restricted, sandboxed Kids TV launcher written in **Kotlin** for Android TV, G
 
 2. **Strict YouTube Kid Shield (No External Recommendations)**
    - YouTube embedded player is configured with `controls=0`, `rel=0`, and strict CSS injection to hide YouTube's watermark, external channel links, and the "(More videos)" shelf.
-   - **Safe Pause Overlay**: When playback is paused or ended, CurateTV displays a full custom overlay preventing YouTube's recommendation thumbnails from appearing.
+   - **Safe Pause Overlay**: When playback is paused or ended, GreenKid TV displays a full custom overlay preventing YouTube's recommendation thumbnails from appearing.
 
 3. **Curated Next-Video Playback (Approved List Only)**
    - "Play Next" strictly advances through the current category's approved video list.
@@ -48,7 +48,7 @@ android/
             ├── AndroidManifest.xml            # TV Leanback & Launcher intents, permissions
             ├── assets/
             │   └── sample-tv-feed.json        # Bundled offline fallback video feed
-            ├── java/com/curatetv/app/
+            ├── java/com/greenkidtv/app/
             │   ├── MainActivity.kt            # TV catalog screen, D-Pad focus & hero spotlight
             │   ├── model/
             │   │   ├── TvFeed.kt              # TvFeed data class
@@ -105,9 +105,9 @@ adb install -r android/app/build/outputs/apk/release/app-release.apk
 ## 🔐 Keystore Signing Credentials
 The project includes an auto-configured `release.jks` keystore. To provide custom credentials via environment variables or properties:
 * `RELEASE_STORE_FILE` (default: `release.jks`)
-* `RELEASE_STORE_PASSWORD` (default: `curatetv123`)
-* `RELEASE_KEY_ALIAS` (default: `curatetv`)
-* `RELEASE_KEY_PASSWORD` (default: `curatetv123`)
+* `RELEASE_STORE_PASSWORD` (default: `greenkidtv123`)
+* `RELEASE_KEY_ALIAS` (default: `greenkidtv`)
+* `RELEASE_KEY_PASSWORD` (default: `greenkidtv123`)
 
 ---
 
