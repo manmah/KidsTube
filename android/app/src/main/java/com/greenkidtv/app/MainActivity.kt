@@ -256,15 +256,44 @@ class MainActivity : AppCompatActivity() {
 
         categoriesContainer.removeAllViews()
 
-        // Default hero spotlight to first video
-        val firstCategory = feed.categories.firstOrNull()
-        val firstVideo = firstCategory?.videos?.firstOrNull()
+        // Gather all videos across all categories
+        val allVideos = mutableListOf<VideoItem>()
+        feed.categories.forEach { cat ->
+            allVideos.addAll(cat.videos)
+        }
+        val distinctVideos = allVideos.distinctBy { it.youtubeId }
+
+        // 1. First Row: Latest / Recently Added Videos
+        val latestVideos = distinctVideos.take(12)
+        val latestCategory = CategorySection(
+            id = "latest-added",
+            title = "⭐ أحدث الفيديوهات المضافة",
+            description = "أحدث المقاطع المضافة خصيصاً لأطفالنا الأعزاء.",
+            videos = latestVideos
+        )
+
+        // 2. Second Row: Random Mix of Videos (shuffled each time the app opens)
+        val randomVideos = distinctVideos.shuffled(Random(System.currentTimeMillis())).take(12)
+        val randomCategory = CategorySection(
+            id = "random-mix",
+            title = "🎲 مقاطع متنوعة ومقترحة",
+            description = "مجموعة منوعة ومسلية من الفيديوهات المقترحة.",
+            videos = randomVideos
+        )
+
+        val displayCategories = mutableListOf<CategorySection>()
+        if (latestVideos.isNotEmpty()) displayCategories.add(latestCategory)
+        if (randomVideos.isNotEmpty()) displayCategories.add(randomCategory)
+        displayCategories.addAll(feed.categories)
+
+        // Default hero spotlight to first video of latest category
+        val firstVideo = latestVideos.firstOrNull() ?: feed.categories.firstOrNull()?.videos?.firstOrNull()
         if (firstVideo != null) {
-            updateSpotlight(firstVideo, firstCategory.videos)
+            updateSpotlight(firstVideo, latestVideos.ifEmpty { feed.categories.first().videos })
         }
 
         // Build Category Rails
-        for (category in feed.categories) {
+        for (category in displayCategories) {
             if (category.videos.isEmpty()) continue
 
             val catHeader = LinearLayout(this).apply {
