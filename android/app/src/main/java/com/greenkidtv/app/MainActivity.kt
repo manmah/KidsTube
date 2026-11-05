@@ -50,7 +50,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var heroChannel: TextView
     private lateinit var heroDescription: TextView
     private lateinit var heroWatchButton: Button
-    private lateinit var syncBadge: TextView
     private lateinit var categoriesContainer: LinearLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -100,22 +99,6 @@ class MainActivity : AppCompatActivity() {
             layoutParams = LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT, 1f)
         }
         navBar.addView(logoText)
-
-        syncBadge = TextView(this).apply {
-            text = "● Live GitHub Synced"
-            textSize = 12f
-            setTextColor(Color.parseColor("#34D399"))
-            setPadding(16, 8, 16, 8)
-            background = createRoundedDrawable("#064E3B", "#059669")
-        }
-        val badgeParams = LinearLayout.LayoutParams(
-            ViewGroup.LayoutParams.WRAP_CONTENT,
-            ViewGroup.LayoutParams.WRAP_CONTENT
-        ).apply {
-            setMargins(0, 0, 16, 0)
-        }
-        syncBadge.layoutParams = badgeParams
-        navBar.addView(syncBadge)
 
         val btnRefresh = Button(this).apply {
             text = "تحديث القائمة"
@@ -258,12 +241,8 @@ class MainActivity : AppCompatActivity() {
             if (result.isSuccess) {
                 val feed = result.getOrNull()
                 currentFeed = feed
-                syncBadge.text = "● Live GitHub Synced"
-                syncBadge.setTextColor(Color.parseColor("#34D399"))
                 renderFeed(feed)
             } else {
-                syncBadge.text = "● Local Cached List"
-                syncBadge.setTextColor(Color.parseColor("#FBBF24"))
                 Toast.makeText(this@MainActivity, "تعذر التحديث من الإنترنت، تم تحميل القائمة المحلية", Toast.LENGTH_SHORT).show()
                 val fallback = repository.getFeed(forceNetwork = false).getOrNull()
                 renderFeed(fallback)
