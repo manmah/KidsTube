@@ -17,6 +17,7 @@ import android.view.ViewGroup
 import android.view.WindowManager
 import android.webkit.JavascriptInterface
 import android.webkit.WebChromeClient
+import android.webkit.WebResourceRequest
 import android.webkit.WebSettings
 import android.webkit.WebView
 import android.webkit.WebViewClient
@@ -34,15 +35,12 @@ class PlayerActivity : Activity() {
 
     private lateinit var webView: WebView
     private lateinit var hudOverlay: View
-    private lateinit var safePauseOverlay: View
     private lateinit var upNextOverlay: View
     private lateinit var tvTitle: TextView
     private lateinit var tvChannel: TextView
     private lateinit var tvTimeDisplay: TextView
     private lateinit var tvNextTitle: TextView
     private lateinit var tvNextCountdown: TextView
-    private lateinit var pauseVideoTitle: TextView
-    private lateinit var pauseNextTitle: TextView
     private lateinit var progressBar: ProgressBar
     private lateinit var btnPlayPause: ImageButton
     private lateinit var btnPrev: ImageButton
@@ -113,13 +111,37 @@ class PlayerActivity : Activity() {
                 mediaPlaybackRequiresUserGesture = false
                 mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
                 cacheMode = WebSettings.LOAD_DEFAULT
+                setSupportMultipleWindows(false)
             }
 
-            webView.webChromeClient = WebChromeClient()
+            // Block all popups and new windows from opening externally
+            webView.webChromeClient = object : WebChromeClient() {
+                override fun onCreateWindow(view: WebView?, isDialog: Boolean, isUserGesture: Boolean, resultMsg: android.os.Message?): Boolean {
+                    return false
+                }
+            }
+
+            // Strictly intercept and prevent any external app or browser launching
             webView.webViewClient = object : WebViewClient() {
                 override fun onPageFinished(view: WebView?, url: String?) {
                     super.onPageFinished(view, url)
                     injectKidShieldCss()
+                }
+
+                override fun shouldOverrideUrlLoading(view: WebView?, request: WebResourceRequest?): Boolean {
+                    val uri = request?.url ?: return true
+                    val url = uri.toString()
+
+                    // Allow ONLY official YouTube iframe embeds and app origin
+                    if (url.contains("youtube-nocookie.com/embed/") ||
+                        url.contains("youtube.com/embed/") ||
+                        url.contains("greenkidtv.app")) {
+                        return false // Load strictly inside WebView
+                    }
+
+                    // Abort and prevent external app launch by forcing about:blank
+                    view?.loadUrl("about:blank")
+                    return true
                 }
             }
 
@@ -148,56 +170,19 @@ class PlayerActivity : Activity() {
         }
         root.addView(webView)
 
-        // 1. Safe Pause Shield Overlay (Blocks YouTube recommendations on pause)
-        safePauseOverlay = LinearLayout(this).apply {
-            orientation = LinearLayout.VERTICAL
-            gravity = Gravity.CENTER
-            setBackgroundColor(Color.parseColor("#EE090D16"))
-            setPadding(60, 60, 60, 60)
-            visibility = View.GONE
+        // Transparent Touch Interceptor View (Completely blocks direct touches/clicks from reaching YouTube iframe elements or links)
+        val touchInterceptor = View(this).apply {
             layoutParams = ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.MATCH_PARENT
             )
-
-            val pauseIcon = TextView(context).apply {
-                text = "⏸ متوقف مؤقتاً"
-                textSize = 28f
-                setTextColor(Color.WHITE)
-                setTypeface(null, Typeface.BOLD)
-                gravity = Gravity.CENTER
-                setPadding(0, 0, 0, 16)
+            isClickable = true
+            setBackgroundColor(Color.TRANSPARENT)
+            setOnClickListener {
+                togglePlayPause()
             }
-            addView(pauseIcon)
-
-            pauseVideoTitle = TextView(context).apply {
-                text = ""
-                textSize = 20f
-                setTextColor(Color.parseColor("#34D399"))
-                setTypeface(null, Typeface.BOLD)
-                gravity = Gravity.CENTER
-                setPadding(0, 0, 0, 8)
-            }
-            addView(pauseVideoTitle)
-
-            pauseNextTitle = TextView(context).apply {
-                text = ""
-                textSize = 14f
-                setTextColor(Color.parseColor("#94A3B8"))
-                gravity = Gravity.CENTER
-                setPadding(0, 0, 0, 12)
-            }
-            addView(pauseNextTitle)
-
-            val hintText = TextView(context).apply {
-                text = "اضغط زر التشغيل (OK) للمتابعة بأمان"
-                textSize = 14f
-                setTextColor(Color.parseColor("#94A3B8"))
-                gravity = Gravity.CENTER
-            }
-            addView(hintText)
         }
-        root.addView(safePauseOverlay)
+        root.addView(touchInterceptor)
 
         // 2. Up Next Auto-Advance Overlay
         upNextOverlay = LinearLayout(this).apply {
@@ -301,13 +286,7 @@ class PlayerActivity : Activity() {
 
         tvTitle.text = currentVideo.title
         tvChannel.text = "${currentVideo.channel} • (${currentIndex + 1}/${playlist.size})"
-        pauseVideoTitle.text = currentVideo.title
 
-        val nextIndex = (currentIndex + 1) % playlist.size
-        val nextVideo = playlist[nextIndex]
-        pauseNextTitle.text = "التالي: ${nextVideo.title}"
-
-        safePauseOverlay.visibility = View.GONE
         upNextOverlay.visibility = View.GONE
         autoAdvanceTimer?.cancel()
 
@@ -323,17 +302,8 @@ class PlayerActivity : Activity() {
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
                 <style>
-                    * { margin: 0; padding: 0; box-sizing: border-box; background: #000; overflow: hidden; }
+                    * { margin: 0; padding: 0; box-sizing: border-box; background: #000; overflow: hidden; pointer-events: none; }
                     html, body, #player { width: 100vw; height: 100vh; }
-                    /* Strict Shield: Hide YouTube UI, More Videos icon, channel logo, annotations */
-                    .ytp-watermark, .ytp-youtube-button, .ytp-pause-overlay, 
-                    .ytp-scroll-min, .ytp-endscreen-content, .ytp-ce-element,
-                    .ytp-show-cards-title, .ytp-cards-teaser, .ytp-paid-content-overlay {
-                        display: none !important;
-                        opacity: 0 !important;
-                        visibility: hidden !important;
-                        pointer-events: none !important;
-                    }
                 </style>
             </head>
             <body>
@@ -394,9 +364,7 @@ class PlayerActivity : Activity() {
     }
 
     private fun injectKidShieldCss() {
-        val css = ".ytp-watermark, .ytp-youtube-button, .ytp-pause-overlay, .ytp-scroll-min, .ytp-endscreen-content { display: none !important; }"
-        val js = "var style = document.createElement('style'); style.innerHTML = '$css'; document.head.appendChild(style);"
-        webView.evaluateJavascript(js, null)
+        // Not needed anymore because touchInterceptor blocks all touches and pointer-events are disabled inside iframe
     }
 
     fun playNextApprovedVideo() {
@@ -415,11 +383,9 @@ class PlayerActivity : Activity() {
         if (isPlaying) {
             webView.evaluateJavascript("sendCommand('pause');", null)
             isPlaying = false
-            safePauseOverlay.visibility = View.VISIBLE
         } else {
             webView.evaluateJavascript("sendCommand('play');", null)
             isPlaying = true
-            safePauseOverlay.visibility = View.GONE
         }
         showHudTemporarily()
     }
@@ -478,10 +444,6 @@ class PlayerActivity : Activity() {
                 return true
             }
             KeyEvent.KEYCODE_BACK -> {
-                if (safePauseOverlay.visibility == View.VISIBLE) {
-                    togglePlayPause()
-                    return true
-                }
                 finish()
                 return true
             }
@@ -503,17 +465,14 @@ class PlayerActivity : Activity() {
                 when (state) {
                     0 -> { // Ended -> Auto advance strictly from approved list
                         isPlaying = false
-                        safePauseOverlay.visibility = View.GONE
                         showUpNextAutoAdvance()
                     }
                     1 -> { // Playing
                         isPlaying = true
-                        safePauseOverlay.visibility = View.GONE
                         upNextOverlay.visibility = View.GONE
                     }
-                    2 -> { // Paused -> Shield against YouTube recommendations
+                    2 -> { // Paused
                         isPlaying = false
-                        safePauseOverlay.visibility = View.VISIBLE
                     }
                 }
             }
