@@ -46,7 +46,7 @@ class FeedRepository(private val context: Context) {
      * 4. If local cache missing, falls back to bundled sample-tv-feed.json in assets
      */
     suspend fun getFeed(forceNetwork: Boolean = true): Result<TvFeed> = withContext(Dispatchers.IO) {
-        val targetUrl = normalizeGitHubUrl(parentalManager.getFeedUrl())
+        val targetUrl = normalizeGitHubUrl(ParentalControlManager.DEFAULT_FEED_URL)
 
         var jsonString: String? = null
         var isFromNetwork = false
@@ -115,6 +115,68 @@ class FeedRepository(private val context: Context) {
             Result.success(feed)
         } catch (e: Exception) {
             Log.e(TAG, "Error parsing feed JSON", e)
+            Result.failure(e)
+        }
+    }
+
+    /**
+     * Loads full unfiltered feed containing all videos (including blocked ones) for Parental Control management
+     */
+    suspend fun getUnfilteredFeed(): Result<TvFeed> = withContext(Dispatchers.IO) {
+        var jsonString: String? = null
+        try {
+            val cacheFile = File(context.cacheDir, cacheFileName)
+            if (cacheFile.exists()) {
+                jsonString = cacheFile.readText(Charsets.UTF_8)
+            }
+        } catch (e: Exception) {}
+
+        if (jsonString.isNullOrBlank()) {
+            try {
+                val assetStream = context.assets.open("sample-tv-feed.json")
+                val reader = BufferedReader(InputStreamReader(assetStream, "UTF-8"))
+                jsonString = reader.readText()
+                reader.close()
+            } catch (e: Exception) {}
+        }
+
+        if (jsonString.isNullOrBlank()) {
+            return@withContext Result.failure(Exception("No feed data available."))
+        }
+
+        try {
+            val root = JSONObject(jsonString!!)
+            val categoriesArray = root.optJSONArray("categories") ?: JSONArray()
+            val categoriesList = mutableListOf<CategorySection>()
+
+            for (i in 0 until categoriesArray.length()) {
+                val catObj = categoriesArray.optJSONObject(i) ?: continue
+                val catId = catObj.optString("id", "")
+                val catTitle = catObj.optString("title", "")
+                val catDesc = catObj.optString("description", "")
+
+                val videosArray = catObj.optJSONArray("videos") ?: JSONArray()
+                val videosList = mutableListOf<VideoItem>()
+
+                for (j in 0 until videosArray.length()) {
+                    val vObj = videosArray.optJSONObject(j) ?: continue
+                    videosList.add(
+                        VideoItem(
+                            id = vObj.optString("id", ""),
+                            youtubeId = vObj.optString("youtubeId", ""),
+                            title = vObj.optString("title", ""),
+                            channel = vObj.optString("channel", ""),
+                            duration = vObj.optString("duration", "00:00"),
+                            description = vObj.optString("description", ""),
+                            thumbnail = vObj.optString("thumbnail", ""),
+                            badge = vObj.optString("badge", "")
+                        )
+                    )
+                }
+                categoriesList.add(CategorySection(catId, catTitle, catDesc, videosList))
+            }
+            Result.success(TvFeed(categories = categoriesList))
+        } catch (e: Exception) {
             Result.failure(e)
         }
     }

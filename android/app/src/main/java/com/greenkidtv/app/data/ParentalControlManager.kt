@@ -9,7 +9,6 @@ class ParentalControlManager(context: Context) {
     companion object {
         private const val KEY_BLOCKED_VIDEOS = "blocked_video_ids"
         private const val KEY_PARENT_PIN = "parent_pin"
-        private const val KEY_FEED_URL = "custom_feed_url"
         const val DEFAULT_FEED_URL = "https://raw.githubusercontent.com/manmah/KidsTube/main/public/sample-tv-feed.json"
     }
 
@@ -31,14 +30,6 @@ class ParentalControlManager(context: Context) {
 
     fun isVideoBlocked(videoId: String): Boolean {
         return getBlockedVideoIds().contains(videoId)
-    }
-
-    fun getFeedUrl(): String {
-        return prefs.getString(KEY_FEED_URL, DEFAULT_FEED_URL) ?: DEFAULT_FEED_URL
-    }
-
-    fun setFeedUrl(url: String) {
-        prefs.edit().putString(KEY_FEED_URL, url.trim()).apply()
     }
 
     fun verifyPin(input: String): Boolean {

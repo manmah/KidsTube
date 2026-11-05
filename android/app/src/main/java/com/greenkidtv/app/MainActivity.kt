@@ -13,6 +13,7 @@ import android.view.ViewGroup
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
+import android.widget.FrameLayout
 import android.widget.HorizontalScrollView
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -328,19 +329,51 @@ class MainActivity : AppCompatActivity() {
         }
         card.layoutParams = cardParams
 
-        // Thumbnail ImageView
-        val thumbnailView = ImageView(this).apply {
-            scaleType = ImageView.ScaleType.CENTER_CROP
+        // Thumbnail FrameLayout with overlay Hide button
+        val frameLayout = FrameLayout(this).apply {
             layoutParams = LinearLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 200
             )
             background = createRoundedDrawable("#1E293B", "#334155")
         }
-        card.addView(thumbnailView)
+
+        val thumbnailView = ImageView(this).apply {
+            scaleType = ImageView.ScaleType.CENTER_CROP
+            layoutParams = LinearLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT
+            )
+        }
+        frameLayout.addView(thumbnailView)
 
         // Async load thumbnail image
         loadThumbnailAsync(thumbnailView, video.getResolvedThumbnail())
+
+        // Hide / Lock button on card
+        val hideButton = TextView(this).apply {
+            text = "❌ إخفاء"
+            textSize = 11f
+            setTextColor(Color.WHITE)
+            setBackgroundColor(Color.parseColor("#CCEF4444")) // Red badge
+            setPadding(12, 6, 12, 6)
+            isClickable = true
+            isFocusable = false
+            setOnClickListener {
+                showParentalGateForHiding(video)
+            }
+        }
+        val hideParams = FrameLayout.LayoutParams(
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        ).apply {
+            gravity = Gravity.TOP or Gravity.END
+            setMargins(8, 8, 8, 8)
+        }
+        hideButton.layoutParams = hideParams
+        frameLayout.addView(hideButton)
+
+        card.addView(frameLayout)
 
         val titleView = TextView(this).apply {
             text = video.title
@@ -418,7 +451,7 @@ class MainActivity : AppCompatActivity() {
 
         AlertDialog.Builder(this, android.R.style.Theme_DeviceDefault_Dialog_Alert)
             .setTitle("🔒 سؤال التحقق الأبوي")
-            .setMessage("للأمان، يرجى حل هذه المسألة الحسابية للوصول لإعدادات الرقابة الأبوية:\n\nما هو حاصل ضرب $num1 × $num2 ؟")
+            .setMessage("للأمان، يرجى حل هذه المسألة الحسابية للوصول لإعدادات الرقابة الأبوية (إدارة الفيديوهات المخفية):\n\nما هو حاصل ضرب $num1 × $num2 ؟")
             .setView(input)
             .setPositiveButton("تأكيد") { _, _ ->
                 val entered = input.text.toString().trim()
@@ -432,31 +465,82 @@ class MainActivity : AppCompatActivity() {
             .show()
     }
 
-    private fun showParentalSettings() {
-        val inputUrl = EditText(this).apply {
-            setText(parentalManager.getFeedUrl())
+    private fun showParentalGateForHiding(video: VideoItem) {
+        val num1 = Random.nextInt(3, 9)
+        val num2 = Random.nextInt(3, 9)
+        val answer = num1 * num2
+
+        val input = EditText(this).apply {
+            inputType = android.text.InputType.TYPE_CLASS_NUMBER
+            hint = "الناتج؟"
             setTextColor(Color.WHITE)
-            textSize = 13f
+            setHintTextColor(Color.GRAY)
         }
 
         AlertDialog.Builder(this, android.R.style.Theme_DeviceDefault_Dialog_Alert)
-            .setTitle("إعدادات رابط القائمة من GitHub")
-            .setMessage("يمكنك تعديل رابط ملف JSON لقائمتك على GitHub. سيتم تحديث القائمة تلقائياً:")
-            .setView(inputUrl)
-            .setPositiveButton("حفظ وتحديث") { _, _ ->
-                val newUrl = inputUrl.text.toString().trim()
-                if (newUrl.isNotBlank()) {
-                    parentalManager.setFeedUrl(newUrl)
-                    loadFeed(forceNetwork = true)
-                    Toast.makeText(this, "تم تحديث الرابط بنجاح", Toast.LENGTH_SHORT).show()
+            .setTitle("🔒 سؤال التحقق الأبوي لإخفاء الفيديو")
+            .setMessage("للأمان، يرجى حل هذه المسألة لإخفاء هذا الفيديو:\n\nما هو حاصل ضرب $num1 × $num2 ؟")
+            .setView(input)
+            .setPositiveButton("إخفاء الفيديو") { _, _ ->
+                val entered = input.text.toString().trim()
+                if (entered == answer.toString()) {
+                    parentalManager.blockVideo(video.id)
+                    parentalManager.blockVideo(video.youtubeId)
+                    loadFeed(forceNetwork = false)
+                    Toast.makeText(this, "تم إخفاء الفيديو بنجاح", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "الإجابة غير صحيحة", Toast.LENGTH_SHORT).show()
                 }
             }
-            .setNeutralButton("استعادة الرابط الافتراضي") { _, _ ->
-                parentalManager.setFeedUrl(ParentalControlManager.DEFAULT_FEED_URL)
-                loadFeed(forceNetwork = true)
-            }
-            .setNegativeButton("إغلاق", null)
+            .setNegativeButton("إلغاء", null)
             .show()
+    }
+
+    private fun showParentalSettings() {
+        lifecycleScope.launch {
+            val result = repository.getUnfilteredFeed()
+            val unfilteredFeed = result.getOrNull()
+            if (unfilteredFeed == null || unfilteredFeed.categories.isEmpty()) {
+                Toast.makeText(this@MainActivity, "تعذر تحميل قائمة الفيديوهات", Toast.LENGTH_SHORT).show()
+                return@launch
+            }
+
+            val allVideos = mutableListOf<VideoItem>()
+            unfilteredFeed.categories.forEach { cat ->
+                allVideos.addAll(cat.videos)
+            }
+
+            val blockedIds = parentalManager.getBlockedVideoIds()
+            val hiddenVideos = allVideos.filter { blockedIds.contains(it.id) || blockedIds.contains(it.youtubeId) }
+
+            if (hiddenVideos.isEmpty()) {
+                AlertDialog.Builder(this@MainActivity, android.R.style.Theme_DeviceDefault_Dialog_Alert)
+                    .setTitle("🔒 الفيديوهات المخفية")
+                    .setMessage("لا توجد أي فيديوهات مخفية حالياً.\n\nيمكنك إخفاء أي فيديو في أي وقت بالضغط على زر (❌ إخفاء) الموجود على بطاقة الفيديو.")
+                    .setPositiveButton("حسناً", null)
+                    .show()
+                return@launch
+            }
+
+            val videoTitles = hiddenVideos.map { "📺 ${it.title}" }.toTypedArray()
+            val selectedToRestore = BooleanArray(hiddenVideos.size) { false }
+
+            AlertDialog.Builder(this@MainActivity, android.R.style.Theme_DeviceDefault_Dialog_Alert)
+                .setTitle("🔒 الفيديوهات المخفية حالياً (اختر لإظهارها)")
+                .setMultiChoiceItems(videoTitles, selectedToRestore) { _, which, isChecked ->
+                    if (isChecked) {
+                        val vid = hiddenVideos[which]
+                        parentalManager.unblockVideo(vid.id)
+                        parentalManager.unblockVideo(vid.youtubeId)
+                    }
+                }
+                .setPositiveButton("إظهار المحدد") { _, _ ->
+                    loadFeed(forceNetwork = false)
+                    Toast.makeText(this@MainActivity, "تم إظهار الفيديوهات المحددة بنجاح", Toast.LENGTH_SHORT).show()
+                }
+                .setNegativeButton("إغلاق", null)
+                .show()
+        }
     }
 
     private fun createRoundedDrawable(bgColor: String, borderColor: String): GradientDrawable {
