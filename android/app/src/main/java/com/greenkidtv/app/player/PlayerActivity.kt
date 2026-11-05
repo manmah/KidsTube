@@ -180,6 +180,15 @@ class PlayerActivity : Activity() {
             }
             addView(pauseVideoTitle)
 
+            pauseNextTitle = TextView(context).apply {
+                text = ""
+                textSize = 14f
+                setTextColor(Color.parseColor("#94A3B8"))
+                gravity = Gravity.CENTER
+                setPadding(0, 0, 0, 12)
+            }
+            addView(pauseNextTitle)
+
             val hintText = TextView(context).apply {
                 text = "اضغط زر التشغيل (OK) للمتابعة بأمان"
                 textSize = 14f
