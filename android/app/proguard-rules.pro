@@ -1,6 +1,12 @@
 # Proguard / R8 Configuration for GreenKid TV
 
 # Keep WebView JavaScript Interface callbacks for YouTube Player integration
+-keep class com.greenkidtv.app.player.PlayerActivity$YouTubeInterface {
+    @android.webkit.JavascriptInterface <methods>;
+}
+-keepclassmembers class com.greenkidtv.app.player.PlayerActivity$YouTubeInterface {
+    @android.webkit.JavascriptInterface <methods>;
+}
 -keepclassmembers class * {
     @android.webkit.JavascriptInterface <methods>;
 }

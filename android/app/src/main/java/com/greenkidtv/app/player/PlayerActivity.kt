@@ -26,6 +26,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.ProgressBar
 import android.widget.TextView
+import android.widget.Toast
 import com.greenkidtv.app.model.VideoItem
 import java.io.Serializable
 
@@ -74,18 +75,22 @@ class PlayerActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Keep screen on for TV playback
+        // Keep screen on for playback
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
 
         // Immersive sticky fullscreen
-        window.decorView.systemUiVisibility = (
-            View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                or View.SYSTEM_UI_FLAG_FULLSCREEN
-                or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-        )
+        try {
+            window.decorView.systemUiVisibility = (
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                    or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                    or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                    or View.SYSTEM_UI_FLAG_FULLSCREEN
+                    or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+            )
+        } catch (e: Exception) {
+            // Ignore system UI flags on strict OEM skins if unsupported
+        }
 
         val passedList = intent.getSerializableExtra(EXTRA_PLAYLIST) as? ArrayList<VideoItem>
         if (!passedList.isNullOrEmpty()) {
@@ -99,25 +104,30 @@ class PlayerActivity : Activity() {
 
     @SuppressLint("SetJavaScriptEnabled")
     private fun setupViews() {
-        setContentView(createPlayerLayout())
+        try {
+            setContentView(createPlayerLayout())
 
-        webView.settings.apply {
-            javaScriptEnabled = true
-            domStorageEnabled = true
-            mediaPlaybackRequiresUserGesture = false
-            mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
-            cacheMode = WebSettings.LOAD_DEFAULT
-        }
-
-        webView.webChromeClient = WebChromeClient()
-        webView.webViewClient = object : WebViewClient() {
-            override fun onPageFinished(view: WebView?, url: String?) {
-                super.onPageFinished(view, url)
-                injectKidShieldCss()
+            webView.settings.apply {
+                javaScriptEnabled = true
+                domStorageEnabled = true
+                mediaPlaybackRequiresUserGesture = false
+                mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
+                cacheMode = WebSettings.LOAD_DEFAULT
             }
-        }
 
-        webView.addJavascriptInterface(YouTubeInterface(), "AndroidKidShield")
+            webView.webChromeClient = WebChromeClient()
+            webView.webViewClient = object : WebViewClient() {
+                override fun onPageFinished(view: WebView?, url: String?) {
+                    super.onPageFinished(view, url)
+                    injectKidShieldCss()
+                }
+            }
+
+            webView.addJavascriptInterface(YouTubeInterface(), "AndroidKidShield")
+        } catch (e: Exception) {
+            Toast.makeText(this, "تعذر تشغيل المشغل: ${e.localizedMessage}", Toast.LENGTH_LONG).show()
+            finish()
+        }
     }
 
     private fun createPlayerLayout(): View {
