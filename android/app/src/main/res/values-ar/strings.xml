@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">GreenKid TV</string>
+    <string name="feed_refresh">تحديث القائمة</string>
+    <string name="parental_control">الرقابة الأبوية 🔒</string>
+    <string name="lang_switch">🌐 English</string>
+    <string name="featured_badge">⭐ الفيديو المميز المختصر</string>
+    <string name="hero_default_title">جاري تحميل محتوى آمن للأطفال...</string>
+    <string name="hero_default_channel">قناة عمر وهنا الرسمية</string>
+    <string name="hero_default_desc">فيديوهات تعليمية وتربوية مختارة بعناية لحماية الأطفال من المحتوى غير المرغوب فيه.</string>
+    <string name="watch_now">▶ مشاهدة الآن (OK)</string>
+    <string name="latest_category_title">⭐ أحدث الفيديوهات المضافة</string>
+    <string name="latest_category_desc">أحدث المقاطع المضافة خصيصاً لأطفالنا الأعزاء.</string>
+     original_category_title
+    <string name="random_category_title">🎲 مقاطع متنوعة ومقترحة</string>
+    <string name="random_category_desc">مجموعة منوعة ومسلية من الفيديوهات المقترحة.</string>
+    <string name="hide_video">❌ إخفاء</string>
+    <string name="parental_gate_title">🔒 سؤال التحقق الأبوي</string>
+    <string name="parental_gate_msg">للأمان، يرجى حل هذه المسألة الحسابية للوصول لإعدادات الرقابة الأبوية (إدارة الفيديوهات المخفية):\n\nما هو حاصل ضرب %1$d × %2$d ؟</string>
+    <string name="parental_gate_hide_title">🔒 سؤال التحقق الأبوي لإخفاء الفيديو</string>
+    <string name="parental_gate_hide_msg">للأمان، يرجى حل هذه المسألة لإخفاء هذا الفيديو:\n\nما هو حاصل ضرب %1$d × %2$d ؟</string>
+    <string name="confirm">تأكيد</string>
+    <string name="cancel">إلغاء</string>
+    <string name="close">إغلاق</string>
+    <string name="hidden_videos_title">🔒 الفيديوهات المخفية حالياً (اختر لإظهارها)</string>
+    <string name="no_hidden_videos_msg">لا توجد أي فيديوهات مخفية حالياً.\n\nيمكنك إخفاء أي فيديو في أي وقت بالضغط على زر (❌ إخفاء) الموجود على بطاقة الفيديو.</string>
+    <string name="restore_selected">إظهار المحدد</string>
+    <string name="toast_video_hidden">تم إخفاء الفيديو بنجاح</string>
+    <string name="toast_videos_restored">تم إظهار الفيديوهات المحددة بنجاح</string>
+    <string name="toast_wrong_answer">الإجابة غير صحيحة</string>
+    <string name="toast_network_error">تعذر التحديث من الإنترنت، تم تحميل القائمة المحلية</string>
+    <string name="up_next_header">📺 الفيديو التالي في القائمة الآمنة</string>
+    <string name="up_next_countdown">يبدأ تلقائياً خلال %d ثوانٍ...</string>
+    <string name="play_now">▶ تشغيل الآن (OK)</string>
+</resources>

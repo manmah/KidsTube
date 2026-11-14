@@ -51,27 +51,46 @@ class MainActivity : AppCompatActivity() {
     private lateinit var heroChannel: TextView
     private lateinit var heroDescription: TextView
     private lateinit var heroWatchButton: Button
+    private lateinit var btnLanguage: Button
+    private lateinit var btnRefresh: Button
+    private lateinit var btnParental: Button
     private lateinit var categoriesContainer: LinearLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        repository = FeedRepository(this)
+        parentalManager = ParentalControlManager(this)
+
+        applyLocale()
         super.onCreate(savedInstanceState)
 
         // TV screen awake & fullscreen
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-        window.decorView.systemUiVisibility = (
-            View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                or View.SYSTEM_UI_FLAG_FULLSCREEN
-                or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-        )
-
-        repository = FeedRepository(this)
-        parentalManager = ParentalControlManager(this)
+        try {
+            window.decorView.systemUiVisibility = (
+                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                    or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                    or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                    or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                    or View.SYSTEM_UI_FLAG_FULLSCREEN
+                    or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+            )
+        } catch (e: Exception) {}
 
         setupUI()
         loadFeed(forceNetwork = true)
+    }
+
+    private fun applyLocale() {
+        val lang = parentalManager.getLanguage()
+        val locale = java.util.Locale(lang)
+        java.util.Locale.setDefault(locale)
+        val config = resources.configuration
+        config.setLocale(locale)
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN_MR1) {
+            config.setLayoutDirection(locale)
+        }
+        @Suppress("DEPRECATION")
+        resources.updateConfiguration(config, resources.displayMetrics)
     }
 
     private fun setupUI() {
@@ -101,8 +120,29 @@ class MainActivity : AppCompatActivity() {
         }
         navBar.addView(logoText)
 
-        val btnRefresh = Button(this).apply {
-            text = "تحديث القائمة"
+        // Language Switcher Button (🌐 English / 🌐 العربية)
+        btnLanguage = Button(this).apply {
+            text = getString(R.string.lang_switch)
+            textSize = 12f
+            setTextColor(Color.WHITE)
+            background = createFocusableButtonDrawable("#1E293B", "#3B82F6")
+            setOnClickListener {
+                val newLang = if (parentalManager.isArabic()) "en" else "ar"
+                parentalManager.setLanguage(newLang)
+                recreate()
+            }
+        }
+        val langParams = LinearLayout.LayoutParams(
+            ViewGroup.LayoutParams.WRAP_CONTENT,
+            ViewGroup.LayoutParams.WRAP_CONTENT
+        ).apply {
+            setMargins(0, 0, 12, 0)
+        }
+        btnLanguage.layoutParams = langParams
+        navBar.addView(btnLanguage)
+
+        btnRefresh = Button(this).apply {
+            text = getString(R.string.feed_refresh)
             textSize = 12f
             setTextColor(Color.WHITE)
             background = createFocusableButtonDrawable("#1E293B", "#10B981")
@@ -117,8 +157,8 @@ class MainActivity : AppCompatActivity() {
         btnRefresh.layoutParams = refreshParams
         navBar.addView(btnRefresh)
 
-        val btnParental = Button(this).apply {
-            text = "الرقابة الأبوية 🔒"
+        btnParental = Button(this).apply {
+            text = getString(R.string.parental_control)
             textSize = 12f
             setTextColor(Color.WHITE)
             background = createFocusableButtonDrawable("#1E293B", "#10B981")
@@ -172,7 +212,7 @@ class MainActivity : AppCompatActivity() {
             setPadding(32, 28, 32, 28)
 
             val badge = TextView(context).apply {
-                text = "⭐ الفيديو المميز المختصر"
+                text = getString(R.string.featured_badge)
                 textSize = 12f
                 setTextColor(Color.parseColor("#34D399"))
                 setTypeface(null, Typeface.BOLD)
@@ -180,7 +220,7 @@ class MainActivity : AppCompatActivity() {
             addView(badge)
 
             heroTitle = TextView(context).apply {
-                text = "جاري تحميل محتوى آمن للأطفال..."
+                text = getString(R.string.hero_default_title)
                 textSize = 24f
                 setTextColor(Color.WHITE)
                 setTypeface(null, Typeface.BOLD)
@@ -189,7 +229,7 @@ class MainActivity : AppCompatActivity() {
             addView(heroTitle)
 
             heroChannel = TextView(context).apply {
-                text = "قناة عمر وهنا الرسمية"
+                text = getString(R.string.hero_default_channel)
                 textSize = 14f
                 setTextColor(Color.parseColor("#94A3B8"))
                 setPadding(0, 0, 0, 8)
@@ -197,7 +237,7 @@ class MainActivity : AppCompatActivity() {
             addView(heroChannel)
 
             heroDescription = TextView(context).apply {
-                text = "فيديوهات تعليمية وتربوية مختارة بعناية لحماية الأطفال من المحتوى غير المرغوب فيه."
+                text = getString(R.string.hero_default_desc)
                 textSize = 13f
                 setTextColor(Color.parseColor("#CBD5E1"))
                 maxLines = 2
@@ -206,7 +246,7 @@ class MainActivity : AppCompatActivity() {
             addView(heroDescription)
 
             heroWatchButton = Button(context).apply {
-                text = "▶ مشاهدة الآن (OK)"
+                text = getString(R.string.watch_now)
                 textSize = 14f
                 setTextColor(Color.WHITE)
                 setTypeface(null, Typeface.BOLD)
@@ -244,7 +284,7 @@ class MainActivity : AppCompatActivity() {
                 currentFeed = feed
                 renderFeed(feed)
             } else {
-                Toast.makeText(this@MainActivity, "تعذر التحديث من الإنترنت، تم تحميل القائمة المحلية", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@MainActivity, getString(R.string.toast_network_error), Toast.LENGTH_SHORT).show()
                 val fallback = repository.getFeed(forceNetwork = false).getOrNull()
                 renderFeed(fallback)
             }
@@ -267,8 +307,8 @@ class MainActivity : AppCompatActivity() {
         val latestVideos = distinctVideos.take(12)
         val latestCategory = CategorySection(
             id = "latest-added",
-            title = "⭐ أحدث الفيديوهات المضافة",
-            description = "أحدث المقاطع المضافة خصيصاً لأطفالنا الأعزاء.",
+            title = getString(R.string.latest_category_title),
+            description = getString(R.string.latest_category_desc),
             videos = latestVideos
         )
 
@@ -276,8 +316,8 @@ class MainActivity : AppCompatActivity() {
         val randomVideos = distinctVideos.shuffled(Random(System.currentTimeMillis())).take(12)
         val randomCategory = CategorySection(
             id = "random-mix",
-            title = "🎲 مقاطع متنوعة ومقترحة",
-            description = "مجموعة منوعة ومسلية من الفيديوهات المقترحة.",
+            title = getString(R.string.random_category_title),
+            description = getString(R.string.random_category_desc),
             videos = randomVideos
         )
 
@@ -381,7 +421,7 @@ class MainActivity : AppCompatActivity() {
 
         // Hide / Lock button on card
         val hideButton = TextView(this).apply {
-            text = "❌ إخفاء"
+            text = getString(R.string.hide_video)
             textSize = 11f
             setTextColor(Color.WHITE)
             setBackgroundColor(Color.parseColor("#CCEF4444")) // Red badge
@@ -448,7 +488,7 @@ class MainActivity : AppCompatActivity() {
         highlightedCategoryVideos = categoryList
         heroTitle.text = video.title
         heroChannel.text = "${video.channel} • ${video.duration} ${if (video.badge.isNotBlank()) "• ${video.badge}" else ""}"
-        heroDescription.text = if (video.description.isNotBlank()) video.description else "شاهد هذا المقطع المميز والآمن من قائمتك المختارة."
+        heroDescription.text = if (video.description.isNotBlank()) video.description else getString(R.string.hero_default_desc)
     }
 
     private fun loadThumbnailAsync(imageView: ImageView, url: String) {
@@ -473,24 +513,24 @@ class MainActivity : AppCompatActivity() {
 
         val input = EditText(this).apply {
             inputType = android.text.InputType.TYPE_CLASS_NUMBER
-            hint = "الناتج؟"
+            hint = "?"
             setTextColor(Color.WHITE)
             setHintTextColor(Color.GRAY)
         }
 
         AlertDialog.Builder(this, android.R.style.Theme_DeviceDefault_Dialog_Alert)
-            .setTitle("🔒 سؤال التحقق الأبوي")
-            .setMessage("للأمان، يرجى حل هذه المسألة الحسابية للوصول لإعدادات الرقابة الأبوية (إدارة الفيديوهات المخفية):\n\nما هو حاصل ضرب $num1 × $num2 ؟")
+            .setTitle(getString(R.string.parental_gate_title))
+            .setMessage(getString(R.string.parental_gate_msg, num1, num2))
             .setView(input)
-            .setPositiveButton("تأكيد") { _, _ ->
+            .setPositiveButton(getString(R.string.confirm)) { _, _ ->
                 val entered = input.text.toString().trim()
                 if (entered == answer.toString()) {
                     showParentalSettings()
                 } else {
-                    Toast.makeText(this, "الإجابة غير صحيحة", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.toast_wrong_answer), Toast.LENGTH_SHORT).show()
                 }
             }
-            .setNegativeButton("إلغاء", null)
+            .setNegativeButton(getString(R.string.cancel), null)
             .show()
     }
 
@@ -501,27 +541,27 @@ class MainActivity : AppCompatActivity() {
 
         val input = EditText(this).apply {
             inputType = android.text.InputType.TYPE_CLASS_NUMBER
-            hint = "الناتج؟"
+            hint = "?"
             setTextColor(Color.WHITE)
             setHintTextColor(Color.GRAY)
         }
 
         AlertDialog.Builder(this, android.R.style.Theme_DeviceDefault_Dialog_Alert)
-            .setTitle("🔒 سؤال التحقق الأبوي لإخفاء الفيديو")
-            .setMessage("للأمان، يرجى حل هذه المسألة لإخفاء هذا الفيديو:\n\nما هو حاصل ضرب $num1 × $num2 ؟")
+            .setTitle(getString(R.string.parental_gate_hide_title))
+            .setMessage(getString(R.string.parental_gate_hide_msg, num1, num2))
             .setView(input)
-            .setPositiveButton("إخفاء الفيديو") { _, _ ->
+            .setPositiveButton(getString(R.string.hide_video)) { _, _ ->
                 val entered = input.text.toString().trim()
                 if (entered == answer.toString()) {
                     parentalManager.blockVideo(video.id)
                     parentalManager.blockVideo(video.youtubeId)
                     loadFeed(forceNetwork = false)
-                    Toast.makeText(this, "تم إخفاء الفيديو بنجاح", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.toast_video_hidden), Toast.LENGTH_SHORT).show()
                 } else {
-                    Toast.makeText(this, "الإجابة غير صحيحة", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, getString(R.string.toast_wrong_answer), Toast.LENGTH_SHORT).show()
                 }
             }
-            .setNegativeButton("إلغاء", null)
+            .setNegativeButton(getString(R.string.cancel), null)
             .show()
     }
 
@@ -544,9 +584,9 @@ class MainActivity : AppCompatActivity() {
 
             if (hiddenVideos.isEmpty()) {
                 AlertDialog.Builder(this@MainActivity, android.R.style.Theme_DeviceDefault_Dialog_Alert)
-                    .setTitle("🔒 الفيديوهات المخفية")
-                    .setMessage("لا توجد أي فيديوهات مخفية حالياً.\n\nيمكنك إخفاء أي فيديو في أي وقت بالضغط على زر (❌ إخفاء) الموجود على بطاقة الفيديو.")
-                    .setPositiveButton("حسناً", null)
+                    .setTitle(getString(R.string.hidden_videos_title))
+                    .setMessage(getString(R.string.no_hidden_videos_msg))
+                    .setPositiveButton(getString(R.string.confirm), null)
                     .show()
                 return@launch
             }
@@ -555,7 +595,7 @@ class MainActivity : AppCompatActivity() {
             val selectedToRestore = BooleanArray(hiddenVideos.size) { false }
 
             AlertDialog.Builder(this@MainActivity, android.R.style.Theme_DeviceDefault_Dialog_Alert)
-                .setTitle("🔒 الفيديوهات المخفية حالياً (اختر لإظهارها)")
+                .setTitle(getString(R.string.hidden_videos_title))
                 .setMultiChoiceItems(videoTitles, selectedToRestore) { _, which, isChecked ->
                     if (isChecked) {
                         val vid = hiddenVideos[which]
@@ -563,11 +603,11 @@ class MainActivity : AppCompatActivity() {
                         parentalManager.unblockVideo(vid.youtubeId)
                     }
                 }
-                .setPositiveButton("إظهار المحدد") { _, _ ->
+                .setPositiveButton(getString(R.string.restore_selected)) { _, _ ->
                     loadFeed(forceNetwork = false)
-                    Toast.makeText(this@MainActivity, "تم إظهار الفيديوهات المحددة بنجاح", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, getString(R.string.toast_videos_restored), Toast.LENGTH_SHORT).show()
                 }
-                .setNegativeButton("إغلاق", null)
+                .setNegativeButton(getString(R.string.close), null)
                 .show()
         }
     }

@@ -9,6 +9,7 @@ class ParentalControlManager(context: Context) {
     companion object {
         private const val KEY_BLOCKED_VIDEOS = "blocked_video_ids"
         private const val KEY_PARENT_PIN = "parent_pin"
+        private const val KEY_APP_LANGUAGE = "app_language"
         const val DEFAULT_FEED_URL = "https://raw.githubusercontent.com/manmah/KidsTube/main/public/sample-tv-feed.json"
     }
 
@@ -39,5 +40,17 @@ class ParentalControlManager(context: Context) {
 
     fun setPin(pin: String) {
         prefs.edit().putString(KEY_PARENT_PIN, pin).apply()
+    }
+
+    fun getLanguage(): String {
+        return prefs.getString(KEY_APP_LANGUAGE, "ar") ?: "ar"
+    }
+
+    fun setLanguage(lang: String) {
+        prefs.edit().putString(KEY_APP_LANGUAGE, lang).apply()
+    }
+
+    fun isArabic(): Boolean {
+        return getLanguage() == "ar"
     }
 }
