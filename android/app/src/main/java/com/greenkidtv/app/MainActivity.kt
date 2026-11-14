@@ -1,13 +1,10 @@
 package com.greenkidtv.app
 
-import android.annotation.SuppressLint
-import android.app.AlertDialog
 import android.graphics.Color
 import android.graphics.Typeface
 import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
 import android.view.Gravity
-import android.view.KeyEvent
 import android.view.View
 import android.view.ViewGroup
 import android.view.WindowManager
@@ -21,7 +18,13 @@ import android.widget.ProgressBar
 import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.graphics.drawable.DrawableCompat
+import androidx.core.graphics.toColorInt
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.lifecycle.lifecycleScope
 import com.greenkidtv.app.data.FeedRepository
 import com.greenkidtv.app.data.ParentalControlManager
@@ -65,16 +68,11 @@ class MainActivity : AppCompatActivity() {
 
         // TV screen awake & fullscreen
         window.addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON)
-        try {
-            window.decorView.systemUiVisibility = (
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                    or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                    or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                    or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                    or View.SYSTEM_UI_FLAG_FULLSCREEN
-                    or View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-            )
-        } catch (e: Exception) {}
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        WindowInsetsControllerCompat(window, window.decorView).let { controller ->
+            controller.hide(WindowInsetsCompat.Type.systemBars())
+            controller.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+        }
 
         setupUI()
         loadFeed(forceNetwork = true)
@@ -86,9 +84,7 @@ class MainActivity : AppCompatActivity() {
         java.util.Locale.setDefault(locale)
         val config = resources.configuration
         config.setLocale(locale)
-        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN_MR1) {
-            config.setLayoutDirection(locale)
-        }
+        config.setLayoutDirection(locale)
         @Suppress("DEPRECATION")
         resources.updateConfiguration(config, resources.displayMetrics)
     }
@@ -96,7 +92,7 @@ class MainActivity : AppCompatActivity() {
     private fun setupUI() {
         val rootLayout = LinearLayout(this).apply {
             orientation = LinearLayout.VERTICAL
-            setBackgroundColor(Color.parseColor("#090D16"))
+            setBackgroundColor("#090D16".toColorInt())
             setPadding(40, 24, 40, 40)
             layoutParams = ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
@@ -112,7 +108,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         val logoText = TextView(this).apply {
-            text = "📺 GreenKid TV"
+            text = getString(R.string.app_header)
             textSize = 22f
             setTextColor(Color.WHITE)
             setTypeface(null, Typeface.BOLD)
@@ -170,7 +166,7 @@ class MainActivity : AppCompatActivity() {
 
         // Loading Bar
         loadingBar = ProgressBar(this).apply {
-            indeterminateDrawable.setColorFilter(Color.parseColor("#10B981"), android.graphics.PorterDuff.Mode.SRC_IN)
+            DrawableCompat.setTint(indeterminateDrawable, "#10B981".toColorInt())
         }
         rootLayout.addView(loadingBar)
 
@@ -214,7 +210,7 @@ class MainActivity : AppCompatActivity() {
             val badge = TextView(context).apply {
                 text = getString(R.string.featured_badge)
                 textSize = 12f
-                setTextColor(Color.parseColor("#34D399"))
+                setTextColor("#34D399".toColorInt())
                 setTypeface(null, Typeface.BOLD)
             }
             addView(badge)
@@ -231,7 +227,7 @@ class MainActivity : AppCompatActivity() {
             heroChannel = TextView(context).apply {
                 text = getString(R.string.hero_default_channel)
                 textSize = 14f
-                setTextColor(Color.parseColor("#94A3B8"))
+                setTextColor("#94A3B8".toColorInt())
                 setPadding(0, 0, 0, 8)
             }
             addView(heroChannel)
@@ -239,7 +235,7 @@ class MainActivity : AppCompatActivity() {
             heroDescription = TextView(context).apply {
                 text = getString(R.string.hero_default_desc)
                 textSize = 13f
-                setTextColor(Color.parseColor("#CBD5E1"))
+                setTextColor("#CBD5E1".toColorInt())
                 maxLines = 2
                 setPadding(0, 0, 0, 16)
             }
@@ -254,11 +250,7 @@ class MainActivity : AppCompatActivity() {
                 background = createFocusableButtonDrawable("#059669", "#10B981")
                 setOnClickListener {
                     highlightedVideo?.let { vid ->
-                        val targetList = if (highlightedCategoryVideos.isNotEmpty()) {
-                            highlightedCategoryVideos
-                        } else {
-                            listOf(vid)
-                        }
+                        val targetList = highlightedCategoryVideos.ifEmpty { listOf(vid) }
                         val index = targetList.indexOfFirst { it.id == vid.id }.coerceAtLeast(0)
                         PlayerActivity.launch(this@MainActivity, targetList, index)
                     }
@@ -333,8 +325,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Build Category Rails
-        for (category in displayCategories) {
-            if (category.videos.isEmpty()) continue
+        for ((_, title, description, videos) in displayCategories) {
+            if (videos.isEmpty()) continue
 
             val catHeader = LinearLayout(this).apply {
                 orientation = LinearLayout.VERTICAL
@@ -342,19 +334,19 @@ class MainActivity : AppCompatActivity() {
             }
 
             val catTitle = TextView(this).apply {
-                text = category.title
+                text = title
                 textSize = 18f
                 setTextColor(Color.WHITE)
                 setTypeface(null, Typeface.BOLD)
             }
             catHeader.addView(catTitle)
 
-            category.description?.let { desc ->
+            description?.let { desc ->
                 if (desc.isNotBlank()) {
                     val catDesc = TextView(this).apply {
                         text = desc
                         textSize = 12f
-                        setTextColor(Color.parseColor("#94A3B8"))
+                        setTextColor("#94A3B8".toColorInt())
                     }
                     catHeader.addView(catDesc)
                 }
@@ -373,8 +365,8 @@ class MainActivity : AppCompatActivity() {
                 setPadding(0, 4, 0, 8)
             }
 
-            for ((index, video) in category.videos.withIndex()) {
-                val card = createVideoCard(video, category.videos, index)
+            for ((index, video) in videos.withIndex()) {
+                val card = createVideoCard(video, videos, index)
                 rowLayout.addView(card)
             }
 
@@ -424,7 +416,7 @@ class MainActivity : AppCompatActivity() {
             text = getString(R.string.hide_video)
             textSize = 11f
             setTextColor(Color.WHITE)
-            setBackgroundColor(Color.parseColor("#CCEF4444")) // Red badge
+            setBackgroundColor("#CCEF4444".toColorInt()) // Red badge
             setPadding(12, 6, 12, 6)
             isClickable = true
             isFocusable = false
@@ -455,9 +447,9 @@ class MainActivity : AppCompatActivity() {
         card.addView(titleView)
 
         val channelView = TextView(this).apply {
-            text = "${video.channel} • ${video.duration}"
+            text = getString(R.string.video_meta, video.channel, video.duration)
             textSize = 12f
-            setTextColor(Color.parseColor("#94A3B8"))
+            setTextColor("#94A3B8".toColorInt())
         }
         card.addView(channelView)
 
@@ -487,8 +479,12 @@ class MainActivity : AppCompatActivity() {
         highlightedVideo = video
         highlightedCategoryVideos = categoryList
         heroTitle.text = video.title
-        heroChannel.text = "${video.channel} • ${video.duration} ${if (video.badge.isNotBlank()) "• ${video.badge}" else ""}"
-        heroDescription.text = if (video.description.isNotBlank()) video.description else getString(R.string.hero_default_desc)
+        heroChannel.text = if (video.badge.isNotBlank()) {
+            getString(R.string.video_meta_badge, video.channel, video.duration, video.badge)
+        } else {
+            getString(R.string.video_meta, video.channel, video.duration)
+        }
+        heroDescription.text = video.description.ifBlank { getString(R.string.hero_default_desc) }
     }
 
     private fun loadThumbnailAsync(imageView: ImageView, url: String) {
@@ -500,7 +496,7 @@ class MainActivity : AppCompatActivity() {
                 withContext(Dispatchers.Main) {
                     imageView.setImageBitmap(bitmap)
                 }
-            } catch (e: Exception) {
+            } catch (_: Exception) {
                 // Fallback to placeholder color
             }
         }
@@ -518,7 +514,7 @@ class MainActivity : AppCompatActivity() {
             setHintTextColor(Color.GRAY)
         }
 
-        AlertDialog.Builder(this, android.R.style.Theme_DeviceDefault_Dialog_Alert)
+        AlertDialog.Builder(this)
             .setTitle(getString(R.string.parental_gate_title))
             .setMessage(getString(R.string.parental_gate_msg, num1, num2))
             .setView(input)
@@ -546,7 +542,7 @@ class MainActivity : AppCompatActivity() {
             setHintTextColor(Color.GRAY)
         }
 
-        AlertDialog.Builder(this, android.R.style.Theme_DeviceDefault_Dialog_Alert)
+        AlertDialog.Builder(this)
             .setTitle(getString(R.string.parental_gate_hide_title))
             .setMessage(getString(R.string.parental_gate_hide_msg, num1, num2))
             .setView(input)
@@ -583,7 +579,7 @@ class MainActivity : AppCompatActivity() {
             val hiddenVideos = allVideos.filter { blockedIds.contains(it.id) || blockedIds.contains(it.youtubeId) }
 
             if (hiddenVideos.isEmpty()) {
-                AlertDialog.Builder(this@MainActivity, android.R.style.Theme_DeviceDefault_Dialog_Alert)
+                AlertDialog.Builder(this@MainActivity)
                     .setTitle(getString(R.string.hidden_videos_title))
                     .setMessage(getString(R.string.no_hidden_videos_msg))
                     .setPositiveButton(getString(R.string.confirm), null)
@@ -592,11 +588,10 @@ class MainActivity : AppCompatActivity() {
             }
 
             val videoTitles = hiddenVideos.map { "📺 ${it.title}" }.toTypedArray()
-            val selectedToRestore = BooleanArray(hiddenVideos.size) { false }
 
-            AlertDialog.Builder(this@MainActivity, android.R.style.Theme_DeviceDefault_Dialog_Alert)
+            AlertDialog.Builder(this@MainActivity)
                 .setTitle(getString(R.string.hidden_videos_title))
-                .setMultiChoiceItems(videoTitles, selectedToRestore) { _, which, isChecked ->
+                .setMultiChoiceItems(videoTitles, BooleanArray(hiddenVideos.size) { false }) { _, which, isChecked ->
                     if (isChecked) {
                         val vid = hiddenVideos[which]
                         parentalManager.unblockVideo(vid.id)
@@ -616,8 +611,8 @@ class MainActivity : AppCompatActivity() {
         return GradientDrawable().apply {
             shape = GradientDrawable.RECTANGLE
             cornerRadius = 16f
-            setColor(Color.parseColor(bgColor))
-            setStroke(2, Color.parseColor(borderColor))
+            setColor(bgColor.toColorInt())
+            setStroke(2, borderColor.toColorInt())
         }
     }
 
@@ -625,14 +620,14 @@ class MainActivity : AppCompatActivity() {
         val normal = GradientDrawable().apply {
             shape = GradientDrawable.RECTANGLE
             cornerRadius = 18f
-            setColor(Color.parseColor("#131C2E"))
-            setStroke(2, Color.parseColor("#1E293B"))
+            setColor("#131C2E".toColorInt())
+            setStroke(2, "#1E293B".toColorInt())
         }
         val focused = GradientDrawable().apply {
             shape = GradientDrawable.RECTANGLE
             cornerRadius = 18f
-            setColor(Color.parseColor("#1B2942"))
-            setStroke(4, Color.parseColor("#10B981")) // Emerald glowing focus border
+            setColor("#1B2942".toColorInt())
+            setStroke(4, "#10B981".toColorInt()) // Emerald glowing focus border
         }
 
         return android.graphics.drawable.StateListDrawable().apply {
@@ -646,12 +641,12 @@ class MainActivity : AppCompatActivity() {
         val normal = GradientDrawable().apply {
             shape = GradientDrawable.RECTANGLE
             cornerRadius = 12f
-            setColor(Color.parseColor(normalColor))
+            setColor(normalColor.toColorInt())
         }
         val focused = GradientDrawable().apply {
             shape = GradientDrawable.RECTANGLE
             cornerRadius = 12f
-            setColor(Color.parseColor(focusedColor))
+            setColor(focusedColor.toColorInt())
             setStroke(3, Color.WHITE)
         }
 

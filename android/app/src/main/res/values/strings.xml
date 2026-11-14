@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">GreenKid TV</string>
+    <string name="app_header">📺 GreenKid TV</string>
+    <string name="video_meta">%1$s • %2$s</string>
+    <string name="video_meta_badge">%1$s • %2$s • %3$s</string>
     <string name="feed_refresh">Refresh List</string>
     <string name="parental_control">Parental Controls 🔒</string>
     <string name="lang_switch">🌐 العربية</string>
