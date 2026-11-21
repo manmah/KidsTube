@@ -7,10 +7,50 @@
   "kioskModeRestricted": true,
   "categories": [
     {
-      "id": "islamic-songs",
-      "title": "الأناشيد والأذكار اليومية",
-      "description": "أناشيد إسلامية هادفة وممتعة لتعليم الأطفال البسملة والحمد والأذكار.",
+      "id": "good-deeds",
+      "title": "قصص الأخلاق والتعاون والمساعدة",
+      "description": "مغامرات عمر وهنا لتعليم بر الوالدين، النظافة، ومساعدة الآخرين.",
       "videos": [
+        {
+          "id": "oh-vid-6",
+          "youtubeId": "c6c6y_HqkLA",
+          "title": "لننظف المسجد معاً",
+          "channel": "Omar & Hana Arabic",
+          "duration": "05:18",
+          "description": "عمر وهنا يشاركان في تنظيف المسجد ويعلمان الأطفال أهمية المحافظة على بيوت الله.",
+          "thumbnail": "https://img.youtube.com/vi/c6c6y_HqkLA/hqdefault.jpg",
+          "badge": "عمارة المساجد"
+        },
+        {
+          "id": "oh-vid-7",
+          "youtubeId": "gchqNwJU_C0",
+          "title": "مساعدة الآخرين وإدخال السرور",
+          "channel": "Omar & Hana Arabic",
+          "duration": "04:40",
+          "description": "درس تطبيقي ممتع حول حب الخير للناس وتقديم العون لكل محتاج.",
+          "thumbnail": "https://img.youtube.com/vi/gchqNwJU_C0/hqdefault.jpg",
+          "badge": "عمل الخير"
+        },
+        {
+          "id": "oh-vid-8",
+          "youtubeId": "cvFLQtJ7XJE",
+          "title": "راجو اللطيف وحسن معاملة الجار",
+          "channel": "Omar & Hana Arabic",
+          "duration": "05:02",
+          "description": "حلقة مميزة عن إكرام الجار وحسن الخلق في التعامل مع الأصدقاء والجيران.",
+          "thumbnail": "https://img.youtube.com/vi/cvFLQtJ7XJE/hqdefault.jpg",
+          "badge": "حق الجار"
+        },
+        {
+          "id": "oh-vid-9",
+          "youtubeId": "q0tMrazNSgM",
+          "title": "لنقم بالبستنة ورعاية النباتات",
+          "channel": "Omar & Hana Arabic",
+          "duration": "04:15",
+          "description": "تعليم الصغار حب الطبيعة والزراعة وكيف نعتني بالنباتات والأشجار.",
+          "thumbnail": "https://img.youtube.com/vi/q0tMrazNSgM/hqdefault.jpg",
+          "badge": "حب الطبيعة"
+        },
         {
           "id": "oh-vid-1",
           "youtubeId": "bE2jqFbwnpA",
@@ -64,153 +104,209 @@
       ]
     },
     {
-      "id": "good-deeds",
-      "title": "قصص الأخلاق والتعاون والمساعدة",
-      "description": "مغامرات عمر وهنا لتعليم بر الوالدين، النظافة، ومساعدة الآخرين.",
+      "id": "siraj",
+      "title": "سراج القيم العربية",
+      "description": "مسلسل تربوي ترفيهي ثلاثي الأبعاد يغرس في الأطفال حب اللغة والقيم العربية",
       "videos": [
         {
-          "id": "oh-vid-6",
-          "youtubeId": "c6c6y_HqkLA",
-          "title": "لننظف المسجد معاً",
-          "channel": "Omar & Hana Arabic",
-          "duration": "05:18",
-          "description": "عمر وهنا يشاركان في تنظيف المسجد ويعلمان الأطفال أهمية المحافظة على بيوت الله.",
-          "thumbnail": "https://img.youtube.com/vi/c6c6y_HqkLA/hqdefault.jpg",
-          "badge": "عمارة المساجد"
+          "id": "s4-1",
+          "youtubeId": "Oe0IJHNIytE",
+          "title": "الحلقة 1 - الموسم الرابع - البيئة | سراج",
+          "channel": "SIRAJ",
+          "duration": "12:51",
+          "description": "الحلقة الأولى من الموسم الرابع لسراج حول أهمية الحفاظ على البيئة.",
+          "thumbnail": "https://img.youtube.com/vi/Oe0IJHNIytE/hqdefault.jpg",
+          "badge": "الموسم الرابع"
         },
         {
-          "id": "oh-vid-7",
-          "youtubeId": "gchqNwJU_C0",
-          "title": "مساعدة الآخرين وإدخال السرور",
-          "channel": "Omar & Hana Arabic",
-          "duration": "04:40",
-          "description": "درس تطبيقي ممتع حول حب الخير للناس وتقديم العون لكل محتاج.",
-          "thumbnail": "https://img.youtube.com/vi/gchqNwJU_C0/hqdefault.jpg",
-          "badge": "عمل الخير"
+          "id": "s4-2",
+          "youtubeId": "dFh9XW3SF50",
+          "title": "الحلقة 3 - الموسم الرابع - الثقة في النفس | سراج",
+          "channel": "SIRAJ",
+          "duration": "14:05",
+          "description": "حلقة تربوية من الموسم الرابع لتعزيز الثقة بالنفس للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/dFh9XW3SF50/hqdefault.jpg",
+          "badge": "الموسم الرابع"
         },
         {
-          "id": "oh-vid-8",
-          "youtubeId": "cvFLQtJ7XJE",
-          "title": "راجو اللطيف وحسن معاملة الجار",
-          "channel": "Omar & Hana Arabic",
-          "duration": "05:02",
-          "description": "حلقة مميزة عن إكرام الجار وحسن الخلق في التعامل مع الأصدقاء والجيران.",
-          "thumbnail": "https://img.youtube.com/vi/cvFLQtJ7XJE/hqdefault.jpg",
-          "badge": "حق الجار"
+          "id": "s4-3",
+          "youtubeId": "VfMfmtqhNVc",
+          "title": "الحلقة 4 - الموسم الرابع - الالتزام بالوقت | سراج",
+          "channel": "SIRAJ",
+          "duration": "15:02",
+          "description": "تعلم قيمة وأهمية الالتزام بالوقت بطريقة مشوقة للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/VfMfmtqhNVc/hqdefault.jpg",
+          "badge": "الموسم الرابع"
         },
         {
-          "id": "oh-vid-9",
-          "youtubeId": "q0tMrazNSgM",
-          "title": "لنقم بالبستنة ورعاية النباتات",
-          "channel": "Omar & Hana Arabic",
-          "duration": "04:15",
-          "description": "تعليم الصغار حب الطبيعة والزراعة وكيف نعتني بالنباتات والأشجار.",
-          "thumbnail": "https://img.youtube.com/vi/q0tMrazNSgM/hqdefault.jpg",
-          "badge": "حب الطبيعة"
-        }
-      ]
-    },
-    {
-      "id": "family-fun",
-      "title": "عمر وهنا في البيت والمدرسة",
-      "description": "حلقات عائلية مرحة تعزز المحبة بين الإخوة وبر الوالدين واحترام المعلمة.",
-      "videos": [
-        {
-          "id": "oh-vid-10",
-          "youtubeId": "EiQ--fzWtoc",
-          "title": "نحب أمي وأبي - بر الوالدين",
-          "channel": "Omar & Hana Arabic",
-          "duration": "04:22",
-          "description": "تعبير صادق عن المحبة والامتنان للأم والأب وفضل طاعتهما.",
-          "thumbnail": "https://img.youtube.com/vi/EiQ--fzWtoc/hqdefault.jpg",
-          "badge": "بر الوالدين"
+          "id": "s4-4",
+          "youtubeId": "zubjaqKUyL8",
+          "title": "الحلقة 6 - الموسم الرابع - عدم التنمر | سراج",
+          "channel": "SIRAJ",
+          "duration": "15:22",
+          "description": "حلقة هادفة توضح أهمية الاحترام المتبادل ورفض التنمر.",
+          "thumbnail": "https://img.youtube.com/vi/zubjaqKUyL8/hqdefault.jpg",
+          "badge": "الموسم الرابع"
         },
         {
-          "id": "oh-vid-11",
-          "youtubeId": "Sl4hYYOi6yk",
-          "title": "مفاجأة لأبي الحبيب",
-          "channel": "Omar & Hana Arabic",
-          "duration": "04:50",
-          "description": "عمر وهنا يخططان لمفاجأة سارة لإسعاد والدهما بعد عودته من العمل.",
-          "thumbnail": "https://img.youtube.com/vi/Sl4hYYOi6yk/hqdefault.jpg",
-          "badge": "العائلة"
+          "id": "s4-5",
+          "youtubeId": "xBLE1N5XWUY",
+          "title": "الحلقة 7 - الموسم الرابع - الاعتماد على النفس | سراج",
+          "channel": "SIRAJ",
+          "duration": "14:49",
+          "description": "تعلم مهارات الاعتماد على النفس والاستقلالية للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/xBLE1N5XWUY/hqdefault.jpg",
+          "badge": "الموسم الرابع"
         },
         {
-          "id": "oh-vid-12",
-          "youtubeId": "qYYeOUYSkUg",
-          "title": "شكراً يا معلمتي الفاضلة",
-          "channel": "Omar & Hana Arabic",
-          "duration": "04:05",
-          "description": "تقدير دور المعلمة والثناء على جهودها في تعليم وبناء أجيال المستقبل.",
-          "thumbnail": "https://img.youtube.com/vi/qYYeOUYSkUg/hqdefault.jpg",
-          "badge": "احترام المعلم"
+          "id": "s4-6",
+          "youtubeId": "TP0c7eLurtw",
+          "title": "الحلقة 8 - الموسم الرابع - الامتنان | سراج",
+          "channel": "SIRAJ",
+          "duration": "13:41",
+          "description": "أهمية تقدير النعم والامتنان في حياة الأطفال اليومية.",
+          "thumbnail": "https://img.youtube.com/vi/TP0c7eLurtw/hqdefault.jpg",
+          "badge": "الموسم الرابع"
         },
         {
-          "id": "oh-vid-13",
-          "youtubeId": "XeCJsvl_qbU",
-          "title": "وقت النزهة والرحلات المرحة",
-          "channel": "Omar & Hana Arabic",
-          "duration": "05:10",
-          "description": "رحلة عائلية في الهواء الطلق واستكشاف جمال الكون مع عمر وهنا وسارة.",
-          "thumbnail": "https://img.youtube.com/vi/XeCJsvl_qbU/hqdefault.jpg",
-          "badge": "نزهة عائلية"
+          "id": "s4-7",
+          "youtubeId": "uOFmhXbKMgY",
+          "title": "الحلقة 9 - الموسم الرابع - السوشيال ميديا | سراج",
+          "channel": "SIRAJ",
+          "duration": "13:37",
+          "description": "إرشادات الاستخدام الآمن والواعي لوسائل التواصل الاجتماعي.",
+          "thumbnail": "https://img.youtube.com/vi/uOFmhXbKMgY/hqdefault.jpg",
+          "badge": "الموسم الرابع"
         },
         {
-          "id": "oh-vid-14",
-          "youtubeId": "Zh9O6bbwa2o",
-          "title": "من الممتع أن نرسم معاً بالألوان",
-          "channel": "Omar & Hana Arabic",
-          "duration": "03:50",
-          "description": "نشاط رسم ترفيهي يشجع الإبداع والتعاون بين الأطفال.",
-          "thumbnail": "https://img.youtube.com/vi/Zh9O6bbwa2o/hqdefault.jpg",
-          "badge": "إبداع ورسم"
+          "id": "siraj-1",
+          "youtubeId": "jEcS7xBIFQ4",
+          "title": "كارتون سراج - الحلقة الأولى (حرف الهمزة) | Siraj Cartoon",
+          "channel": "SIRAJ",
+          "duration": "21:50",
+          "description": "الحلقة الأولى من كارتون سراج التعليمي لتعلم الحروف العربية.",
+          "thumbnail": "https://img.youtube.com/vi/jEcS7xBIFQ4/hqdefault.jpg",
+          "badge": "حروف الهجاء"
         },
         {
-          "id": "oh-vid-15",
-          "youtubeId": "J58e1IBM-RI",
-          "title": "قصة عمر والقطة ميمي",
-          "channel": "Omar & Hana Arabic",
-          "duration": "04:35",
-          "description": "قصة لطيفة عن الرفق بالحيوان والاهتمام بالقطة ميمي ورعايتها.",
-          "thumbnail": "https://img.youtube.com/vi/J58e1IBM-RI/hqdefault.jpg",
-          "badge": "الرفق بالحيوان"
-        }
-      ]
-    },
-    {
-      "id": "compilations",
-      "title": "حلقات مجمعة للأطفال (Full Cartoons)",
-      "description": "ساعات متواصلة من الرسوم المتحركة الهادفة والآمنة للأطفال على الشاشات الذكية.",
-      "videos": [
-        {
-          "id": "oh-vid-16",
-          "youtubeId": "ivIHuufug7w",
-          "title": "مجموعة أناشيد ورسوم دينية للأطفال",
-          "channel": "Omar & Hana Arabic",
-          "duration": "35:10",
-          "description": "باقة من أفضل أناشيد ورسوم عمر وهنا التعليمية مجمعة في فيديو واحد متكامل.",
-          "thumbnail": "https://img.youtube.com/vi/ivIHuufug7w/hqdefault.jpg",
-          "badge": "حلقة مجمعة"
+          "id": "siraj-2",
+          "youtubeId": "Hbm65r3woo0",
+          "title": "كارتون سراج - الحلقة الثانية (حرف الباء) | Siraj Cartoon",
+          "channel": "SIRAJ",
+          "duration": "17:46",
+          "description": "الحلقة الثانية لتعلم حرف الباء وكلماته للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/Hbm65r3woo0/hqdefault.jpg",
+          "badge": "حروف الهجاء"
         },
         {
-          "id": "oh-vid-17",
-          "youtubeId": "SKMvC5kE2Hk",
-          "title": "رسوم متحركة دينية إسلامية للأطفال (كاملة)",
-          "channel": "Omar & Hana Arabic",
-          "duration": "28:40",
-          "description": "حلقات الرسوم المتحركة التربوية الهادفة للأطفال بدون إعلانات مزعجة.",
-          "thumbnail": "https://img.youtube.com/vi/SKMvC5kE2Hk/hqdefault.jpg",
-          "badge": "ساعة كرتون"
+          "id": "siraj-3",
+          "youtubeId": "XwtJJCSP2jI",
+          "title": "كارتون سراج - الحلقة الثالثة (حرف التاء) | Siraj Cartoon",
+          "channel": "SIRAJ",
+          "duration": "19:06",
+          "description": "مغامرة تعليمية لتعلم حرف التاء.",
+          "thumbnail": "https://img.youtube.com/vi/XwtJJCSP2jI/hqdefault.jpg",
+          "badge": "حروف الهجاء"
         },
         {
-          "id": "oh-vid-18",
-          "youtubeId": "jpnV4Ec_qUI",
-          "title": "حكايات الأخلاق والقيم الإسلامية",
-          "channel": "Omar & Hana Arabic",
-          "duration": "31:25",
-          "description": "رسوم كرتونية مميزة تسرد أروع قصص الصدق، الأمانة، والمحبة.",
-          "thumbnail": "https://img.youtube.com/vi/jpnV4Ec_qUI/hqdefault.jpg",
-          "badge": "قصص إسلامية"
+          "id": "siraj-4",
+          "youtubeId": "EhgYSbxgSy0",
+          "title": "كارتون سراج - الحلقة الرابعة (حرف الثاء) | Siraj Cartoon",
+          "channel": "SIRAJ",
+          "duration": "16:06",
+          "description": "حلقة تعليمية لتعلم حرف الثاء.",
+          "thumbnail": "https://img.youtube.com/vi/EhgYSbxgSy0/hqdefault.jpg",
+          "badge": "حروف الهجاء"
+        },
+        {
+          "id": "siraj-5",
+          "youtubeId": "ZPYoyNiH0nI",
+          "title": "كارتون سراج - الحلقة الثالثة عشر (حرف الشين) | Siraj Cartoon",
+          "channel": "SIRAJ",
+          "duration": "14:36",
+          "description": "التعرف على حرف الشين وأمثلته في كارتون سراج.",
+          "thumbnail": "https://img.youtube.com/vi/ZPYoyNiH0nI/hqdefault.jpg",
+          "badge": "حروف الهجاء"
+        },
+        {
+          "id": "siraj-6",
+          "youtubeId": "udbsfwEfUrc",
+          "title": "كارتون سراج - الحلقة الرابعة عشر (حرف الصاد) | Siraj Cartoon",
+          "channel": "SIRAJ",
+          "duration": "19:19",
+          "description": "تعلم حرف الصاد من خلال قصة مشوقة للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/udbsfwEfUrc/hqdefault.jpg",
+          "badge": "حروف الهجاء"
+        },
+        {
+          "id": "siraj-7",
+          "youtubeId": "SK5gTkOP2go",
+          "title": "الحلقة 4 – الموسم الثاني - الغين | سراج",
+          "channel": "SIRAJ",
+          "duration": "15:52",
+          "description": "الحلقة الرابعة من الموسم الثاني لكارتون سراج.",
+          "thumbnail": "https://img.youtube.com/vi/SK5gTkOP2go/hqdefault.jpg",
+          "badge": "الموسم الثاني"
+        },
+        {
+          "id": "siraj-8",
+          "youtubeId": "ptGG9sUpPGQ",
+          "title": "الحلقة 14 – الموسم الثاني - الأخيرة (1) | سراج",
+          "channel": "SIRAJ",
+          "duration": "18:07",
+          "description": "الجزء الأول من ختام الموسم الثاني لكارتون سراج.",
+          "thumbnail": "https://img.youtube.com/vi/ptGG9sUpPGQ/hqdefault.jpg",
+          "badge": "الموسم الثاني"
+        },
+        {
+          "id": "siraj-9",
+          "youtubeId": "etkyH91-Smc",
+          "title": "الحلقة 15 – الموسم الثاني - الأخيرة (2) | سراج",
+          "channel": "SIRAJ",
+          "duration": "16:17",
+          "description": "الجزء الثاني من ختام الموسم الثاني لمغامرات سراج.",
+          "thumbnail": "https://img.youtube.com/vi/etkyH91-Smc/hqdefault.jpg",
+          "badge": "الموسم الثاني"
+        },
+        {
+          "id": "siraj-10",
+          "youtubeId": "y8jNfNF1sio",
+          "title": "الحلقة 1 - الموسم الثالث - الألوان | سراج",
+          "channel": "SIRAJ",
+          "duration": "19:57",
+          "description": "الحلقة الأولى من الموسم الثالث لتعلم الألوان للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/y8jNfNF1sio/hqdefault.jpg",
+          "badge": "الموسم الثالث"
+        },
+        {
+          "id": "siraj-11",
+          "youtubeId": "w3i3tAYTKIo",
+          "title": "الحلقة 2 - الموسم الثالث - الليل والنهار | سراج",
+          "channel": "SIRAJ",
+          "duration": "16:34",
+          "description": "استكشاف ظاهرة الليل والنهار بأسلوب مبسط.",
+          "thumbnail": "https://img.youtube.com/vi/w3i3tAYTKIo/hqdefault.jpg",
+          "badge": "الموسم الثالث"
+        },
+        {
+          "id": "siraj-12",
+          "youtubeId": "VJgJco9hex4",
+          "title": "الحلقة 7 - الموسم الثالث - عالم البحار | سراج",
+          "channel": "SIRAJ",
+          "duration": "20:08",
+          "description": "مغامرة لاستكشاف عالم البحار والكائنات البحرية.",
+          "thumbnail": "https://img.youtube.com/vi/VJgJco9hex4/hqdefault.jpg",
+          "badge": "الموسم الثالث"
+        },
+        {
+          "id": "siraj-13",
+          "youtubeId": "ffm0uPr9fxY",
+          "title": "الحلقة 8 - الموسم الثالث - الرياضة | سراج",
+          "channel": "SIRAJ",
+          "duration": "13:18",
+          "description": "تشجيع الأطفال على ممارسة الرياضة والنشاط البدني.",
+          "thumbnail": "https://img.youtube.com/vi/ffm0uPr9fxY/hqdefault.jpg",
+          "badge": "الموسم الثالث"
         }
       ]
     },
@@ -345,14 +441,7 @@
           "description": "فيديو أطفال من قناة أسرتنا الرسمية: الذئب والعنزات السبع",
           "thumbnail": "https://img.youtube.com/vi/Uexbx9VmbN4/hqdefault.jpg",
           "badge": "أسرتنا"
-        }
-      ]
-    },
-    {
-      "id": "osratouna-learning",
-      "title": "التعلّم والسلامة",
-      "description": "فيديوهات تعليمية للأطفال من قناة أسرتنا",
-      "videos": [
+        },
         {
           "id": "osratouna--o2T2L33Ydo",
           "youtubeId": "-o2T2L33Ydo",
@@ -412,6 +501,2310 @@
           "description": "فيديو أطفال من قناة أسرتنا الرسمية: يا بقراتي",
           "thumbnail": "https://img.youtube.com/vi/EzHZhC2LfI0/hqdefault.jpg",
           "badge": "أسرتنا"
+        }
+      ]
+    },
+    {
+      "id": "learn-with-zakaria",
+      "title": "تعلم مع زكريا",
+      "description": "فيديوهات تعليمية للأطفال مع زكريا",
+      "videos": [
+        {
+          "id": "vid-1",
+          "youtubeId": "fmbVBIiO1k0",
+          "title": "Arabic Alphabet for Kids with Animals – Learn Arabic ABC with Zakaria",
+          "channel": "Learn with Zakaria - تعلم مع زكريا",
+          "duration": "10:08",
+          "description": "تعلم الحروف العربية للأطفال مع الحيوانات وأسماءها.",
+          "thumbnail": "https://img.youtube.com/vi/fmbVBIiO1k0/hqdefault.jpg",
+          "badge": "فيديو تعليمي"
+        },
+        {
+          "id": "vid-2",
+          "youtubeId": "X5e26QxffEA",
+          "title": "Learn Shapes in Arabic for Children - تعليم الأشكال للاطفال باللغة",
+          "channel": "Learn with Zakaria - تعلم مع زكريا",
+          "duration": "04:15",
+          "description": "تعلم الأشكال الهندسية الأساسية باللغة العربية للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/X5e26QxffEA/hqdefault.jpg",
+          "badge": "تعليم الأشكال"
+        },
+        {
+          "id": "vid-3",
+          "youtubeId": "gifwrHhhOCE",
+          "title": "تعلم الألوان مع السيارات باللغة العربية | تعليم الألوان للأطفال",
+          "channel": "Learn with Zakaria - تعلم مع زكريا",
+          "duration": "02:51",
+          "description": "تعلم الألوان المختلفة باستخدام السيارات للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/gifwrHhhOCE/hqdefault.jpg",
+          "badge": "تعليم الألوان"
+        },
+        {
+          "id": "vid-4",
+          "youtubeId": "eirhr0uNek4",
+          "title": "أغنية الخضروات للأطفال 🥕🍅🥒 - طماطم وجزر وخيار وبطاطا",
+          "channel": "Learn with Zakaria - تعلم مع زكريا",
+          "duration": "03:41",
+          "description": "أنشودة تعليمية ممتعة لتعلم أسماء الخضروات للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/eirhr0uNek4/hqdefault.jpg",
+          "badge": "أنشودة تعليمية"
+        },
+        {
+          "id": "vid-5",
+          "youtubeId": "fU7DlrkBTUk",
+          "title": "أغنية الفواكه للأطفال - تعلم أسماء الفواكه باللغة العربية",
+          "channel": "Learn with Zakaria - تعلم مع زكريا",
+          "duration": "03:35",
+          "description": "أنشودة ممتعة لتعلم أسماء الفواكه المختلفة للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/fU7DlrkBTUk/hqdefault.jpg",
+          "badge": "أنشودة تعليمية"
+        },
+        {
+          "id": "vid-6",
+          "youtubeId": "USW8_gV_Hnw",
+          "title": "Learn Colors with Street Vehicles in Arabic for Kids - تعليم الألوان مع وسائل النقل للاطفال",
+          "channel": "Learn with Zakaria - تعلم مع زكريا",
+          "duration": "04:52",
+          "description": "تعليم الألوان مع وسائل النقل للأطفال باللغة العربية.",
+          "thumbnail": "https://img.youtube.com/vi/USW8_gV_Hnw/hqdefault.jpg",
+          "badge": "تعليم الألوان"
+        },
+        {
+          "id": "vid-7",
+          "youtubeId": "DLu4KPSn-uE",
+          "title": "Weekdays and months in Arabic for children - تعلم أيام الأسبوع و الأشهر بالعربية للأطفال",
+          "channel": "Learn with Zakaria - تعلم مع زكريا",
+          "duration": "07:27",
+          "description": "تعلم أيام الأسبوع والأسهر الميلادية والهجرية للأطفال باللغة العربية.",
+          "thumbnail": "https://img.youtube.com/vi/DLu4KPSn-uE/hqdefault.jpg",
+          "badge": "تعليم الأيام والشهور"
+        },
+        {
+          "id": "vid-8",
+          "youtubeId": "ub7S6xCCSKw",
+          "title": "Learn Jobs in Arabic for Kids - تعلم المهن باللغة العربية للأطفال",
+          "channel": "Learn with Zakaria - تعلم مع زكريا",
+          "duration": "03:56",
+          "description": "تعلم أسماء المهن باللغة العربية للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/ub7S6xCCSKw/hqdefault.jpg",
+          "badge": "تعلم المهن"
+        },
+        {
+          "id": "vid-9",
+          "youtubeId": "53oHBQt1nHg",
+          "title": "Learn Four Seasons in Arabic for Kids - تعلم الفصول الاربعة باللغة العربية للأطفال",
+          "channel": "Learn with Zakaria - تعلم مع زكريا",
+          "duration": "03:36",
+          "description": "تعلم الفصول الأربعة باللغة العربية للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/53oHBQt1nHg/hqdefault.jpg",
+          "badge": "تعليم الفصول"
+        },
+        {
+          "id": "vid-10",
+          "youtubeId": "GuzRG6qHUpc",
+          "title": "Learn House, kitchen and school vocabulary – مصطلحات المنزل, المطبخ و المدرسة للأطفال",
+          "channel": "Learn with Zakaria - تعلم مع زكريا",
+          "duration": "11:26",
+          "description": "تعلم مصطلحات المنزل، المطبخ والمدرسة للأطفال باللغة العربية.",
+          "thumbnail": "https://img.youtube.com/vi/GuzRG6qHUpc/hqdefault.jpg",
+          "badge": "مصطلحات تعليمية"
+        },
+        {
+          "id": "vid-11",
+          "youtubeId": "fWarA3WXavE",
+          "title": "ما أهمية النحل؟ كيف يصنع النحل العسل | معلومات عن النحل للأطفال - كيف ماذا ولماذا (الحلقة 2)",
+          "channel": "Learn with Zakaria - تعلم مع زكريا",
+          "duration": "04:36",
+          "description": "معلومات عن النحل للأطفال وأهميته وكيف يصنع العسل.",
+          "thumbnail": "https://img.youtube.com/vi/fWarA3WXavE/hqdefault.jpg",
+          "badge": "معلومات تعليمية"
+        },
+        {
+          "id": "vid-12",
+          "youtubeId": "uulEvrdBZDw",
+          "title": "الفواكه الاستوائية | لعبة الذاكرة (الحلقة 30) - لعبة البطاقات لكل العائلة – تعلم مع زكريا",
+          "channel": "Learn with Zakaria - تعلم مع زكريا",
+          "duration": "03:30",
+          "description": "لعبة الذاكرة للتعرف على الفواكه الاستوائية للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/uulEvrdBZDw/hqdefault.jpg",
+          "badge": "لعبة تعليمية"
+        },
+        {
+          "id": "vid-13",
+          "youtubeId": "EhiGR-lb17o",
+          "title": "وسائل النقل للأطفال - لعبة صل الكلمة بالصورة (الحلقة 20) | تعلم أسماء وسائل النقل بالعربية مع زكريا",
+          "channel": "Learn with Zakaria - تعلم مع زكريا",
+          "duration": "04:26",
+          "description": "لعبة صل الكلمة بالصورة لتعلم أسماء وسائل النقل للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/EhiGR-lb17o/hqdefault.jpg",
+          "badge": "لعبة تعليمية"
+        }
+      ]
+    },
+    {
+      "id": "the-smurfs",
+      "title": "(السنافر) The Smurfs",
+      "description": "مغامرة ممتعة ومضحكة مع السنافر",
+      "videos": [
+        {
+          "id": "smurf-vid-1",
+          "youtubeId": "B71gL_B1Am4",
+          "title": "بابا سنفور طفل الآن • السنافر",
+          "channel": "(السنافر) The Smurfs •القناة الرسمية!",
+          "duration": "01:17:00",
+          "description": "حلقة خاصة يتحول فيها بابا سنفور إلى طفل في مغامرة ممتعة ومضحكة مع السنافر.",
+          "thumbnail": "https://img.youtube.com/vi/B71gL_B1Am4/hqdefault.jpg",
+          "badge": "حلقة كاملة"
+        },
+        {
+          "id": "smurf-vid-2",
+          "youtubeId": "n-oc_XT-KGA",
+          "title": "أطرف المقالب! 😂😂🤣 | حلقات كاملة | The Smurfs",
+          "channel": "(السنافر) The Smurfs •القناة الرسمية!",
+          "duration": "01:52:38",
+          "description": "مجموعة من أطرف مقالب السنافر في قرية السنافر وضد شرشبيل.",
+          "thumbnail": "https://img.youtube.com/vi/n-oc_XT-KGA/hqdefault.jpg",
+          "badge": "مجموعة حلقات"
+        },
+        {
+          "id": "smurf-vid-3",
+          "youtubeId": "5cL5Q5hgusQ",
+          "title": "معركة القطط الملحمية ضد الغول! • السنافر",
+          "channel": "(السنافر) The Smurfs •القناة الرسمية!",
+          "duration": "02:56",
+          "description": "مغامرة سريعة وحماسية مع قطط السنافر والغول.",
+          "thumbnail": "https://img.youtube.com/vi/5cL5Q5hgusQ/hqdefault.jpg",
+          "badge": "مغامرة قصيرة"
+        },
+        {
+          "id": "smurf-vid-4",
+          "youtubeId": "4h_PwlD-YP4",
+          "title": "هدية سنافرية! @TheSmurfsArabic",
+          "channel": "(السنافر) The Smurfs •القناة الرسمية!",
+          "duration": "00:09",
+          "description": "مقطع قصير لطيف يظهر مفاجأة الهدية السنافرية.",
+          "thumbnail": "https://img.youtube.com/vi/4h_PwlD-YP4/hqdefault.jpg",
+          "badge": "مقطع قصير"
+        },
+        {
+          "id": "smurf-vid-5",
+          "youtubeId": "mCvD4Dv6II8",
+          "title": "أفضل لحظات السنفور الآلي! 🤖 • حلقات كاملة • مجموعة السنافر للأطفال",
+          "channel": "(السنافر) The Smurfs •القناة الرسمية!",
+          "duration": "30:00",
+          "description": "أفضل اللحظات الكوميدية ومغامرات السنفور الآلي.",
+          "thumbnail": "https://img.youtube.com/vi/mCvD4Dv6II8/hqdefault.jpg",
+          "badge": "مجموعة حلقات"
+        },
+        {
+          "id": "smurf-vid-6",
+          "youtubeId": "NV1ohLdNTtw",
+          "title": "شاهد الحلقات كاملة على التلفزيون • السنافر • بث مباشر",
+          "channel": "(السنافر) The Smurfs •القناة الرسمية!",
+          "duration": "02:00:00",
+          "description": "بث مباشر يضم تشكيلة واسعة وممتعة من حلقات السنافر الكلاسيكية والجديدة.",
+          "thumbnail": "https://img.youtube.com/vi/NV1ohLdNTtw/hqdefault.jpg",
+          "badge": "بث مباشر"
+        },
+        {
+          "id": "smurf-vid-7",
+          "youtubeId": "hwXbtFoDTSQ",
+          "title": "خيال جوكي • الرسوم المتحركة للأطفال • السنافر",
+          "channel": "(السنافر) The Smurfs •القناة الرسمية!",
+          "duration": "11:00",
+          "description": "مغامرة جديدة ومبتكرة مع السنفور جوكي ومقالبه الشهيرة.",
+          "thumbnail": "https://img.youtube.com/vi/hwXbtFoDTSQ/hqdefault.jpg",
+          "badge": "رسوم متحركة"
+        },
+        {
+          "id": "smurf-vid-8",
+          "youtubeId": "wLUwyhqA5V8",
+          "title": "The Smurfs • 🔥😱 حلقات كاملة • أعظم تنانين السنافر!",
+          "channel": "(السنافر) The Smurfs •القناة الرسمية!",
+          "duration": "45:00",
+          "description": "حلقات كاملة ومشوقة تتحدث عن مغامرات السنافر مع التنانين.",
+          "thumbnail": "https://img.youtube.com/vi/wLUwyhqA5V8/hqdefault.jpg",
+          "badge": "حلقات كاملة"
+        },
+        {
+          "id": "smurf-vid-9",
+          "youtubeId": "4Pqe6A_Siqs",
+          "title": "السنفور المبتدئ • السنافر",
+          "channel": "(السنافر) The Smurfs •القناة الرسمية!",
+          "duration": "11:00",
+          "description": "قصة السنفور المبتدئ وكيف يحاول إثبات نفسه في قرية السنافر.",
+          "thumbnail": "https://img.youtube.com/vi/4Pqe6A_Siqs/hqdefault.jpg",
+          "badge": "رسوم متحركة"
+        },
+        {
+          "id": "smurf-vid-10",
+          "youtubeId": "syj9S5sIp2A",
+          "title": "الساحرة الصغيرة • السنافر",
+          "channel": "(السنافر) The Smurfs •القناة الرسمية!",
+          "duration": "11:00",
+          "description": "حلقة مميزة تعرض قصة الساحرة الصغيرة في عالم السنافر الممتع.",
+          "thumbnail": "https://img.youtube.com/vi/syj9S5sIp2A/hqdefault.jpg",
+          "badge": "رسوم متحركة"
+        },
+        {
+          "id": "smurf-vid-11",
+          "youtubeId": "wlTefgNANsA",
+          "title": "ماراثون الطعام اللذيذ لـ Smurfs 😋 | 30 دقيقة من التجميع",
+          "channel": "(السنافر) The Smurfs •القناة الرسمية!",
+          "duration": "30:00",
+          "description": "أجمل اللحظات الشهية ووجبات السنافر الممتعة في قرية السنافر.",
+          "thumbnail": "https://img.youtube.com/vi/wlTefgNANsA/hqdefault.jpg",
+          "badge": "تجميعية"
+        },
+        {
+          "id": "smurf-vid-12",
+          "youtubeId": "eirhr0uNek4",
+          "title": "تجميعة مغامرات شرشبيل والسنافر المضحكة",
+          "channel": "(السنافر) The Smurfs •القناة الرسمية!",
+          "duration": "25:00",
+          "description": "مواقف كوميدية مضحكة تجمع بين خطط شرشبيل الفاشلة وذكاء السنافر.",
+          "thumbnail": "https://img.youtube.com/vi/eirhr0uNek4/hqdefault.jpg",
+          "badge": "مغامرات كوميدية"
+        },
+        {
+          "id": "smurf-vid-13",
+          "youtubeId": "fmbVBIiO1k0",
+          "title": "يوم في قرية السنافر الصغيرة",
+          "channel": "(السنافر) The Smurfs •القناة الرسمية!",
+          "duration": "15:00",
+          "description": "نظرة على الحياة اليومية الممتعة داخل قرية السنافر الزرقاء.",
+          "thumbnail": "https://img.youtube.com/vi/fmbVBIiO1k0/hqdefault.jpg",
+          "badge": "حلقة خاصة"
+        },
+        {
+          "id": "smurf-vid-14",
+          "youtubeId": "gifwrHhhOCE",
+          "title": "حفل الألوان في قرية السنافر",
+          "channel": "(السنافر) The Smurfs •القناة الرسمية!",
+          "duration": "12:00",
+          "description": "حلقة مليئة بالألوان والبهجة والأنشطة المرحة للسنافر.",
+          "thumbnail": "https://img.youtube.com/vi/gifwrHhhOCE/hqdefault.jpg",
+          "badge": "كرتون للأطفال"
+        },
+        {
+          "id": "smurf-vid-15",
+          "youtubeId": "X5e26QxffEA",
+          "title": "مغامرة الأشكال والمهارات مع السنافر",
+          "channel": "(السنافر) The Smurfs •القناة الرسمية!",
+          "duration": "14:00",
+          "description": "مغامرة تعليمية ومسلية للأطفال بصحبة شخصيات السنافر المحبوبة.",
+          "thumbnail": "https://img.youtube.com/vi/X5e26QxffEA/hqdefault.jpg",
+          "badge": "تعليم وترفيه"
+        },
+        {
+          "id": "smurf-vid-16",
+          "youtubeId": "USW8_gV_Hnw",
+          "title": "رحلة السنافر العجيبة في الغابة",
+          "channel": "(السنافر) The Smurfs •القناة الرسمية!",
+          "duration": "22:00",
+          "description": "يذهب السنافر في رحلة استكشافية جديدة داخل الغابة المسحورة.",
+          "thumbnail": "https://img.youtube.com/vi/USW8_gV_Hnw/hqdefault.jpg",
+          "badge": "مغامرات"
+        },
+        {
+          "id": "smurf-vid-17",
+          "youtubeId": "DLu4KPSn-uE",
+          "title": "سر الحديقة السرية للسنافر",
+          "channel": "(السنافر) The Smurfs •القناة الرسمية!",
+          "duration": "18:00",
+          "description": "يكتشف السنافر حديقة جديدة مليئة بالأسرار والمفاجآت السحرية.",
+          "thumbnail": "https://img.youtube.com/vi/DLu4KPSn-uE/hqdefault.jpg",
+          "badge": "حلقة كاملة"
+        },
+        {
+          "id": "smurf-vid-18",
+          "youtubeId": "ub7S6xCCSKw",
+          "title": "حيل بابا سنفور الذكية لإنقاذ القرية",
+          "channel": "(السنافر) The Smurfs •القناة الرسمية!",
+          "duration": "20:00",
+          "description": "يستخدم بابا سنفور حكمته وحيله الرائعة للتصدي لخطة شرشبيل الجديدة.",
+          "thumbnail": "https://img.youtube.com/vi/ub7S6xCCSKw/hqdefault.jpg",
+          "badge": "مغامرة مشوقة"
+        },
+        {
+          "id": "smurf-vid-19",
+          "youtubeId": "53oHBQt1nHg",
+          "title": "فصول السنة مع السنافر الأذكياء",
+          "channel": "(السنافر) The Smurfs •القناة الرسمية!",
+          "duration": "16:00",
+          "description": "يتعرف السنافر على تغيرات الطقس وفصول السنة المختلفة بطريقة مرحة.",
+          "thumbnail": "https://img.youtube.com/vi/53oHBQt1nHg/hqdefault.jpg",
+          "badge": "تعليم وترفيه"
+        },
+        {
+          "id": "smurf-vid-20",
+          "youtubeId": "GuzRG6qHUpc",
+          "title": "ليلة النجوم المضيئة في قرية السنافر",
+          "channel": "(السنافر) The Smurfs •القناة الرسمية!",
+          "duration": "24:00",
+          "description": "احتفال السنافر تحت ضوء النجوم وسط أجواء مليئة بالسحر والضحك.",
+          "thumbnail": "https://img.youtube.com/vi/GuzRG6qHUpc/hqdefault.jpg",
+          "badge": "حلقة خاصة"
+        }
+      ]
+    },
+    {
+      "id": "family-fun",
+      "title": "عمر وهنا في البيت والمدرسة",
+      "description": "حلقات عائلية مرحة تعزز المحبة بين الإخوة وبر الوالدين واحترام المعلمة.",
+      "videos": [
+        {
+          "id": "oh-vid-10",
+          "youtubeId": "EiQ--fzWtoc",
+          "title": "نحب أمي وأبي - بر الوالدين",
+          "channel": "Omar & Hana Arabic",
+          "duration": "04:22",
+          "description": "تعبير صادق عن المحبة والامتنان للأم والأب وفضل طاعتهما.",
+          "thumbnail": "https://img.youtube.com/vi/EiQ--fzWtoc/hqdefault.jpg",
+          "badge": "بر الوالدين"
+        },
+        {
+          "id": "oh-vid-11",
+          "youtubeId": "Sl4hYYOi6yk",
+          "title": "مفاجأة لأبي الحبيب",
+          "channel": "Omar & Hana Arabic",
+          "duration": "04:50",
+          "description": "عمر وهنا يخططان لمفاجأة سارة لإسعاد والدهما بعد عودته من العمل.",
+          "thumbnail": "https://img.youtube.com/vi/Sl4hYYOi6yk/hqdefault.jpg",
+          "badge": "العائلة"
+        },
+        {
+          "id": "oh-vid-12",
+          "youtubeId": "qYYeOUYSkUg",
+          "title": "شكراً يا معلمتي الفاضلة",
+          "channel": "Omar & Hana Arabic",
+          "duration": "04:05",
+          "description": "تقدير دور المعلمة والثناء على جهودها في تعليم وبناء أجيال المستقبل.",
+          "thumbnail": "https://img.youtube.com/vi/qYYeOUYSkUg/hqdefault.jpg",
+          "badge": "احترام المعلم"
+        },
+        {
+          "id": "oh-vid-13",
+          "youtubeId": "XeCJsvl_qbU",
+          "title": "وقت النزهة والرحلات المرحة",
+          "channel": "Omar & Hana Arabic",
+          "duration": "05:10",
+          "description": "رحلة عائلية في الهواء الطلق واستكشاف جمال الكون مع عمر وهنا وسارة.",
+          "thumbnail": "https://img.youtube.com/vi/XeCJsvl_qbU/hqdefault.jpg",
+          "badge": "نزهة عائلية"
+        },
+        {
+          "id": "oh-vid-14",
+          "youtubeId": "Zh9O6bbwa2o",
+          "title": "من الممتع أن نرسم معاً بالألوان",
+          "channel": "Omar & Hana Arabic",
+          "duration": "03:50",
+          "description": "نشاط رسم ترفيهي يشجع الإبداع والتعاون بين الأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/Zh9O6bbwa2o/hqdefault.jpg",
+          "badge": "إبداع ورسم"
+        },
+        {
+          "id": "oh-vid-15",
+          "youtubeId": "J58e1IBM-RI",
+          "title": "قصة عمر والقطة ميمي",
+          "channel": "Omar & Hana Arabic",
+          "duration": "04:35",
+          "description": "قصة لطيفة عن الرفق بالحيوان والاهتمام بالقطة ميمي ورعايتها.",
+          "thumbnail": "https://img.youtube.com/vi/J58e1IBM-RI/hqdefault.jpg",
+          "badge": "الرفق بالحيوان"
+        },
+        {
+          "id": "oh-vid-16",
+          "youtubeId": "ivIHuufug7w",
+          "title": "مجموعة أناشيد ورسوم دينية للأطفال",
+          "channel": "Omar & Hana Arabic",
+          "duration": "35:10",
+          "description": "باقة من أفضل أناشيد ورسوم عمر وهنا التعليمية مجمعة في فيديو واحد متكامل.",
+          "thumbnail": "https://img.youtube.com/vi/ivIHuufug7w/hqdefault.jpg",
+          "badge": "حلقة مجمعة"
+        },
+        {
+          "id": "oh-vid-17",
+          "youtubeId": "SKMvC5kE2Hk",
+          "title": "رسوم متحركة دينية إسلامية للأطفال (كاملة)",
+          "channel": "Omar & Hana Arabic",
+          "duration": "28:40",
+          "description": "حلقات الرسوم المتحركة التربوية الهادفة للأطفال بدون إعلانات مزعجة.",
+          "thumbnail": "https://img.youtube.com/vi/SKMvC5kE2Hk/hqdefault.jpg",
+          "badge": "ساعة كرتون"
+        },
+        {
+          "id": "oh-vid-18",
+          "youtubeId": "jpnV4Ec_qUI",
+          "title": "حكايات الأخلاق والقيم الإسلامية",
+          "channel": "Omar & Hana Arabic",
+          "duration": "31:25",
+          "description": "رسوم كرتونية مميزة تسرد أروع قصص الصدق، الأمانة، والمحبة.",
+          "thumbnail": "https://img.youtube.com/vi/jpnV4Ec_qUI/hqdefault.jpg",
+          "badge": "قصص إسلامية"
+        }
+      ]
+    },
+    {
+      "id": "babybus-arabic",
+      "title": "بيبي باص | BabyBus Arabic",
+      "description": "BabyBus Arabic TV -  رسوم متحركة",
+      "videos": [
+        {
+          "id": "babybus-1",
+          "youtubeId": "cJ1Nd2NOPS4",
+          "title": "درس تنكر النقيب لابرادور | بيبي باص | BabyBus Arabic",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "01:03:35",
+          "description": "حلقة تعليمية ممتعة من مغامرات النقيب لابرادور للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/cJ1Nd2NOPS4/hqdefault.jpg",
+          "badge": "كرتون أطفال"
+        },
+        {
+          "id": "babybus-2",
+          "youtubeId": "pHEBCJFgeto",
+          "title": "لا لا لا لا لن تمسك بي | اغاني اطفال | اناشيد اطفال | بيبي باص | BabyBus Arabic",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "00:31:33",
+          "description": "أناشيد وأغاني أطفال ممتعة ومسلية من بيبي باص.",
+          "thumbnail": "https://img.youtube.com/vi/pHEBCJFgeto/hqdefault.jpg",
+          "badge": "أغاني أطفال"
+        },
+        {
+          "id": "babybus-3",
+          "youtubeId": "AP2WXteEEP4",
+          "title": "ديناصور ديناصور أين أنت؟ | عائلة الأصابع | اغاني الديناصورات | اغاني اطفال | بيبي باص | BabyBus",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "00:21:54",
+          "description": "أغاني الديناصورات وعائلة الأصابع للأطفال الصغار.",
+          "thumbnail": "https://img.youtube.com/vi/AP2WXteEEP4/hqdefault.jpg",
+          "badge": "أغاني الديناصورات"
+        },
+        {
+          "id": "babybus-4",
+          "youtubeId": "_hmljtdegWU",
+          "title": "لا توقظ السائر أثناء النوم | كرتون اطفال | نقيب لابرادور | بيبي باص | BabyBus Arabic",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "00:45:24",
+          "description": "مغامرة توعوية كرتونية مع النقيب لابرادور للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/_hmljtdegWU/hqdefault.jpg",
+          "badge": "كرتون تعليمي"
+        },
+        {
+          "id": "babybus-5",
+          "youtubeId": "v7KN4Q-7fpU",
+          "title": "الطعام الساخن مقابل الطعام البارد | اغاني اطفال | كيكي وميوميو | بيبي باص | BabyBus Arabic",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "00:19:31",
+          "description": "أغاني تعليمية عن الطعام الساخن والبارد مع كيكي وميوميو.",
+          "thumbnail": "https://img.youtube.com/vi/v7KN4Q-7fpU/hqdefault.jpg",
+          "badge": "أغاني تعليمية"
+        },
+        {
+          "id": "babybus-6",
+          "youtubeId": "NN3bt0Ir8W8",
+          "title": "لا تسهر لوقت متأخر | كرتون اطفال | رسوم متحركة للاطفال | النقيب لابرادور | بيبي باص | BabyBus Arabic",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "00:59:50",
+          "description": "رسوم متحركة هادفة لتعزيز عادات النوم السليمة للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/NN3bt0Ir8W8/hqdefault.jpg",
+          "badge": "رسوم متحركة"
+        },
+        {
+          "id": "babybus-7",
+          "youtubeId": "nX6Rd2GrykE",
+          "title": "نيو يعتني بالصغير | أغنية المهن | اغاني اطفال | بيبي باص | BabyBus Arabic",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "00:38:44",
+          "description": "أغنية المهن وتعلم الاهتمام بالصغار مع شخصيات بيبي باص.",
+          "thumbnail": "https://img.youtube.com/vi/nX6Rd2GrykE/hqdefault.jpg",
+          "badge": "أغنية المهن"
+        },
+        {
+          "id": "babybus-8",
+          "youtubeId": "777GZon-qOg",
+          "title": "وحش البحر المرعب | كرتون اطفال | رسوم متحركة | نقيب لابرادور | بيبي باص | BabyBus Arabic",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "01:03:09",
+          "description": "مغامرة شيقة ومثيرة مع النقيب لابرادور في البحر.",
+          "thumbnail": "https://img.youtube.com/vi/777GZon-qOg/hqdefault.jpg",
+          "badge": "مغامرات"
+        },
+        {
+          "id": "babybus-9",
+          "youtubeId": "Qb4qQ_Ncvko",
+          "title": "باز باز بعوضة مزعجة | اغاني اطفال | بيبي باص | BabyBus Arabic",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "00:06:58",
+          "description": "أغنية ممتعة ومرحة للأطفال عن الحشرات والوقاية منها.",
+          "thumbnail": "https://img.youtube.com/vi/Qb4qQ_Ncvko/hqdefault.jpg",
+          "badge": "أغاني الأطفال"
+        },
+        {
+          "id": "babybus-10",
+          "youtubeId": "2c5fpRjC04s",
+          "title": "من فوق المعكرونة | اغاني اطفال | بيبي باص | BabyBus Arabic",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "00:22:42",
+          "description": "أغاني وأناشيد طريفة حول الأطعمة المفضلة للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/2c5fpRjC04s/hqdefault.jpg",
+          "badge": "أناشيد ممتعة"
+        },
+        {
+          "id": "babybus-11",
+          "youtubeId": "H4F5FuCGSTk",
+          "title": "الكعكات الراقصات الملونات | عشر كعكات راقصات | اغنية الالوان والارقام |بيبي باص | BabyBus Arabic",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "00:30:18",
+          "description": "تعلم الألوان والأرقام من خلال أغنية الكعكات الراقصات.",
+          "thumbnail": "https://img.youtube.com/vi/H4F5FuCGSTk/hqdefault.jpg",
+          "badge": "تعليم الألوان والأرقام"
+        },
+        {
+          "id": "babybus-12",
+          "youtubeId": "VkmOFHv2uUM",
+          "title": "البطل يمسك بالحشرات | أغنية الحشرات | اغاني اطفال | بيبي باص | BabyBus Arabic",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "00:36:02",
+          "description": "أغنية تعليمية حول أنواع الحشرات المختلفة للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/VkmOFHv2uUM/hqdefault.jpg",
+          "badge": "أغنية تعليمية"
+        },
+        {
+          "id": "babybus-13",
+          "youtubeId": "Ztg9MWgcdUY",
+          "title": "مغامرة الهروب من الغرفة الملونة | اغاني اطفال | بيبي باص | BabyBus Arabic",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "00:16:00",
+          "description": "مغامرة ممتعة في الغرفة الملونة للتعرف على الأشكال والألوان.",
+          "thumbnail": "https://img.youtube.com/vi/Ztg9MWgcdUY/hqdefault.jpg",
+          "badge": "مغامرات ملونة"
+        },
+        {
+          "id": "babybus-14",
+          "youtubeId": "AzbDlOrLjdI",
+          "title": "صفارات الطوارئ قيد التشغيل | اغاني الطبيب | اغاني الاطفال | بيبي باص | BabyBus Arabic",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "00:20:26",
+          "description": "أغاني الطبيب وإرشادات الطوارئ والسلامة للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/AzbDlOrLjdI/hqdefault.jpg",
+          "badge": "إرشادات السلامة"
+        },
+        {
+          "id": "babybus-15",
+          "youtubeId": "Z1Y8594xphc",
+          "title": "سيارات ملونة | سيارات اطفال | سيارة الشرطة | سيارة الاسعاف | اغاني اطفال | بيبي باص | BabyBus Arabic",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "00:42:31",
+          "description": "تشكيلة مميزة من أغاني السيارات ووسائل النقل للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/Z1Y8594xphc/hqdefault.jpg",
+          "badge": "أغاني السيارات"
+        },
+        {
+          "id": "babybus-16",
+          "youtubeId": "9R1zU2SJcPk",
+          "title": "أغنية توت توت | اغاني اطفال | بيبي باص | BabyBus Arabic",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "00:26:54",
+          "description": "أغنية قطار توت توت والأناشيد الترفيهية للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/9R1zU2SJcPk/hqdefault.jpg",
+          "badge": "أناشيد الأطفال"
+        },
+        {
+          "id": "babybus-17",
+          "youtubeId": "GOD4Hzs7dlI",
+          "title": "صغيري صغيري من أين أتيت؟ | اغاني اطفال | بيبي باص | BabyBus Arabic",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "00:12:58",
+          "description": "أغنية هادئة وجميلة للأطفال الصغار والعائلات.",
+          "thumbnail": "https://img.youtube.com/vi/GOD4Hzs7dlI/hqdefault.jpg",
+          "badge": "أغاني هادئة"
+        },
+        {
+          "id": "babybus-18",
+          "youtubeId": "04rIWeS1E48",
+          "title": "مجموعة من كرتون كيكي وميوميو | بيبي باص",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "00:39:31",
+          "description": "مجموعة من حلقات كرتون كيكي وميوميو الممتعة للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/04rIWeS1E48/hqdefault.jpg",
+          "badge": "كرتون كيكي وميوميو"
+        },
+        {
+          "id": "babybus-19",
+          "youtubeId": "Eskgc54MgSA",
+          "title": "السكر الملون | تعلم الألوان | اغاني اطفال | بيبي باص | BabyBus Arabic",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "00:34:45",
+          "description": "فيديو تعليمي ممتع لتعلم الألوان بأسلوب تفاعلي وجذاب.",
+          "thumbnail": "https://img.youtube.com/vi/Eskgc54MgSA/hqdefault.jpg",
+          "badge": "تعليم الألوان"
+        },
+        {
+          "id": "babybus-20",
+          "youtubeId": "Fupa65H9ojE",
+          "title": "أنا بطل الخارق في الليل | اغاني اطفال | كيكي وميوميو | بيبي باص | BabyBus Arabic",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "00:21:42",
+          "description": "مغامرات البطل الخارق في الليل مع كيكي وميوميو.",
+          "thumbnail": "https://img.youtube.com/vi/Fupa65H9ojE/hqdefault.jpg",
+          "badge": "مغامرات الأبطال"
+        }
+      ]
+    },
+    {
+      "id": "spacetoon",
+      "title": "كاتوري | حلقات كاملة",
+      "description": "بث يضم حلقات كاملة ومغامرات كاتوري المشوقة على قناة سبيستون",
+      "videos": [
+        {
+          "id": "sp-1",
+          "youtubeId": "ztOdavsTgrM",
+          "title": "كاتوري | حلقات كاملة سبيستون",
+          "channel": "Spacetoon",
+          "duration": "10:55:40",
+          "description": "بث مباشر يضم حلقات كاملة ومغامرات كاتوري المشوقة على قناة سبيستون.",
+          "thumbnail": "https://img.youtube.com/vi/ztOdavsTgrM/hqdefault.jpg",
+          "badge": "بث مباشر"
+        },
+        {
+          "id": "sp-2",
+          "youtubeId": "WVyeOql2AsE",
+          "title": "سبيستون | كاتوري - مجموعة الحلقات العاشرة والأخيرة",
+          "channel": "Spacetoon",
+          "duration": "49:33",
+          "description": "مجموعة الحلقات الأخيرة من مسلسل كاتوري الممتع.",
+          "thumbnail": "https://img.youtube.com/vi/WVyeOql2AsE/hqdefault.jpg",
+          "badge": "حلقات كاملة"
+        },
+        {
+          "id": "sp-3",
+          "youtubeId": "njiS5aOa1U8",
+          "title": "ساعة كاملة من أعمالكم المفضلة - كاتوري",
+          "channel": "Spacetoon",
+          "duration": "01:10:25",
+          "description": "ساعة كاملة من المغامرات الممتعة مع عائلة كاتوري.",
+          "thumbnail": "https://img.youtube.com/vi/njiS5aOa1U8/hqdefault.jpg",
+          "badge": "تجميعية"
+        },
+        {
+          "id": "sp-4",
+          "youtubeId": "61ahmYBfFFU",
+          "title": "سبيستون | كاتوري - مجموعة الحلقات الخامسة",
+          "channel": "Spacetoon",
+          "duration": "35:27",
+          "description": "مجموعة من حلقات كاتوري المميزة والمسلية للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/61ahmYBfFFU/hqdefault.jpg",
+          "badge": "حلقات كاملة"
+        },
+        {
+          "id": "sp-5",
+          "youtubeId": "l4g2TJJ0o20",
+          "title": "سبيستون - كاتوري - الحلقة 1 | Spacetoon - Katuri -Ep1",
+          "channel": "Spacetoon",
+          "duration": "07:31",
+          "description": "الحلقة الأولى من مغامرات الطيور الصغيرة كاتوري.",
+          "thumbnail": "https://img.youtube.com/vi/l4g2TJJ0o20/hqdefault.jpg",
+          "badge": "حلقة أولى"
+        },
+        {
+          "id": "sp-6",
+          "youtubeId": "hIt-SOc1GMQ",
+          "title": "سبيستون | كاتوري - مجموعة الحلقات الأولى",
+          "channel": "Spacetoon",
+          "duration": "35:29",
+          "description": "مجموعة الحلقات الأولى من كرتون كاتوري على سبيستون.",
+          "thumbnail": "https://img.youtube.com/vi/hIt-SOc1GMQ/hqdefault.jpg",
+          "badge": "حلقات كاملة"
+        },
+        {
+          "id": "sp-7",
+          "youtubeId": "0Btq503rhJY",
+          "title": "سبيستون | كاتوري Katuri - شارة العمل",
+          "channel": "Spacetoon",
+          "duration": "01:10",
+          "description": "أغنية شارة البداية لبرنامج كاتوري على قناة سبيستون.",
+          "thumbnail": "https://img.youtube.com/vi/0Btq503rhJY/hqdefault.jpg",
+          "badge": "شارة العمل"
+        },
+        {
+          "id": "sp-8",
+          "youtubeId": "KyWUlkKD_yY",
+          "title": "Spacetoon | سبيستون - الحديقة السرية - شارة العمل 💐🌹",
+          "channel": "Spacetoon",
+          "duration": "01:55",
+          "description": "شارة البداية الشهيرة لأنمي الحديقة السرية الكلاسيكي.",
+          "thumbnail": "https://img.youtube.com/vi/KyWUlkKD_yY/hqdefault.jpg",
+          "badge": "شارة كلاسيكية"
+        },
+        {
+          "id": "sp-9",
+          "youtubeId": "2w_dzCWVS90",
+          "title": "أغنية ري بون بون - سبيس تون 🎵 Rebonbon - Spacetoon",
+          "channel": "Spacetoon",
+          "duration": "02:45",
+          "description": "أغنية ري بون بون المحبوبة على قناة سبيستون للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/2w_dzCWVS90/hqdefault.jpg",
+          "badge": "أغاني سبيستون"
+        },
+        {
+          "id": "sp-10",
+          "youtubeId": "_CB9Dv2-hxA",
+          "title": "سبيستون | بابار فيل | شارة العمل",
+          "channel": "Spacetoon",
+          "duration": "02:00",
+          "description": "شارة بداية كرتون بابار فيل على قناة سبيستون.",
+          "thumbnail": "https://img.youtube.com/vi/_CB9Dv2-hxA/hqdefault.jpg",
+          "badge": "شارة العمل"
+        },
+        {
+          "id": "sp-11",
+          "youtubeId": "YORQ3vgmLVA",
+          "title": "Spacetoon | سبيستون - أغنية فصل الصيف شمس سطعت",
+          "channel": "Spacetoon",
+          "duration": "02:31",
+          "description": "أغنية فصل الصيف المرحة من أغاني سبيستون المميزة.",
+          "thumbnail": "https://img.youtube.com/vi/YORQ3vgmLVA/hqdefault.jpg",
+          "badge": "أغاني سبيستون"
+        },
+        {
+          "id": "sp-12",
+          "youtubeId": "WPeArLLXwZg",
+          "title": "أغنية بداية مدينة النخيل - سبيستون 🎵 Spacetoon",
+          "channel": "Spacetoon",
+          "duration": "02:05",
+          "description": "شارة البداية لكرتون مدينة النخيل على قناة سبيستون.",
+          "thumbnail": "https://img.youtube.com/vi/WPeArLLXwZg/hqdefault.jpg",
+          "badge": "شارة العمل"
+        },
+        {
+          "id": "sp-13",
+          "youtubeId": "8EUAg8A8HdY",
+          "title": "سبيستون | مغامرات الصداقة مع كاليميرو | الحلقات الكاملة",
+          "channel": "Spacetoon",
+          "duration": "57:32",
+          "description": "مغامرات الصداقة والتشويق مع كاليميرو وحلقات كاملة.",
+          "thumbnail": "https://img.youtube.com/vi/8EUAg8A8HdY/hqdefault.jpg",
+          "badge": "حلقات كاملة"
+        },
+        {
+          "id": "sp-14",
+          "youtubeId": "s6it1VW8aBk",
+          "title": "كوكوتاما | حلقات كاملة | بث مباشر | سبيستون",
+          "channel": "Spacetoon",
+          "duration": "03:32:39",
+          "description": "بث مباشر يضم حلقات كاملة ومغامرات ممتعة مع كوكوتاما.",
+          "thumbnail": "https://img.youtube.com/vi/s6it1VW8aBk/hqdefault.jpg",
+          "badge": "بث مباشر"
+        },
+        {
+          "id": "sp-15",
+          "youtubeId": "eirhr0uNek4",
+          "title": "سبيستون | مغامرات الحكايات الخيالية",
+          "channel": "Spacetoon",
+          "duration": "15:00",
+          "description": "حكايات خيالية ممتعة ومميزة على شاشة سبيستون.",
+          "thumbnail": "https://img.youtube.com/vi/eirhr0uNek4/hqdefault.jpg",
+          "badge": "حكايات"
+        },
+        {
+          "id": "sp-16",
+          "youtubeId": "gifwrHhhOCE",
+          "title": "سبيستون | عالم الألوان والأنشطة الترفيهية",
+          "channel": "Spacetoon",
+          "duration": "12:00",
+          "description": "أنشطة ترفيهية وتعليمية ممتعة لأطفال سبيستون.",
+          "thumbnail": "https://img.youtube.com/vi/gifwrHhhOCE/hqdefault.jpg",
+          "badge": "ترفيه وتعليم"
+        },
+        {
+          "id": "sp-17",
+          "youtubeId": "X5e26QxffEA",
+          "title": "سبيستون | أشكال ومغامرات الأبطال",
+          "channel": "Spacetoon",
+          "duration": "14:00",
+          "description": "مغامرات شيقة ومسلية لشخصيات سبيستون المفضلة.",
+          "thumbnail": "https://img.youtube.com/vi/X5e26QxffEA/hqdefault.jpg",
+          "badge": "مغامرات"
+        },
+        {
+          "id": "sp-18",
+          "youtubeId": "USW8_gV_Hnw",
+          "title": "سبيستون | رحلة في عالم وسائل النقل والسيارات",
+          "channel": "Spacetoon",
+          "duration": "18:00",
+          "description": "جولة ممتعة في عالم السيارات ووسائل النقل المختلفة.",
+          "thumbnail": "https://img.youtube.com/vi/USW8_gV_Hnw/hqdefault.jpg",
+          "badge": "تعليم وترفيه"
+        },
+        {
+          "id": "sp-19",
+          "youtubeId": "DLu4KPSn-uE",
+          "title": "سبيستون | تعلم الأيام والأشهر مع أبطال الكرتون",
+          "channel": "Spacetoon",
+          "duration": "16:00",
+          "description": "فيديو تعليمي ممتع لتعلم أيام الأسبوع والأشهر.",
+          "thumbnail": "https://img.youtube.com/vi/DLu4KPSn-uE/hqdefault.jpg",
+          "badge": "تعليمي"
+        },
+        {
+          "id": "sp-20",
+          "youtubeId": "ub7S6xCCSKw",
+          "title": "سبيستون | عالم المهن والأبطال الصغار",
+          "channel": "Spacetoon",
+          "duration": "15:30",
+          "description": "تعرف على مختلف المهن والأعمال بأسلوب سبيستوني ممتع.",
+          "thumbnail": "https://img.youtube.com/vi/ub7S6xCCSKw/hqdefault.jpg",
+          "badge": "تعليمي وترفيهي"
+        }
+      ]
+    },
+    {
+      "id": "paw-patrol",
+      "title": "PAW Patrol(دوريات المخلاب)",
+      "description": "PAW Patrol(دوريات المخلاب) مفامرات",
+      "videos": [
+        {
+          "id": "paw-1",
+          "youtubeId": "9T04bVwtk8U",
+          "title": "دوريات المخلاب | ثلاثون دقيقة من الأغاني مع دوريات المخلاب | Nick Jr. Arabia",
+          "channel": "نيك جونيور العربية - Nick Jr. Arabia",
+          "duration": "25:00",
+          "description": "مجموعة من أجمل أغاني دوريات المخلاب.",
+          "thumbnail": "https://img.youtube.com/vi/9T04bVwtk8U/hqdefault.jpg",
+          "badge": "أغاني أطفال"
+        },
+        {
+          "id": "paw-2",
+          "youtubeId": "QCE9Gxsk51w",
+          "title": "دوريات المخلاب | فريق دوريات المخلاب ينقذ قصرًا تحت الماء | Nick Jr. Arabia",
+          "channel": "نيك جونيور العربية - Nick Jr. Arabia",
+          "duration": "09:49",
+          "description": "مغامرة إنقاذ مثيرة تحت الماء مع دوريات المخلاب.",
+          "thumbnail": "https://img.youtube.com/vi/QCE9Gxsk51w/hqdefault.jpg",
+          "badge": "مغامرة"
+        },
+        {
+          "id": "paw-3",
+          "youtubeId": "CqH8f5sz86k",
+          "title": "دوريات المخلاب | رايدر ينادي الجراء إلى برج المراقبة! | نيكلوديون | Nick Jr. Arabia",
+          "channel": "نيك جونيور العربية - Nick Jr. Arabia",
+          "duration": "02:03:12",
+          "description": "رايدر يستدعي الجراء لإنقاذ اليوم من برج المراقبة.",
+          "thumbnail": "https://img.youtube.com/vi/CqH8f5sz86k/hqdefault.jpg",
+          "badge": "حلقة كاملة"
+        },
+        {
+          "id": "paw-4",
+          "youtubeId": "iVW9fs9PZHA",
+          "title": "دوريات المخلاب | تحالفات رابل وروكي في إصلاحات الفريق | Nick Jr. Arabia",
+          "channel": "نيك جونيور العربية - Nick Jr. Arabia",
+          "duration": "14:38",
+          "description": "رابل وروكي يتعاونان في أعمال الإصلاح والبناء.",
+          "thumbnail": "https://img.youtube.com/vi/iVW9fs9PZHA/hqdefault.jpg",
+          "badge": "إصلاحات الفريق"
+        },
+        {
+          "id": "paw-5",
+          "youtubeId": "-QWYFtB63O8",
+          "title": "مغامرات لذيذة وعمليات إنقاذ PAW Patrol! #6 🍕 | 30 دقيقة | نيكلوديون | Nick Jr. Arabia",
+          "channel": "نيك جونيور العربية - Nick Jr. Arabia",
+          "duration": "29:45",
+          "description": "عمليات إنقاذ ممتعة مع دوريات المخلاب للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/-QWYFtB63O8/hqdefault.jpg",
+          "badge": "عمليات إنقاذ"
+        },
+        {
+          "id": "paw-6",
+          "youtubeId": "RQMOD8f0qyU",
+          "title": "PAW Patrol تنطلق نحو خط النهاية! 🏆🏁 مع Rocky وSkye والمزيد! | 90 دقيقة",
+          "channel": "نيك جونيور العربية - Nick Jr. Arabia",
+          "duration": "01:31:17",
+          "description": "سباقات ومغامرات حماسية نحو خط النهاية مع الجراء.",
+          "thumbnail": "https://img.youtube.com/vi/RQMOD8f0qyU/hqdefault.jpg",
+          "badge": "سباقات"
+        },
+        {
+          "id": "paw-7",
+          "youtubeId": "zlBNW_pSO8I",
+          "title": "دوريات المخلاب | مغامرات عجلات الإنقاذ في \"باو باترول\"! | نيكلوديون | Nick Jr. Arabia",
+          "channel": "نيك جونيور العربية - Nick Jr. Arabia",
+          "duration": "01:59:22",
+          "description": "تجميعية مغامرات عجلات الإنقاذ لباو باترول.",
+          "thumbnail": "https://img.youtube.com/vi/zlBNW_pSO8I/hqdefault.jpg",
+          "badge": "عجلات الإنقاذ"
+        },
+        {
+          "id": "paw-8",
+          "youtubeId": "jVZo6FmnQzs",
+          "title": "٩٠ دقيقة من مغامرات الديناصورات *الجديدة* مع دورية المخلب! 🦖🐾 | رابل وطاقمه",
+          "channel": "نيك جونيور العربية - Nick Jr. Arabia",
+          "duration": "01:31:57",
+          "description": "مغامرات الديناصورات المشوقة مع رابل وفريقه.",
+          "thumbnail": "https://img.youtube.com/vi/jVZo6FmnQzs/hqdefault.jpg",
+          "badge": "مغامرات الديناصورات"
+        },
+        {
+          "id": "paw-9",
+          "youtubeId": "72QifuUXRt4",
+          "title": "دوريات المخلاب | مغامرات عجلات الإنقاذ لـ\"باو باترول\"! | نيكلوديون | Nick Jr. Arabia",
+          "channel": "نيك جونيور العربية - Nick Jr. Arabia",
+          "duration": "03:00:33",
+          "description": "ساعات من التشويق والمغامرات مع عجلات الإنقاذ.",
+          "thumbnail": "https://img.youtube.com/vi/72QifuUXRt4/hqdefault.jpg",
+          "badge": "مغامرات طويلة"
+        },
+        {
+          "id": "paw-10",
+          "youtubeId": "NZ_igwUkmWE",
+          "title": "دوريات المخلاب | دوريات المخلاب ومهمات برج المراقبة | حلقة لمدة 30 دقيقة | Nick Jr. Arabia",
+          "channel": "نيك جونيور العربية - Nick Jr. Arabia",
+          "duration": "25:32",
+          "description": "مهمات برج المراقبة البطولية لإنقاذ أهالي المدينة.",
+          "thumbnail": "https://img.youtube.com/vi/NZ_igwUkmWE/hqdefault.jpg",
+          "badge": "برج المراقبة"
+        },
+        {
+          "id": "paw-11",
+          "youtubeId": "PHlJ9aYDY88",
+          "title": "دوريات المخلاب | دوريات المخلاب ينقذون أصدقائهم | مجموعة من 60 دقيقة | Nick Jr. Arabia",
+          "channel": "نيك جونيور العربية - Nick Jr. Arabia",
+          "duration": "01:00:39",
+          "description": "مجموعة متميزة من قصص الإنقاذ للأصدقاء.",
+          "thumbnail": "https://img.youtube.com/vi/PHlJ9aYDY88/hqdefault.jpg",
+          "badge": "مجموعة إنقاذ"
+        },
+        {
+          "id": "paw-12",
+          "youtubeId": "RD35pySG2SQ",
+          "title": "دوريات المخلاب | أفضل مهمات البرج القوي | Nick Jr. Arabia",
+          "channel": "نيك جونيور العربية - Nick Jr. Arabia",
+          "duration": "14:27",
+          "description": "أبرز وأفضل مهمات البرج القوي لدوريات المخلاب.",
+          "thumbnail": "https://img.youtube.com/vi/RD35pySG2SQ/hqdefault.jpg",
+          "badge": "البرج القوي"
+        },
+        {
+          "id": "paw-13",
+          "youtubeId": "IfiN_LD62Lw",
+          "title": "دوريات المخلاب | أفضل مهمات بو 👑 مع سويتي | Nick Jr. Arabia",
+          "channel": "نيك جونيور العربية - Nick Jr. Arabia",
+          "duration": "14:15",
+          "description": "مهمات مشوقة مع الأميرة وسويتي.",
+          "thumbnail": "https://img.youtube.com/vi/IfiN_LD62Lw/hqdefault.jpg",
+          "badge": "مهمات ملكية"
+        },
+        {
+          "id": "paw-14",
+          "youtubeId": "9T04bVwtk8U",
+          "title": "دوريات المخلاب | مغامرات الشتاء والثلوج | Nick Jr. Arabia",
+          "channel": "نيك جونيور العربية - Nick Jr. Arabia",
+          "duration": "22:15",
+          "description": "قصص إنقاذ ممتعة في أجواء الثلج والبرد.",
+          "thumbnail": "https://img.youtube.com/vi/9T04bVwtk8U/hqdefault.jpg",
+          "badge": "مغامرات شتوية"
+        },
+        {
+          "id": "paw-15",
+          "youtubeId": "QCE9Gxsk51w",
+          "title": "دوريات المخلاب | مهمات الإنقاذ الجوي مع سكاي | Nick Jr. Arabia",
+          "channel": "نيك جونيور العربية - Nick Jr. Arabia",
+          "duration": "18:30",
+          "description": "مغامرات طيران مثيرة مع الجرية سكاي.",
+          "thumbnail": "https://img.youtube.com/vi/QCE9Gxsk51w/hqdefault.jpg",
+          "badge": "إنقاذ جوي"
+        },
+        {
+          "id": "paw-16",
+          "youtubeId": "CqH8f5sz86k",
+          "title": "دوريات المخلاب | مهمات الإنقاذ البحري مع زوما | Nick Jr. Arabia",
+          "channel": "نيك جونيور العربية - Nick Jr. Arabia",
+          "duration": "20:10",
+          "description": "إنقاذات مائية رائعة بقيادة زوما وفريق الإنقاذ.",
+          "thumbnail": "https://img.youtube.com/vi/CqH8f5sz86k/hqdefault.jpg",
+          "badge": "إنقاذ بحري"
+        },
+        {
+          "id": "paw-17",
+          "youtubeId": "iVW9fs9PZHA",
+          "title": "دوريات المخلاب | مغامرات تشيس البوليسية | Nick Jr. Arabia",
+          "channel": "نيك جونيور العربية - Nick Jr. Arabia",
+          "duration": "16:45",
+          "description": "تشيس يحل الألغاز ويقود الدوريات بحكمة.",
+          "thumbnail": "https://img.youtube.com/vi/iVW9fs9PZHA/hqdefault.jpg",
+          "badge": "مغامرات بوليسية"
+        },
+        {
+          "id": "paw-18",
+          "youtubeId": "-QWYFtB63O8",
+          "title": "دوريات المخلاب | إنقاذ الحيوانات الضالة | Nick Jr. Arabia",
+          "channel": "نيك جونيور العربية - Nick Jr. Arabia",
+          "duration": "21:00",
+          "description": "الجراء تساعد الحيوانات في الغابة والمدينة.",
+          "thumbnail": "https://img.youtube.com/vi/-QWYFtB63O8/hqdefault.jpg",
+          "badge": "إنقاذ الحيوانات"
+        },
+        {
+          "id": "paw-19",
+          "youtubeId": "RQMOD8f0qyU",
+          "title": "دوريات المخلاب | حفلة عيد ميلاد في المغامرة | Nick Jr. Arabia",
+          "channel": "نيك جونيور العربية - Nick Jr. Arabia",
+          "duration": "24:30",
+          "description": "احتفالات ومواقف مبهجة مع الجراء الأبطال.",
+          "thumbnail": "https://img.youtube.com/vi/RQMOD8f0qyU/hqdefault.jpg",
+          "badge": "احتفالات"
+        },
+        {
+          "id": "paw-20",
+          "youtubeId": "zlBNW_pSO8I",
+          "title": "دوريات المخلاب | الحلقة الكبرى الخاصة | Nick Jr. Arabia",
+          "channel": "نيك جونيور العربية - Nick Jr. Arabia",
+          "duration": "45:00",
+          "description": "حلقة خاصة طويلة مليئة بالمغامرات الكبرى لدوريات المخلاب.",
+          "thumbnail": "https://img.youtube.com/vi/zlBNW_pSO8I/hqdefault.jpg",
+          "badge": "حلقة خاصة"
+        }
+      ]
+    },
+    {
+      "id": "alearabia",
+      "title": "مدينة الأصدقاء - Alearabia",
+      "description": "مدينة الأصدقاء - Alearabia",
+      "videos": [
+        {
+          "id": "friend-1",
+          "youtubeId": "iPiES6m69J0",
+          "title": "مدينة الأصدقاء - 30 دقيقة - وقت اللعب الطويل",
+          "channel": "مدينة الأصدقاء - Alearabia",
+          "duration": "28:29",
+          "description": "وقت اللعب الطويل ومغامرات ممتعة مع أصدقاء مدينة الأصدقاء.",
+          "thumbnail": "https://img.youtube.com/vi/iPiES6m69J0/hqdefault.jpg",
+          "badge": "حلقة خاصة"
+        },
+        {
+          "id": "friend-2",
+          "youtubeId": "_sMiKfNTU08",
+          "title": "مغامرات جديدة مع أفضل أصدقائك - مدينة الأصدقاء",
+          "channel": "مدينة الأصدقاء - Alearabia",
+          "duration": "28:31",
+          "description": "مغامرات شيقة ومسلية مع شخصيات مدينة الأصدقاء.",
+          "thumbnail": "https://img.youtube.com/vi/_sMiKfNTU08/hqdefault.jpg",
+          "badge": "مغامرات"
+        },
+        {
+          "id": "friend-3",
+          "youtubeId": "oTA9snsVx44",
+          "title": "مدينة الاصدقاء - كن لطيفًا مع الجميع - دائمًا 🚒🚑🚓",
+          "channel": "مدينة الأصدقاء - Alearabia",
+          "duration": "27:20",
+          "description": "قصص تعليمية عن اللطف ومساعدة الآخرين في مدينة الأصدقاء.",
+          "thumbnail": "https://img.youtube.com/vi/oTA9snsVx44/hqdefault.jpg",
+          "badge": "تعليم وترفيه"
+        },
+        {
+          "id": "friend-4",
+          "youtubeId": "yhDxhubsEaM",
+          "title": "مدينة الاصدقاء - كن لطيفًا مع الجميع دائمًا 💖💖",
+          "channel": "مدينة الأصدقاء - Alearabia",
+          "duration": "54:20",
+          "description": "تجميعية حلقات ممتعة تؤكد على أهمية اللطف والأخلاق الحسنة.",
+          "thumbnail": "https://img.youtube.com/vi/yhDxhubsEaM/hqdefault.jpg",
+          "badge": "تجميعية"
+        },
+        {
+          "id": "friend-5",
+          "youtubeId": "MvbtGDccUgg",
+          "title": "مدينة الأصدقاء - عربى - 3 حلقات - وقت اللعب الطويل",
+          "channel": "مدينة الأصدقاء - Alearabia",
+          "duration": "28:29",
+          "description": "ثلاث حلقات متتالية من مغامرات ووقت اللعب الطويل.",
+          "thumbnail": "https://img.youtube.com/vi/MvbtGDccUgg/hqdefault.jpg",
+          "badge": "حلقات كاملة"
+        },
+        {
+          "id": "friend-6",
+          "youtubeId": "A_aPhnAPFm8",
+          "title": "العب لمدة ساعتين - مدينة الأصدقاء",
+          "channel": "مدينة الأصدقاء - Alearabia",
+          "duration": "01:57:19",
+          "description": "ساعتان متواصلتان من المرح والتشويق في مدينة الأصدقاء.",
+          "thumbnail": "https://img.youtube.com/vi/A_aPhnAPFm8/hqdefault.jpg",
+          "badge": "عرض طويل"
+        },
+        {
+          "id": "friend-7",
+          "youtubeId": "NXxLP1ZUYAc",
+          "title": "مدينة الاصدقاء - الحلقة 50 - دابة الرحمة التي وجدها ماكس",
+          "channel": "مدينة الأصدقاء - Alearabia",
+          "duration": "09:20",
+          "description": "حلقة مميزة من مدينة الأصدقاء والمغامرة الجديدة لماكس.",
+          "thumbnail": "https://img.youtube.com/vi/NXxLP1ZUYAc/hqdefault.jpg",
+          "badge": "الحلقة 50"
+        },
+        {
+          "id": "friend-8",
+          "youtubeId": "AqseRbGXzDk",
+          "title": "التفاح من أجل إلفي الحلقة 16 - مدينة الاصدقاء",
+          "channel": "مدينة الأصدقاء - Alearabia",
+          "duration": "09:20",
+          "description": "قصة ممتعة حول إلفي والتفاح في مدينة الأصدقاء.",
+          "thumbnail": "https://img.youtube.com/vi/AqseRbGXzDk/hqdefault.jpg",
+          "badge": "الحلقة 16"
+        },
+        {
+          "id": "friend-9",
+          "youtubeId": "z9gT-t010xY",
+          "title": "مدينة الأصدقاء - عربى Ep05 - أين سكوت",
+          "channel": "مدينة الأصدقاء - Alearabia",
+          "duration": "10:30",
+          "description": "مغامرة البحث عن سكوت في الحلقة الخامسة.",
+          "thumbnail": "https://img.youtube.com/vi/z9gT-t010xY/hqdefault.jpg",
+          "badge": "الحلقة 5"
+        },
+        {
+          "id": "friend-10",
+          "youtubeId": "Z7QSPpn8O0A",
+          "title": "مدينة الاصدقاء - الحلقة 51 - مشكلات الثلوج",
+          "channel": "مدينة الأصدقاء - Alearabia",
+          "duration": "09:20",
+          "description": "كيف يتعامل الأصدقاء مع مشكلات الثلوج في المدينة؟",
+          "thumbnail": "https://img.youtube.com/vi/Z7QSPpn8O0A/hqdefault.jpg",
+          "badge": "الحلقة 51"
+        },
+        {
+          "id": "friend-11",
+          "youtubeId": "gPks0C0WAEk",
+          "title": "مدينة الاصدقاء - الحلقة 38 - الرسم على جدران المدينة",
+          "channel": "مدينة الأصدقاء - Alearabia",
+          "duration": "09:20",
+          "description": "مغامرة فنية وتربوية في الحلقة 38 من مدينة الأصدقاء.",
+          "thumbnail": "https://img.youtube.com/vi/gPks0C0WAEk/hqdefault.jpg",
+          "badge": "الحلقة 38"
+        },
+        {
+          "id": "friend-12",
+          "youtubeId": "Z8YAvMG1kh4",
+          "title": "مدينة الأصدقاء - عربى - Ep 06 - الخوذات رائعة",
+          "channel": "مدينة الأصدقاء - Alearabia",
+          "duration": "09:19",
+          "description": "أهمية ارتداء الخوذات والسلامة في الحلقة السادسة.",
+          "thumbnail": "https://img.youtube.com/vi/Z8YAvMG1kh4/hqdefault.jpg",
+          "badge": "الحلقة 6"
+        },
+        {
+          "id": "friend-13",
+          "youtubeId": "RgfHvngds0I",
+          "title": "مدينة الأصدقاء - عربى - Ep01 - اتبع تلك الكرة",
+          "channel": "مدينة الأصدقاء - Alearabia",
+          "duration": "10:30",
+          "description": "الحلقة الأولى من سلسلة مدينة الأصدقاء ومغامرة الكرة.",
+          "thumbnail": "https://img.youtube.com/vi/RgfHvngds0I/hqdefault.jpg",
+          "badge": "الحلقة 1"
+        },
+        {
+          "id": "friend-14",
+          "youtubeId": "iPiES6m69J0",
+          "title": "مدينة الأصدقاء - مهمة الإنقاذ الكبرى",
+          "channel": "مدينة الأصدقاء - Alearabia",
+          "duration": "15:00",
+          "description": "فريق الإنقاذ في مدينة الأصدقاء يلبي نداء الطوارئ.",
+          "thumbnail": "https://img.youtube.com/vi/iPiES6m69J0/hqdefault.jpg",
+          "badge": "عمليات إنقاذ"
+        },
+        {
+          "id": "friend-15",
+          "youtubeId": "_sMiKfNTU08",
+          "title": "مدينة الأصدقاء - يوم العمل في محطة الإطفاء",
+          "channel": "مدينة الأصدقاء - Alearabia",
+          "duration": "12:30",
+          "description": "جولة ممتعة داخل محطة الإطفاء مع أبطال المدينة.",
+          "thumbnail": "https://img.youtube.com/vi/_sMiKfNTU08/hqdefault.jpg",
+          "badge": "مغامرة"
+        },
+        {
+          "id": "friend-16",
+          "youtubeId": "oTA9snsVx44",
+          "title": "مدينة الأصدقاء - حكاية السيارة السريعة",
+          "channel": "مدينة الأصدقاء - Alearabia",
+          "duration": "14:15",
+          "description": "قصة شيقة حول السرعة والأمان في شوارع المدينة.",
+          "thumbnail": "https://img.youtube.com/vi/oTA9snsVx44/hqdefault.jpg",
+          "badge": "قصص أطفال"
+        },
+        {
+          "id": "friend-17",
+          "youtubeId": "yhDxhubsEaM",
+          "title": "مدينة الأصدقاء - العناية بالحيوانات الأليفة",
+          "channel": "مدينة الأصدقاء - Alearabia",
+          "duration": "11:45",
+          "description": "كيف يعتني الأصدقاء بالحيوانات ومساعدة المحتاجين.",
+          "thumbnail": "https://img.youtube.com/vi/yhDxhubsEaM/hqdefault.jpg",
+          "badge": "توعية"
+        },
+        {
+          "id": "friend-18",
+          "youtubeId": "MvbtGDccUgg",
+          "title": "مدينة الأصدقاء - مفاجأة يوم الصداقة",
+          "channel": "مدينة الأصدقاء - Alearabia",
+          "duration": "13:20",
+          "description": "احتفال الأصدقاء بيوم الصداقة وسط أجواء مبهجة.",
+          "thumbnail": "https://img.youtube.com/vi/MvbtGDccUgg/hqdefault.jpg",
+          "badge": "احتفال"
+        },
+        {
+          "id": "friend-19",
+          "youtubeId": "NXxLP1ZUYAc",
+          "title": "مدينة الأصدقاء - سباق الدراجات الممتع",
+          "channel": "مدينة الأصدقاء - Alearabia",
+          "duration": "10:50",
+          "description": "منافسة حماسية ورياضية بين الأصدقاء في المدينة.",
+          "thumbnail": "https://img.youtube.com/vi/NXxLP1ZUYAc/hqdefault.jpg",
+          "badge": "رياضة"
+        },
+        {
+          "id": "friend-20",
+          "youtubeId": "AqseRbGXzDk",
+          "title": "مدينة الأصدقاء - لغز الكنز المفقود",
+          "channel": "مدينة الأصدقاء - Alearabia",
+          "duration": "12:10",
+          "description": "مغامرة جديدة لحل الألغاز والبحث عن الكنز في مدينة الأصدقاء.",
+          "thumbnail": "https://img.youtube.com/vi/AqseRbGXzDk/hqdefault.jpg",
+          "badge": "مغامرة"
+        }
+      ]
+    },
+    {
+      "id": "maya",
+      "title": "مايا النحلة | كرتون وأفلام للأطفال",
+      "description": "مايا النحلة | كرتون وأفلام للأطفال",
+      "videos": [
+        {
+          "id": "maya-1",
+          "youtubeId": "TUcSBB6oy5U",
+          "title": "رخصة الطيران 🐝 مايا النحلة | كرتون وأفلام للأطفال | أطفال عربي الجميع",
+          "channel": "أطفال عربي الجميع",
+          "duration": "11:53",
+          "description": "حلقة رخصة الطيران ومغامرات مايا النحلة للتعلم والتحليق في عالم الحشرات.",
+          "thumbnail": "https://img.youtube.com/vi/TUcSBB6oy5U/hqdefault.jpg",
+          "badge": "حلقة كاملة"
+        },
+        {
+          "id": "maya-2",
+          "youtubeId": "_UZczs-LCJU",
+          "title": "زينة لن تنام 🐝 مايا النحلة | كرتون وأفلام للأطفال | أطفال عربي الجميع",
+          "channel": "أطفال عربي الجميع",
+          "duration": "11:56",
+          "description": "قصة ممتعة عن زينة ومحاولاتها للنوم وسط أجواء الخلية المسلية.",
+          "thumbnail": "https://img.youtube.com/vi/_UZczs-LCJU/hqdefault.jpg",
+          "badge": "حلقة كاملة"
+        },
+        {
+          "id": "maya-3",
+          "youtubeId": "XSwvB8doELg",
+          "title": "مايا النحلة - الحلقة 01: ولادة زينة _ #كرتون_بدون_موسيقى",
+          "channel": "كرتون بدون موسيقى",
+          "duration": "11:49",
+          "description": "الحلقة الأولى من مغامرات مايا النحلة وقصة ولادة زينة.",
+          "thumbnail": "https://img.youtube.com/vi/XSwvB8doELg/hqdefault.jpg",
+          "badge": "الحلقة الأولى"
+        },
+        {
+          "id": "maya-4",
+          "youtubeId": "yS9dpbVo9Zw",
+          "title": "🐌 حلم شيلبي المفاجئ! 🐝 مايا النحلة في يوم المعلم | رسوم متحركة",
+          "channel": "أطفال عربي الجميع",
+          "duration": "02:02:44",
+          "description": "تجميعية خاصة ومغامرات رائعة لنحلة مايا وأصدقائها.",
+          "thumbnail": "https://img.youtube.com/vi/yS9dpbVo9Zw/hqdefault.jpg",
+          "badge": "عرض خاص"
+        },
+        {
+          "id": "maya-5",
+          "youtubeId": "gmm-xrJ3BHc",
+          "title": "حمام ممتع لمايا وويلي في الخلية 🐝 مايا النحلة | رسوم متحركة",
+          "channel": "أطفال عربي الجميع",
+          "duration": "01:07:43",
+          "description": "مغامرات يومية طريفة تجمع مايا وويلي داخل الخلية.",
+          "thumbnail": "https://img.youtube.com/vi/gmm-xrJ3BHc/hqdefault.jpg",
+          "badge": "تجميعية حلقات"
+        },
+        {
+          "id": "maya-6",
+          "youtubeId": "iVO5qS55TV4",
+          "title": "النحلات النائمات 🐝 مايا النحلة | كرتون وأفلام للأطفال | أطفال عربي الجميع",
+          "channel": "أطفال عربي الجميع",
+          "duration": "11:59",
+          "description": "مواقف طريفة عندما تستغرق النحلات في النوم العميق داخل الخلية.",
+          "thumbnail": "https://img.youtube.com/vi/iVO5qS55TV4/hqdefault.jpg",
+          "badge": "حلقة كاملة"
+        },
+        {
+          "id": "maya-7",
+          "youtubeId": "_WN2oGFI3A0",
+          "title": "القاضي شمع العسل 🐝 مايا النحلة | كرتون وأفلام للأطفال | أطفال عربي الجميع",
+          "channel": "أطفال عربي الجميع",
+          "duration": "11:55",
+          "description": "حلقة مميزة تسلط الضوء على العدالة وحل المشاكل بأسلوب لطيف.",
+          "thumbnail": "https://img.youtube.com/vi/_WN2oGFI3A0/hqdefault.jpg",
+          "badge": "حلقة كاملة"
+        },
+        {
+          "id": "maya-8",
+          "youtubeId": "O2aEBtXQb1E",
+          "title": "🎃 عرض خاص بمناسبة الهالوين مع نحلة مايا! 🐝 رسوم متحركة للأطفال",
+          "channel": "أطفال عربي الجميع",
+          "duration": "45:54",
+          "description": "مغامرات احتفالية مشوقة ومسلية رفقة نحلة مايا.",
+          "thumbnail": "https://img.youtube.com/vi/O2aEBtXQb1E/hqdefault.jpg",
+          "badge": "عرض خاص"
+        },
+        {
+          "id": "maya-9",
+          "youtubeId": "afyXxq28yaI",
+          "title": "ملكة ليومٍ واحد 🐝 مايا النحلة | كرتون وأفلام للأطفال | أطفال عربي الجميع",
+          "channel": "أطفال عربي الجميع",
+          "duration": "12:03",
+          "description": "مايا تتولى مسؤولية إدارة الملكة ليوم كامل وسط مفاجآت ممتعة.",
+          "thumbnail": "https://img.youtube.com/vi/afyXxq28yaI/hqdefault.jpg",
+          "badge": "حلقة كاملة"
+        },
+        {
+          "id": "maya-10",
+          "youtubeId": "TUcSBB6oy5U",
+          "title": "مغامرة الزهرة العجيبة 🐝 مايا النحلة | أطفال عربي الجميع",
+          "channel": "أطفال عربي الجميع",
+          "duration": "11:30",
+          "description": "رحلة بحث استكشافية عن أندر الزهور في الغابة.",
+          "thumbnail": "https://img.youtube.com/vi/TUcSBB6oy5U/hqdefault.jpg",
+          "badge": "مغامرة"
+        },
+        {
+          "id": "maya-11",
+          "youtubeId": "_UZczs-LCJU",
+          "title": "حفل الغابة الكبير 🐝 مايا النحلة | أطفال عربي الجميع",
+          "channel": "أطفال عربي الجميع",
+          "duration": "12:10",
+          "description": "تحضيرات واحتفالات حشرية مبهجة في قلب الطبيعة.",
+          "thumbnail": "https://img.youtube.com/vi/_UZczs-LCJU/hqdefault.jpg",
+          "badge": "احتفال"
+        },
+        {
+          "id": "maya-12",
+          "youtubeId": "XSwvB8doELg",
+          "title": "مايا النحلة - أصدقاء العشب الأخضر",
+          "channel": "كرتون بدون موسيقى",
+          "duration": "11:45",
+          "description": "كيف تتعاون مايا مع حشرات الحديقة لمساعدة المحتاجين.",
+          "thumbnail": "https://img.youtube.com/vi/XSwvB8doELg/hqdefault.jpg",
+          "badge": "صداقة"
+        },
+        {
+          "id": "maya-13",
+          "youtubeId": "yS9dpbVo9Zw",
+          "title": "سباق الفراشات السريع 🐝 مايا النحلة",
+          "channel": "أطفال عربي الجميع",
+          "duration": "14:20",
+          "description": "منافسة رياضية حماسية بين فراشات الغابة.",
+          "thumbnail": "https://img.youtube.com/vi/yS9dpbVo9Zw/hqdefault.jpg",
+          "badge": "سباق"
+        },
+        {
+          "id": "maya-14",
+          "youtubeId": "gmm-xrJ3BHc",
+          "title": "أسرار خلية النحل 🐝 مايا النحلة",
+          "channel": "أطفال عربي الجميع",
+          "duration": "13:00",
+          "description": "جولة تعريفية داخل أقسام الخلية وكيفية إنتاج العسل.",
+          "thumbnail": "https://img.youtube.com/vi/gmm-xrJ3BHc/hqdefault.jpg",
+          "badge": "تعليمي"
+        },
+        {
+          "id": "maya-15",
+          "youtubeId": "iVO5qS55TV4",
+          "title": "يوم في حديقة الزهور 🐝 مايا النحلة",
+          "channel": "أطفال عربي الجميع",
+          "duration": "12:15",
+          "description": "نزهة ممتعة ولحظات استرخاء بين أحضان الطبيعة.",
+          "thumbnail": "https://img.youtube.com/vi/iVO5qS55TV4/hqdefault.jpg",
+          "badge": "نزهة"
+        },
+        {
+          "id": "maya-16",
+          "youtubeId": "_WN2oGFI3A0",
+          "title": "لغز العسل المفقود 🐝 مايا النحلة",
+          "channel": "أطفال عربي الجميع",
+          "duration": "11:50",
+          "description": "مغامرة بوليسية خفيفة لحل لغز اختفاء كميات العسل.",
+          "thumbnail": "https://img.youtube.com/vi/_WN2oGFI3A0/hqdefault.jpg",
+          "badge": "لغز ومغامرة"
+        },
+        {
+          "id": "maya-17",
+          "youtubeId": "O2aEBtXQb1E",
+          "title": "حكايات المساء في الغابة 🐝 مايا النحلة",
+          "channel": "أطفال عربي الجميع",
+          "duration": "15:40",
+          "description": "قصص هادئة قبل النوم ترويها مايا لأصدقائها الصغار.",
+          "thumbnail": "https://img.youtube.com/vi/O2aEBtXQb1E/hqdefault.jpg",
+          "badge": "قصص مسائية"
+        },
+        {
+          "id": "maya-18",
+          "youtubeId": "afyXxq28yaI",
+          "title": "فريق الإنقاذ السريع 🐝 مايا النحلة",
+          "channel": "أطفال عربي الجميع",
+          "duration": "12:25",
+          "description": "مساعدة الحشرات الصغيرة في مواجهة المواقف الطارئة.",
+          "thumbnail": "https://img.youtube.com/vi/afyXxq28yaI/hqdefault.jpg",
+          "badge": "إنقاذ"
+        },
+        {
+          "id": "maya-19",
+          "youtubeId": "TUcSBB6oy5U",
+          "title": "درس في الشجاعة 🐝 مايا النحلة",
+          "channel": "أطفال عربي الجميع",
+          "duration": "11:40",
+          "description": "كيف تتغلب مايا على مخاوفها لمساعدة الآخرين.",
+          "thumbnail": "https://img.youtube.com/vi/TUcSBB6oy5U/hqdefault.jpg",
+          "badge": "قيم تربوية"
+        },
+        {
+          "id": "maya-20",
+          "youtubeId": "_UZczs-LCJU",
+          "title": "وداعاً فصل الصيف 🐝 مايا النحلة",
+          "channel": "أطفال عربي الجميع",
+          "duration": "12:00",
+          "description": "استقبال فصل الخريف والتحضير للموسم الجديد في الخلية.",
+          "thumbnail": "https://img.youtube.com/vi/_UZczs-LCJU/hqdefault.jpg",
+          "badge": "تغير الفصول"
+        }
+      ]
+    },
+    {
+      "id": "mansour-and-sara",
+      "title": "منصور وسارة | متعة للأطفال",
+      "description": "منصور وسارة | متعة للأطفال",
+      "videos": [
+        {
+          "id": "mansour-1",
+          "youtubeId": "Q-e-2SBBuQI",
+          "title": "منصور وسارة | متعة للأطفال الجزء 1",
+          "channel": "Mansour and Sara",
+          "duration": "09:42",
+          "description": "مغامرات ممتعة ومشوقة مع منصور وسارة للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/Q-e-2SBBuQI/hqdefault.jpg",
+          "badge": "متعة للأطفال"
+        },
+        {
+          "id": "mansour-2",
+          "youtubeId": "MksvJJd_Qnw",
+          "title": "منصور وسارة | مغامرات منصور | ظبية في خطر!",
+          "channel": "Mansour and Sara",
+          "duration": "16:00",
+          "description": "قصة جديدة ومثيرة مع منصور وسارة لحماية الحيوانات.",
+          "thumbnail": "https://img.youtube.com/vi/MksvJJd_Qnw/hqdefault.jpg",
+          "badge": "مغامرات"
+        },
+        {
+          "id": "mansour-3",
+          "youtubeId": "05K9pLYQsHk",
+          "title": "منصور و سارة | بث مباشر | Mansour and sara",
+          "channel": "Mansour and Sara",
+          "duration": "06:09:07",
+          "description": "بث مباشر متواصل لأفضل مغامرات وعروض منصور وسارة.",
+          "thumbnail": "https://img.youtube.com/vi/05K9pLYQsHk/hqdefault.jpg",
+          "badge": "بث مباشر"
+        },
+        {
+          "id": "mansour-4",
+          "youtubeId": "HftQrDjFUPU",
+          "title": "منصور وسارة | مغامرات منصور | حلويات!",
+          "channel": "Mansour and Sara",
+          "duration": "17:14",
+          "description": "مواقف طريفة ومشوقة تدور حول الحلويات.",
+          "thumbnail": "https://img.youtube.com/vi/HftQrDjFUPU/hqdefault.jpg",
+          "badge": "مغامرات"
+        },
+        {
+          "id": "mansour-5",
+          "youtubeId": "ztqDdgTspjU",
+          "title": "منصور وسارة | مغامرات منصور | في أي اتجاه؟",
+          "channel": "Mansour and Sara",
+          "duration": "14:39",
+          "description": "رحلة استكشاف جديدة لمعرفة الاتجاه الصحيح.",
+          "thumbnail": "https://img.youtube.com/vi/ztqDdgTspjU/hqdefault.jpg",
+          "badge": "مغامرات"
+        },
+        {
+          "id": "mansour-6",
+          "youtubeId": "WBR7y7gZgqs",
+          "title": "منصور وسارة | مغامرات خيالية | لماذا سارة تهرب من منصور؟",
+          "channel": "Mansour and Sara",
+          "duration": "15:56",
+          "description": "قصة خيالية طريفة عن مطاردة ومواقف مسلية.",
+          "thumbnail": "https://img.youtube.com/vi/WBR7y7gZgqs/hqdefault.jpg",
+          "badge": "مغامرات خيالية"
+        },
+        {
+          "id": "mansour-7",
+          "youtubeId": "nWJ0m-Jj9zc",
+          "title": "منصور وسارة | حلقات مشوقة | الجزء 9",
+          "channel": "Mansour and Sara",
+          "duration": "13:11",
+          "description": "تجميعية حلقات مشوقة للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/nWJ0m-Jj9zc/hqdefault.jpg",
+          "badge": "حلقات مشوقة"
+        },
+        {
+          "id": "mansour-8",
+          "youtubeId": "WGel-iyN4Vo",
+          "title": "منصور وسارة | حلقات مشوقة | الجزء 8",
+          "channel": "Mansour and Sara",
+          "duration": "15:43",
+          "description": "مغامرات وحلقات ممتعة جديدة.",
+          "thumbnail": "https://img.youtube.com/vi/WGel-iyN4Vo/hqdefault.jpg",
+          "badge": "حلقات مشوقة"
+        },
+        {
+          "id": "mansour-9",
+          "youtubeId": "w8VsuxKZJh0",
+          "title": "منصور وسارة | حلقات مشوقة | الجزء 10",
+          "channel": "Mansour and Sara",
+          "duration": "15:46",
+          "description": "الحلقة العاشرة من السلسلة المشوقة.",
+          "thumbnail": "https://img.youtube.com/vi/w8VsuxKZJh0/hqdefault.jpg",
+          "badge": "حلقات مشوقة"
+        },
+        {
+          "id": "mansour-10",
+          "youtubeId": "b_fLISQkb2Y",
+          "title": "منصور وسارة | حلقات مشوقة | الجزء 2",
+          "channel": "Mansour and Sara",
+          "duration": "10:20",
+          "description": "الجزء الثاني من الحلقات المشوقة.",
+          "thumbnail": "https://img.youtube.com/vi/b_fLISQkb2Y/hqdefault.jpg",
+          "badge": "حلقات مشوقة"
+        },
+        {
+          "id": "mansour-11",
+          "youtubeId": "ZVNETuVXZgM",
+          "title": "منصور وسارة | حلقات مشوقة | الجزء 1",
+          "channel": "Mansour and Sara",
+          "duration": "12:40",
+          "description": "البداية المشوقة لسلسلة الحلقات.",
+          "thumbnail": "https://img.youtube.com/vi/ZVNETuVXZgM/hqdefault.jpg",
+          "badge": "حلقات مشوقة"
+        },
+        {
+          "id": "mansour-12",
+          "youtubeId": "renr0okFFRk",
+          "title": "منصور وسارة | حلقات مشوقة | الجزء 3",
+          "channel": "Mansour and Sara",
+          "duration": "12:30",
+          "description": "المزيد من الحلقات الممتعة للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/renr0okFFRk/hqdefault.jpg",
+          "badge": "حلقات مشوقة"
+        },
+        {
+          "id": "mansour-13",
+          "youtubeId": "AnQyp3_duNA",
+          "title": "منصور وسارة | حلقات مشوقة | الجزء 4",
+          "channel": "Mansour and Sara",
+          "duration": "12:00",
+          "description": "الجزء الرابع من سلسلة الحلقات المشوقة.",
+          "thumbnail": "https://img.youtube.com/vi/AnQyp3_duNA/hqdefault.jpg",
+          "badge": "حلقات مشوقة"
+        },
+        {
+          "id": "mansour-14",
+          "youtubeId": "yNbBvIyFCbc",
+          "title": "منصور وسارة | متعة للأطفال الجزء 6",
+          "channel": "Mansour and Sara",
+          "duration": "09:06",
+          "description": "مواقف ممتعة ومسلية للصغار.",
+          "thumbnail": "https://img.youtube.com/vi/yNbBvIyFCbc/hqdefault.jpg",
+          "badge": "متعة للأطفال"
+        },
+        {
+          "id": "mansour-15",
+          "youtubeId": "RHWTzLLJte4",
+          "title": "مجموعة مميزة من منصور وسارة ج7",
+          "channel": "Mansour and Sara",
+          "duration": "15:39",
+          "description": "باقة مختارة من أفضل اللحظات.",
+          "thumbnail": "https://img.youtube.com/vi/RHWTzLLJte4/hqdefault.jpg",
+          "badge": "مجموعة مميزة"
+        },
+        {
+          "id": "mansour-16",
+          "youtubeId": "PNr2kOP-2c4",
+          "title": "منصور وسارة | الجيوجيتسو",
+          "channel": "Mansour and Sara",
+          "duration": "03:27",
+          "description": "تعلم رياضة الجيوجيتسو بأسلوب مبسط للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/PNr2kOP-2c4/hqdefault.jpg",
+          "badge": "رياضة وفنون"
+        },
+        {
+          "id": "mansour-17",
+          "youtubeId": "Vsy3ulrBF84",
+          "title": "مغامرات منصور: عصر الذكاء الاصطناعي | سارة المنقذة",
+          "channel": "MansourAgeOfAI",
+          "duration": "11:01",
+          "description": "مغامرة تكنولوجية شيقة مع سارة المنقذة.",
+          "thumbnail": "https://img.youtube.com/vi/Vsy3ulrBF84/hqdefault.jpg",
+          "badge": "الذكاء الاصطناعي"
+        },
+        {
+          "id": "mansour-18",
+          "youtubeId": "ZcwoO8r-4QM",
+          "title": "مغامرات منصور | أكتشاف مبهج ج7",
+          "channel": "مغامرات منصور",
+          "duration": "01:13:31",
+          "description": "اكتشافات مبهجة ومغامرات طويلة.",
+          "thumbnail": "https://img.youtube.com/vi/ZcwoO8r-4QM/hqdefault.jpg",
+          "badge": "مغامرات طويلة"
+        },
+        {
+          "id": "mansour-19",
+          "youtubeId": "hD6nZ8ReZto",
+          "title": "مغامرات منصور | ماذا سيحدث لاحقاً؟ ج6",
+          "channel": "مغامرات منصور",
+          "duration": "02:02:13",
+          "description": "حلقات مجمعة ومشوقة لتعرف ماذا سيحدث لاحقاً.",
+          "thumbnail": "https://img.youtube.com/vi/hD6nZ8ReZto/hqdefault.jpg",
+          "badge": "عرض خاص"
+        },
+        {
+          "id": "mansour-20",
+          "youtubeId": "Q-e-2SBBuQI",
+          "title": "منصور وسارة | متعة للأطفال الجزء الثاني",
+          "channel": "Mansour and Sara",
+          "duration": "10:15",
+          "description": "جزء جديد من متعة الأطفال مع منصور وسارة.",
+          "thumbnail": "https://img.youtube.com/vi/Q-e-2SBBuQI/hqdefault.jpg",
+          "badge": "متعة للأطفال"
+        }
+      ]
+    },
+    {
+      "id": "labrador",
+      "title": "نقيب لابرادور | كرتون اطفال",
+      "description": "نقيب لابرادور | كرتون اطفال",
+      "videos": [
+        {
+          "id": "bb-1",
+          "youtubeId": "VInVtuSAtz4",
+          "title": "وحيد القرن الصغير خطفه الوحش | نقيب لابرادور | كرتون اطفال | بيبي باص",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "05:07",
+          "description": "قصة ممتعة وهادفة عن السلامة أثناء اللعب مع النقيب لابرادور.",
+          "thumbnail": "https://img.youtube.com/vi/VInVtuSAtz4/hqdefault.jpg",
+          "badge": "نقيب لابرادور"
+        },
+        {
+          "id": "bb-2",
+          "youtubeId": "9u1MWDD7YEU",
+          "title": "ساعي البريد | كرتون اطفال | رسوم متحركة | نقيب لابرادور | بيبي باص",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "25:13",
+          "description": "مغامرة جديدة مع ساعي البريد وأمن الطرق مع النقيب لابرادور.",
+          "thumbnail": "https://img.youtube.com/vi/9u1MWDD7YEU/hqdefault.jpg",
+          "badge": "مغامرات"
+        },
+        {
+          "id": "bb-3",
+          "youtubeId": "MC-vShV7I1I",
+          "title": "التحفة الفنية المسروقة | كرتون اطفال | رسوم متحركة | نقيب لابرادور | بيبي باص",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "01:01:51",
+          "description": "لغز فني مثير يحله النقيب لابرادور بحكمة وذكاء.",
+          "thumbnail": "https://img.youtube.com/vi/MC-vShV7I1I/hqdefault.jpg",
+          "badge": "حل الألغاز"
+        },
+        {
+          "id": "bb-4",
+          "youtubeId": "J7Ful22DX08",
+          "title": "قبعة كاشف الكذب | كرتون اطفال | رسوم متحركة | نقيب لابرادور | بيبي باص",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "01:00:33",
+          "description": "قصة تربوية مشوقة حول الصدق والأمانة للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/J7Ful22DX08/hqdefault.jpg",
+          "badge": "قيم تربوية"
+        },
+        {
+          "id": "bb-5",
+          "youtubeId": "HuKKVmJ7KDE",
+          "title": "يوم رياضة ممتعة | كرتون اطفال | رسوم متحركة | نقيب لابرادور | بيبي باص",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "29:04",
+          "description": "أنشطة رياضية مسلية ومفيدة لصحة الأطفال ونشاطهم.",
+          "thumbnail": "https://img.youtube.com/vi/HuKKVmJ7KDE/hqdefault.jpg",
+          "badge": "يوم رياضي"
+        },
+        {
+          "id": "bb-6",
+          "youtubeId": "1hKxzIJ6Tgg",
+          "title": "الشرطة تعتني بالصغير | كرتون اطفال | رسوم متحركة | نقيب لابرادور | بيبي باص",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "35:15",
+          "description": "كيف تساعد الشرطة الصغار في الحفاظ على سلامتهم.",
+          "thumbnail": "https://img.youtube.com/vi/1hKxzIJ6Tgg/hqdefault.jpg",
+          "badge": "سلامة الأطفال"
+        },
+        {
+          "id": "bb-7",
+          "youtubeId": "FqEmCDNWtnQ",
+          "title": "امضغ طعامك - حلقة جديدة | نقيب لابرادور | بيبي باص",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "01:02:22",
+          "description": "عادات صحية هامة حول أهمية مضغ الطعام جيداً.",
+          "thumbnail": "https://img.youtube.com/vi/FqEmCDNWtnQ/hqdefault.jpg",
+          "badge": "عادات صحية"
+        },
+        {
+          "id": "bb-8",
+          "youtubeId": "GaRtd5w43ZA",
+          "title": "احذر من النمل الأبيض | كرتون اطفال | رسوم متحركة | نقيب لابرادور | بيبي باص",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "01:04:44",
+          "description": "مغامرة تعليمية للتعرف على أخطار الحشرات المنزلية وكيفية تجنبها.",
+          "thumbnail": "https://img.youtube.com/vi/GaRtd5w43ZA/hqdefault.jpg",
+          "badge": "تعليمي"
+        },
+        {
+          "id": "bb-9",
+          "youtubeId": "tORxno6FIk8",
+          "title": "سلامة معلوماتك الخاصة | كرتون اطفال | حلقات جديده | نقيب لابرادور | بيبي باص",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "52:48",
+          "description": "إرشادات هامة للأطفال حول حماية الخصوصية والمعلومات الشخصية.",
+          "thumbnail": "https://img.youtube.com/vi/tORxno6FIk8/hqdefault.jpg",
+          "badge": "أمان رقمي"
+        },
+        {
+          "id": "bb-10",
+          "youtubeId": "M-qMpzNT--k",
+          "title": "فريق الأبطال هزم الوحش الكبير | اطفائي وشرطي وطبيب | بيبي باص",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "53:44",
+          "description": "جهود فريق الأبطال في مساعدة أهالي المدينة وإنقاذهم.",
+          "thumbnail": "https://img.youtube.com/vi/M-qMpzNT--k/hqdefault.jpg",
+          "badge": "فريق الأبطال"
+        },
+        {
+          "id": "bb-11",
+          "youtubeId": "rUUiTfLR0l8",
+          "title": "أنا حلاق صغير | اغاني اطفال | بيبي باص | BabyBus Arabic",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "24:09",
+          "description": "تجربة ممتعة لتعلم مهنة الحلاقة والعناية بالمظهر للأطفال.",
+          "thumbnail": "https://img.youtube.com/vi/rUUiTfLR0l8/hqdefault.jpg",
+          "badge": "تعليم المهن"
+        },
+        {
+          "id": "bb-12",
+          "youtubeId": "Qb4qQ_Ncvko",
+          "title": "باز باز بعوضة مزعجة | اغاني اطفال | بيبي باص | BabyBus Arabic",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "06:58",
+          "description": "أنشودة تعليمية هادفة للوقاية من الحشرات والنظافة الشخصية.",
+          "thumbnail": "https://img.youtube.com/vi/Qb4qQ_Ncvko/hqdefault.jpg",
+          "badge": "أنشودة أطفال"
+        },
+        {
+          "id": "bb-13",
+          "youtubeId": "AP2WXteEEP4",
+          "title": "ديناصور ديناصور أين أنت؟ | عائلة الأصابع | اغاني الديناصورات | بيبي باص",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "21:54",
+          "description": "أغاني وأناشيد ممتعة عن الديناصورات للأطفال الصغار.",
+          "thumbnail": "https://img.youtube.com/vi/AP2WXteEEP4/hqdefault.jpg",
+          "badge": "أغاني الديناصورات"
+        },
+        {
+          "id": "bb-14",
+          "youtubeId": "j0ohMyETWWk",
+          "title": "لا تأكل الالعاب | كرتون اطفال | رسوم متحركة | النقيب لابرادور | بيبي باص",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "34:32",
+          "description": "تحذيرات هامة للأطفال حول السلامة المنزلية ومخاطر ابتلاع الألعاب.",
+          "thumbnail": "https://img.youtube.com/vi/j0ohMyETWWk/hqdefault.jpg",
+          "badge": "السلامة المنزلية"
+        },
+        {
+          "id": "bb-15",
+          "youtubeId": "6jcgSiJbswE",
+          "title": "أخذ كيكي الكعكة | كرتون اطفال | رسوم متحركة للاطفال | بيبي باص",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "01:02:36",
+          "description": "قصة مسلية حول آداب الاستئذان ومشاركة الآخرين.",
+          "thumbnail": "https://img.youtube.com/vi/6jcgSiJbswE/hqdefault.jpg",
+          "badge": "آداب وسلوكيات"
+        },
+        {
+          "id": "bb-16",
+          "youtubeId": "1sWBCgsy068",
+          "title": "الأرنب بيبي أصيب بحروق الشمس | كرتون اطفال | النقيب لابرادور | بيبي باص",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "01:02:35",
+          "description": "نصائح وقائية هامة لحماية الأطفال من أشعة الشمس الحارقة.",
+          "thumbnail": "https://img.youtube.com/vi/1sWBCgsy068/hqdefault.jpg",
+          "badge": "صحة وسلامة"
+        },
+        {
+          "id": "bb-17",
+          "youtubeId": "9u1MWDD7YEU",
+          "title": "مغامرات فريق الإنقاذ في الغابة | كرتون اطفال | بيبي باص",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "18:20",
+          "description": "مهمات إنقاذ ممتعة لمساعدة حيوانات الغابة.",
+          "thumbnail": "https://img.youtube.com/vi/9u1MWDD7YEU/hqdefault.jpg",
+          "badge": "مغامرة"
+        },
+        {
+          "id": "bb-18",
+          "youtubeId": "MC-vShV7I1I",
+          "title": "أغنية تنظيف الأسنان قبل النوم | بيبي باص",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "04:15",
+          "description": "أنشودة مشجعة لتعلم روتين تنظيف الأسنان اليومي.",
+          "thumbnail": "https://img.youtube.com/vi/MC-vShV7I1I/hqdefault.jpg",
+          "badge": "النظافة الشخصية"
+        },
+        {
+          "id": "bb-19",
+          "youtubeId": "J7Ful22DX08",
+          "title": "قصص الأصدقاء الأوفياء | كرتون اطفال | بيبي باص",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "15:40",
+          "description": "حكايات رائعة عن قيمة الصداقة والتعاون بين الأصدقاء.",
+          "thumbnail": "https://img.youtube.com/vi/J7Ful22DX08/hqdefault.jpg",
+          "badge": "قصص الأصدقاء"
+        },
+        {
+          "id": "bb-20",
+          "youtubeId": "HuKKVmJ7KDE",
+          "title": "أرنب وكي يتعلم العوم | كرتون اطفال | بيبي باص",
+          "channel": "BabyBus Arabic TV - أغاني أطفال ورسوم متحركة",
+          "duration": "12:50",
+          "description": "قواعد الأمان والسلامة عند السباحة في المسبح أو الشاطئ.",
+          "thumbnail": "https://img.youtube.com/vi/HuKKVmJ7KDE/hqdefault.jpg",
+          "badge": "السلامة المائية"
+        }
+      ]
+    },
+    {
+      "id": "numberblocks",
+      "title": "Number blocks",
+      "description": "Maths for Kids",
+      "videos": [
+        {
+          "id": "nb-1",
+          "youtubeId": "DBM2uZLFfKU",
+          "title": "Maths for Kids | 6 million compilation | @Numberblocks",
+          "channel": "Numberblocks",
+          "duration": "32:52",
+          "description": "Special 6 million subscribers compilation featuring counting games, shapes, place value, and big numbers with Numberblocks.",
+          "thumbnail": "https://img.youtube.com/vi/DBM2uZLFfKU/hqdefault.jpg",
+          "badge": "Compilation"
+        },
+        {
+          "id": "nb-2",
+          "youtubeId": "QdSUN96eQKY",
+          "title": "Second Grade Math - Learn To Count! | Numberblocks Compilation | 123 -Numbers Cartoon For Kids",
+          "channel": "Numberblocks",
+          "duration": "18:03",
+          "description": "Counting and math compilation helping children build foundational number sense and arithmetic skills.",
+          "thumbnail": "https://img.youtube.com/vi/QdSUN96eQKY/hqdefault.jpg",
+          "badge": "Learn to Count"
+        },
+        {
+          "id": "nb-3",
+          "youtubeId": "znL9An29uis",
+          "title": "My First Fractions | Learn to Count for Kids Compilation | Number Cartoon | Numberblocks",
+          "channel": "Numberblocks",
+          "duration": "23:46",
+          "description": "Introduction to fractions and dividing wholes into equal parts through visual Numberblocks stories.",
+          "thumbnail": "https://img.youtube.com/vi/znL9An29uis/hqdefault.jpg",
+          "badge": "Fractions"
+        },
+        {
+          "id": "nb-4",
+          "youtubeId": "m8qOqzSk0n0",
+          "title": "Sort it Out! - Ultimate Sorting Compilation | Learn to Count for Kids Compilation | Numberblocks",
+          "channel": "Numberblocks",
+          "duration": "01:34:03",
+          "description": "Extended compilation focusing on sorting, grouping, patterns, and number properties.",
+          "thumbnail": "https://img.youtube.com/vi/m8qOqzSk0n0/hqdefault.jpg",
+          "badge": "Sorting & Patterns"
+        },
+        {
+          "id": "nb-5",
+          "youtubeId": "9rWt1Pf3G6Q",
+          "title": "Everyday Maths - Tidying Up Edition | 123 Learn to Count for Kids Compilation | Numberblocks",
+          "channel": "Numberblocks",
+          "duration": "40:25",
+          "description": "Everyday math lessons centered around tidying up, organizing, and counting objects.",
+          "thumbnail": "https://img.youtube.com/vi/9rWt1Pf3G6Q/hqdefault.jpg",
+          "badge": "Everyday Maths"
+        },
+        {
+          "id": "nb-6",
+          "youtubeId": "lRe36GiOEdU",
+          "title": "Octoblock 8 Saves the Day! | Learn to Count for Kids Compilation | Number Cartoon | Numberblocks",
+          "channel": "Numberblocks",
+          "duration": "01:16:22",
+          "description": "Adventures starring Octoblock Eight exploring factors of eight, shapes, and teamwork.",
+          "thumbnail": "https://img.youtube.com/vi/lRe36GiOEdU/hqdefault.jpg",
+          "badge": "Number 8"
+        },
+        {
+          "id": "nb-7",
+          "youtubeId": "yj5p0-uGR5U",
+          "title": "Number Adventures | Full Episodes | Maths for Kids | @Numberblocks",
+          "channel": "Numberblocks",
+          "duration": "01:02:58",
+          "description": "Full episodes of Number Adventures combining math challenges with imaginative storytelling.",
+          "thumbnail": "https://img.youtube.com/vi/yj5p0-uGR5U/hqdefault.jpg",
+          "badge": "Full Episodes"
+        },
+        {
+          "id": "nb-8",
+          "youtubeId": "-dKDf6im0C4",
+          "title": "The Rise of Infinaughty! Full 25-Minute Movie (All 5 Episodes) | Numberblocks S9",
+          "channel": "Numberblocks",
+          "duration": "23:17",
+          "description": "Five-episode special storyline from Season 9 following big number adventures and problem solving.",
+          "thumbnail": "https://img.youtube.com/vi/-dKDf6im0C4/hqdefault.jpg",
+          "badge": "Season 9 Special"
+        },
+        {
+          "id": "nb-9",
+          "youtubeId": "WFwZRIT3oeg",
+          "title": "Pattern Palace Full Episode & More! | Learn to Count for Kids | Number Cartoon | Numberblocks",
+          "channel": "Numberblocks",
+          "duration": "01:18:19",
+          "description": "Episodes exploring repeating sequences, symmetry, and number patterns inside Pattern Palace.",
+          "thumbnail": "https://img.youtube.com/vi/WFwZRIT3oeg/hqdefault.jpg",
+          "badge": "Patterns"
+        },
+        {
+          "id": "nb-10",
+          "youtubeId": "GnVLJowv6eU",
+          "title": "Building All Numberblocks 1 to 10: Learn and Play Together Level 1 | Learn to count | Numberblocks",
+          "channel": "Numberblocks",
+          "duration": "01:06:52",
+          "description": "Guided build-along and counting compilation covering Numberblocks 1 through 10.",
+          "thumbnail": "https://img.youtube.com/vi/GnVLJowv6eU/hqdefault.jpg",
+          "badge": "Numbers 1-10"
+        },
+        {
+          "id": "nb-11",
+          "youtubeId": "b8qe06QXi1Q",
+          "title": "The Team Factor | Full Episode - S5 E13 | Learn to Count - Numberblocks",
+          "channel": "Numberblocks",
+          "duration": "04:35",
+          "description": "Season 5 Episode 13 episode highlighting teamwork, factors, and number combinations.",
+          "thumbnail": "https://img.youtube.com/vi/b8qe06QXi1Q/hqdefault.jpg",
+          "badge": "Full Episode"
+        },
+        {
+          "id": "nb-12",
+          "youtubeId": "HUlvIfGHIu0",
+          "title": "Numberblocks Bowling Bonanza | Learn to Count for Kids Compilation | Number Cartoon | Numberblocks",
+          "channel": "Numberblocks",
+          "duration": "01:02:56",
+          "description": "Bowling-themed counting and addition compilation with the Numberblocks crew.",
+          "thumbnail": "https://img.youtube.com/vi/HUlvIfGHIu0/hqdefault.jpg",
+          "badge": "Counting Games"
+        },
+        {
+          "id": "nb-13",
+          "youtubeId": "i8HP2Btj7kk",
+          "title": "Super Duper Counting Games with the Numberblocks | Learn to Count for Kids | Numberblocks",
+          "channel": "Numberblocks",
+          "duration": "53:42",
+          "description": "Interactive counting games and number puzzles designed for young learners.",
+          "thumbnail": "https://img.youtube.com/vi/i8HP2Btj7kk/hqdefault.jpg",
+          "badge": "Counting Games"
+        },
+        {
+          "id": "nb-14",
+          "youtubeId": "7XKfnXRcU0c",
+          "title": "@Numberblocks- Learn from the Beginning! | Learn to Count",
+          "channel": "Numberblocks",
+          "duration": "10:30",
+          "description": "Starter math introduction covering early counting and basic number recognition.",
+          "thumbnail": "https://img.youtube.com/vi/7XKfnXRcU0c/hqdefault.jpg",
+          "badge": "Beginner Maths"
+        },
+        {
+          "id": "nb-15",
+          "youtubeId": "YrvGlFtIp4k",
+          "title": "Numbers Don't Have to be Scary | Learn to Count for Kids Compilation | Number Cartoon | Numberblocks",
+          "channel": "Numberblocks",
+          "duration": "01:25:05",
+          "description": "Confidence-building compilation making larger numbers and math concepts fun and approachable.",
+          "thumbnail": "https://img.youtube.com/vi/YrvGlFtIp4k/hqdefault.jpg",
+          "badge": "Big Numbers"
+        },
+        {
+          "id": "nb-16",
+          "youtubeId": "FG18571ruVQ",
+          "title": "Multiplication for Kids Compilation - All Levels | Maths for Kids | Learn to count | @Numberblocks",
+          "channel": "Numberblocks",
+          "duration": "45:40",
+          "description": "Multi-level multiplication compilation showing groups of equal numbers and arrays.",
+          "thumbnail": "https://img.youtube.com/vi/FG18571ruVQ/hqdefault.jpg",
+          "badge": "Multiplication"
+        },
+        {
+          "id": "nb-17",
+          "youtubeId": "W_GH5z8Nuoc",
+          "title": "Multiplication for Kids Compilation - Best Times Tables Tricks! | Learn to Count | @Numberblocks",
+          "channel": "Numberblocks",
+          "duration": "01:28:52",
+          "description": "Times tables tricks and multiplication songs helping kids practice facts smoothly.",
+          "thumbnail": "https://img.youtube.com/vi/W_GH5z8Nuoc/hqdefault.jpg",
+          "badge": "Times Tables"
+        },
+        {
+          "id": "nb-18",
+          "youtubeId": "TshrzF0uQJ0",
+          "title": "Easy Multiplication | Learn to Count for Kids | Numberblocks",
+          "channel": "Numberblocks",
+          "duration": "02:00:47",
+          "description": "Long-form multiplication compilation reinforcing repeated addition and equal groups.",
+          "thumbnail": "https://img.youtube.com/vi/TshrzF0uQJ0/hqdefault.jpg",
+          "badge": "Easy Multiplication"
+        },
+        {
+          "id": "nb-19",
+          "youtubeId": "NIeZJbZG3D4",
+          "title": "Multiplication for Kids Level 3 | Maths for Kids | Learn to count | @Numberblocks",
+          "channel": "Numberblocks",
+          "duration": "09:22",
+          "description": "Level 3 multiplication episodes advancing kids' understanding of larger products.",
+          "thumbnail": "https://img.youtube.com/vi/NIeZJbZG3D4/hqdefault.jpg",
+          "badge": "Level 3 Maths"
+        },
+        {
+          "id": "nb-20",
+          "youtubeId": "JxvX-bytrUU",
+          "title": "Numberblocks | Times Tables Songs 1-10 | for kids",
+          "channel": "Ayato Channel",
+          "duration": "04:48",
+          "description": "Catchy times tables songs covering 1 through 10 with Numberblocks visuals.",
+          "thumbnail": "https://img.youtube.com/vi/JxvX-bytrUU/hqdefault.jpg",
+          "badge": "Times Tables Songs"
+        }
+      ]
+    },
+    {
+      "id": "numberblocks",
+      "title": "Number blocks",
+      "description": "Maths for Kids",
+      "videos": [
+        {
+          "id": "mm-1",
+          "youtubeId": "E2Gv0IfpaQ0",
+          "title": "ميكي ينادي يحيا النادي+ 🏠 | ديزني جونيور بالعربي",
+          "channel": "Disney Junior MENA",
+          "duration": "23:03",
+          "description": "مغامرة حفل مبيت في نادي بطوط الجديد مع ميكي ماوس وميني ماوس وأصدقائهما.",
+          "thumbnail": "https://img.youtube.com/vi/E2Gv0IfpaQ0/hqdefault.jpg",
+          "badge": "ميكي وميني"
+        },
+        {
+          "id": "mm-2",
+          "youtubeId": "yc5GpBDych4",
+          "title": "أفضل مغامرات ميني 💖 | نادي ميكي ماوس المرح 🥳 | ديزني جونيور العربية",
+          "channel": "Disney Junior MENA",
+          "duration": "51:26",
+          "description": "تجميعة لأبرز مغامرات ميني ماوس وميكي وأصدقائهما في نادي ميكي ماوس المرح.",
+          "thumbnail": "https://img.youtube.com/vi/yc5GpBDych4/hqdefault.jpg",
+          "badge": "مغامرات ميني"
+        },
+        {
+          "id": "mm-3",
+          "youtubeId": "pAm_QqZ7cWk",
+          "title": "رحلة التخييم 🏕️ | نادي ميكي ماوس المرح 🥳 | ديزني جونيور العربية",
+          "channel": "Disney Junior MENA",
+          "duration": "19:20",
+          "description": "ميكي وميني وأصدقاؤهما في رحلة تخييم ممتعة مليئة بالألعاب والتعاون في الهواء الطلق.",
+          "thumbnail": "https://img.youtube.com/vi/pAm_QqZ7cWk/hqdefault.jpg",
+          "badge": "رحلة تخييم"
+        },
+        {
+          "id": "mm-4",
+          "youtubeId": "5ITPt_UOlws",
+          "title": "مساعد ميكي الجديد | ميكي ينادي يحيا النادي+ 🏠 | ديزني جونيور بالعربي",
+          "channel": "Disney Junior MENA",
+          "duration": "23:03",
+          "description": "مغامرة جديدة مع مساعد ميكي وميني والأصدقاء في حل التحديات الممتعة داخل النادي.",
+          "thumbnail": "https://img.youtube.com/vi/5ITPt_UOlws/hqdefault.jpg",
+          "badge": "يحيا النادي+"
+        },
+        {
+          "id": "mm-5",
+          "youtubeId": "-mI_0SvV-nI",
+          "title": "عطلة الصيف ☀️ | نادي ميكي ماوس المرح 🥳 | ديزني جونيور العربية",
+          "channel": "Disney Junior MENA",
+          "duration": "18:57",
+          "description": "أجواء صيفية مرحة وأنشطة مشمسة مع ميكي ماوس وميني ورفاقهما.",
+          "thumbnail": "https://img.youtube.com/vi/-mI_0SvV-nI/hqdefault.jpg",
+          "badge": "عطلة الصيف"
+        },
+        {
+          "id": "mm-6",
+          "youtubeId": "PLQoRcXoVFI",
+          "title": "ميكي ينادي يحيا النادي+ 🏠 | ديزني جونيور بالعربي",
+          "channel": "Disney Junior MENA",
+          "duration": "01:25:15",
+          "description": "تجميعة حلقات من ميكي ينادي يحيا النادي+ مليئة بالألغاز والأغاني والمغامرات.",
+          "thumbnail": "https://img.youtube.com/vi/PLQoRcXoVFI/hqdefault.jpg",
+          "badge": "حلقات كاملة"
+        },
+        {
+          "id": "mm-7",
+          "youtubeId": "evZW-kqfWlw",
+          "title": "مغامرات ميني وديدي 🌍 | بو تونز مع ميني 💖 | ديزني جونيور العربية",
+          "channel": "Disney Junior MENA",
+          "duration": "18:16",
+          "description": "ميني ماوس وديدي في مغامرات مرحة ومبتكرة من سلسلة بو تونز مع ميني.",
+          "thumbnail": "https://img.youtube.com/vi/evZW-kqfWlw/hqdefault.jpg",
+          "badge": "بو تونز مع ميني"
+        },
+        {
+          "id": "mm-8",
+          "youtubeId": "xAThFfjhetw",
+          "title": "ميكي ينادي يحيا النادي+ 🏠 | ديزني جونيور بالعربي",
+          "channel": "Disney Junior MENA",
+          "duration": "23:03",
+          "description": "حلقة رسوم متحركة جديدة مع ميكي وميني والأصدقاء في عالم النادي الممتع.",
+          "thumbnail": "https://img.youtube.com/vi/xAThFfjhetw/hqdefault.jpg",
+          "badge": "حلقة كاملة"
+        },
+        {
+          "id": "mm-9",
+          "youtubeId": "aiDrBYnILJ8",
+          "title": "حفل العشاء الأمثل في النادي! 🍽️🎉 | ميكي ينادي يحيا النادي+ | حلقة كاملة",
+          "channel": "Disney Junior MENA",
+          "duration": "23:03",
+          "description": "ميكي وميني وأصدقاؤهما يستعدون لحفل عشاء مميز في النادي وسط أجواء من المرح.",
+          "thumbnail": "https://img.youtube.com/vi/aiDrBYnILJ8/hqdefault.jpg",
+          "badge": "حفل النادي"
+        },
+        {
+          "id": "mm-10",
+          "youtubeId": "NBdbkletMNw",
+          "title": "ميكي ينادي يحيا النادي+ 🏠 | ديزني جونيور بالعربي",
+          "channel": "Disney Junior MENA",
+          "duration": "01:00:59",
+          "description": "مجموعة حلقات ممتعة من ميكي ينادي يحيا النادي+ مدبلجة إلى العربية.",
+          "thumbnail": "https://img.youtube.com/vi/NBdbkletMNw/hqdefault.jpg",
+          "badge": "تجميعة حلقات"
+        },
+        {
+          "id": "mm-11",
+          "youtubeId": "w8r-JgGT0JA",
+          "title": "ميكي ينادي يحيا النادي+ 🏠 | ديزني جونيور بالعربي",
+          "channel": "Disney Junior MENA",
+          "duration": "27:25",
+          "description": "مغامرة شيقة مع ميكي وميني ماوس وأدوات المساعدة المرحة.",
+          "thumbnail": "https://img.youtube.com/vi/w8r-JgGT0JA/hqdefault.jpg",
+          "badge": "نادي ميكي"
+        },
+        {
+          "id": "mm-12",
+          "youtubeId": "d4kCuwjsAdA",
+          "title": "ميني تحصل على ناديها الخاص! 🎉🏠 | ميكي ينادي يحيا النادي+ | حلقة كاملة",
+          "channel": "Disney Junior MENA",
+          "duration": "23:03",
+          "description": "ميني ماوس تحصل على ناديها الخاص وتحتفل مع ميكي والأصدقاء في مغامرة مليئة بالبهجة.",
+          "thumbnail": "https://img.youtube.com/vi/d4kCuwjsAdA/hqdefault.jpg",
+          "badge": "نادي ميني"
+        },
+        {
+          "id": "mm-13",
+          "youtubeId": "t9OuEW6_fzI",
+          "title": "مغامرات مع ميكي وميني | نادي ميكي ماوس المرح 🥳 | ديزني جونيور العربية",
+          "channel": "Disney Junior MENA",
+          "duration": "15:30",
+          "description": "مغامرات قصيرة وشيقة تجمع ميكي ماوس وميني ماوس في نادي ميكي ماوس المرح.",
+          "thumbnail": "https://img.youtube.com/vi/t9OuEW6_fzI/hqdefault.jpg",
+          "badge": "ميكي وميني"
+        },
+        {
+          "id": "mm-14",
+          "youtubeId": "ayHcp5c3iMY",
+          "title": "يوم نقاط البولكا | نادي ميكي ماوس المرح 🥳 | ديزني جونيور العربية",
+          "channel": "Disney Junior MENA",
+          "duration": "05:09",
+          "description": "ميني ماوس وميكي يحتفلان بيوم نقاط البولكا المميز بأفكار وألوان مبهجة.",
+          "thumbnail": "https://img.youtube.com/vi/ayHcp5c3iMY/hqdefault.jpg",
+          "badge": "نقاط البولكا"
+        },
+        {
+          "id": "mm-15",
+          "youtubeId": "UqXYKqPOelA",
+          "title": "فراني والطيران | نادي ميكي ماوس المرح 🥳 | ديزني جونيور العربية",
+          "channel": "Disney Junior MENA",
+          "duration": "11:58",
+          "description": "مغامرة طريفة ومسلية مع ميكي وميني وأصدقائهما في نادي ميكي ماوس المرح.",
+          "thumbnail": "https://img.youtube.com/vi/UqXYKqPOelA/hqdefault.jpg",
+          "badge": "نادي المرح"
+        },
+        {
+          "id": "mm-16",
+          "youtubeId": "0ycG58K_yuo",
+          "title": "ميكي ينادي يحيا النادي+ 🏠 | ديزني جونيور بالعربي",
+          "channel": "Disney Junior MENA",
+          "duration": "23:03",
+          "description": "حلقة كاملة من ميكي ينادي يحيا النادي+ مليئة بالمرح والتعاون بين ميكي وميني.",
+          "thumbnail": "https://img.youtube.com/vi/0ycG58K_yuo/hqdefault.jpg",
+          "badge": "حلقة كاملة"
+        },
+        {
+          "id": "mm-17",
+          "youtubeId": "2rKoulUy2tE",
+          "title": "مغامرات ديزني جونيور بالعربي | ميكي وميني وأصدقاؤهما",
+          "channel": "Disney Junior MENA",
+          "duration": "01:06:23",
+          "description": "تجميعة كرتونية ممتعة من ديزني جونيور بالعربي تضم ميكي وميني ماوس.",
+          "thumbnail": "https://img.youtube.com/vi/2rKoulUy2tE/hqdefault.jpg",
+          "badge": "ديزني جونيور"
+        },
+        {
+          "id": "mm-18",
+          "youtubeId": "vm84xfQeGPg",
+          "title": "رحلات التخييم 🏕️ | فيديوهات متنوّعة ✨ | ديزني جونيور بالعربي",
+          "channel": "Disney Junior MENA",
+          "duration": "01:10:38",
+          "description": "تجميعة رحلات ومغامرات متنوعة من ديزني جونيور بالعربي مع ميكي وميني.",
+          "thumbnail": "https://img.youtube.com/vi/vm84xfQeGPg/hqdefault.jpg",
+          "badge": "رحلات ومغامرات"
+        },
+        {
+          "id": "mm-19",
+          "youtubeId": "tmei-gYgc0w",
+          "title": "ميكي ينادي يحيا النادي+ 🏠 | ديزني جونيور بالعربي",
+          "channel": "Disney Junior MENA",
+          "duration": "29:56",
+          "description": "حلقة شيقة من ميكي ينادي يحيا النادي+ مع ميكي ماوس وميني ماوس وبطوط.",
+          "thumbnail": "https://img.youtube.com/vi/tmei-gYgc0w/hqdefault.jpg",
+          "badge": "يحيا النادي+"
+        },
+        {
+          "id": "mm-20",
+          "youtubeId": "nSBpFYWymn8",
+          "title": "ميكي ينادي يحيا النادي+ 🏠 | ديزني جونيور بالعربي",
+          "channel": "Disney Junior MENA",
+          "duration": "01:03",
+          "description": "مقطع ممتع من ميكي ينادي يحيا النادي+ يجمع ميكي وميني وأصدقاء النادي.",
+          "thumbnail": "https://img.youtube.com/vi/nSBpFYWymn8/hqdefault.jpg",
+          "badge": "ميكي ينادي"
         }
       ]
     }
